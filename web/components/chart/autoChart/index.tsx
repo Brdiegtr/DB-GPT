@@ -134,7 +134,7 @@ export const AutoChart = (props: AutoChartProps) => {
               <Select
                 className='w-52'
                 value={renderChartType}
-                placeholder={'Chart Switcher'}
+                placeholder={'Cambiar gráfico'}
                 onChange={value => setRenderChartType(value)}
                 size={'small'}
               >
@@ -166,7 +166,7 @@ export const AutoChart = (props: AutoChartProps) => {
     );
   }
 
-  return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description={'暂无合适的可视化视图'} />;
+  return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description={'No hay una visualización adecuada'} />;
 };
 
 export * from './helpers';

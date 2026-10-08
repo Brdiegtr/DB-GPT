@@ -383,7 +383,7 @@ async def build_sub_react_agent(
         conv_id=sub_conv_id,
         gpts_app_code="react_agent_sub",
         gpts_app_name="ReAct-Sub",
-        language="zh",
+        language="en",
         enable_context_management=True,
     )
 

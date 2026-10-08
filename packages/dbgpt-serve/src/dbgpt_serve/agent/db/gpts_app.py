@@ -1067,45 +1067,43 @@ class GptsAppDao(BaseDao):
         """
         chat_normal_ctx = NativeTeamContext(
             chat_scene="chat_normal",
-            scene_name="Chat Normal",
-            scene_describe="Native LLM dialogue",
+            scene_name="Chat Libre",
+            scene_describe="Conversación directa con el modelo de IA",
             param_title="",
             show_disable=False,
         )
         chat_knowledge_ctx = NativeTeamContext(
             chat_scene="chat_knowledge",
-            scene_name="Chat Knowledge",
-            scene_describe="Private knowledge base Q&A",
+            scene_name="Chat con Conocimiento",
+            scene_describe="Preguntas y respuestas sobre tu base de conocimiento privada",
             param_title="",
             show_disable=False,
         )
         chat_with_db_qa_ctx = NativeTeamContext(
             chat_scene="chat_with_db_qa",
-            scene_name="Chat DB",
-            scene_describe="Database Metadata Q&A",
+            scene_name="Consulta de Base de Datos",
+            scene_describe="Preguntas y respuestas sobre la estructura de la base de datos",
             param_title="",
             show_disable=False,
         )
         chat_with_db_execute_ctx = NativeTeamContext(
             chat_scene="chat_with_db_execute",
-            scene_name="Chat Data",
-            scene_describe="Have a conversation with your private data through natural"
-            " language",
+            scene_name="Chat con Datos",
+            scene_describe="Conversa con tus datos privados en lenguaje natural",
             param_title="",
             show_disable=False,
         )
         chat_dashboard_ctx = NativeTeamContext(
             chat_scene="chat_dashboard",
-            scene_name="Chat Dashboard",
-            scene_describe="Provide you with professional data analysis reports through"
-            " natural language",
+            scene_name="Panel de Análisis",
+            scene_describe="Informes profesionales de análisis de datos en lenguaje natural",
             param_title="",
             show_disable=False,
         )
         chat_excel_ctx = NativeTeamContext(
             chat_scene="chat_excel",
-            scene_name="Chat Excel",
-            scene_describe="Excel analysis through natural language",
+            scene_name="Chat con Excel",
+            scene_describe="Análisis de archivos Excel en lenguaje natural",
             param_title="",
             show_disable=False,
         )
@@ -1115,7 +1113,7 @@ class GptsAppDao(BaseDao):
         chat_knowledge_app = GptsApp(
             app_code=chat_knowledge_ctx.chat_scene,
             app_name=chat_knowledge_ctx.scene_name,
-            language="zh",
+            language="en",
             team_mode="native_app",
             details=[],
             app_describe=chat_knowledge_ctx.scene_describe,
@@ -1141,7 +1139,7 @@ class GptsAppDao(BaseDao):
         chat_normal_app = GptsApp(
             app_code=chat_normal_ctx.chat_scene,
             app_name=chat_normal_ctx.scene_name,
-            language="zh",
+            language="en",
             team_mode="native_app",
             details=[],
             app_describe=chat_normal_ctx.scene_describe,
@@ -1175,7 +1173,7 @@ class GptsAppDao(BaseDao):
         chat_with_db_qa_app = GptsApp(
             app_code=chat_with_db_qa_ctx.chat_scene,
             app_name=chat_with_db_qa_ctx.scene_name,
-            language="zh",
+            language="en",
             team_mode="native_app",
             details=[],
             app_describe=chat_with_db_qa_ctx.scene_describe,
@@ -1198,7 +1196,7 @@ class GptsAppDao(BaseDao):
         chat_with_db_execute_app = GptsApp(
             app_code=chat_with_db_execute_ctx.chat_scene,
             app_name=chat_with_db_execute_ctx.scene_name,
-            language="zh",
+            language="en",
             team_mode="native_app",
             details=[],
             app_describe=chat_with_db_execute_ctx.scene_describe,
@@ -1221,7 +1219,7 @@ class GptsAppDao(BaseDao):
         chat_dashboard_app = GptsApp(
             app_code=chat_dashboard_ctx.chat_scene,
             app_name=chat_dashboard_ctx.scene_name,
-            language="zh",
+            language="en",
             team_mode="native_app",
             details=[],
             app_describe=chat_dashboard_ctx.scene_describe,
@@ -1244,7 +1242,7 @@ class GptsAppDao(BaseDao):
         chat_excel_app = GptsApp(
             app_code=chat_excel_ctx.chat_scene,
             app_name=chat_excel_ctx.scene_name,
-            language="zh",
+            language="en",
             team_mode="native_app",
             details=[],
             app_describe=chat_excel_ctx.scene_describe,

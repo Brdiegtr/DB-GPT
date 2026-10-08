@@ -1233,7 +1233,7 @@ async def _react_agent_stream_inner(
         if not final_emitted and not done_emitted:
             yield _sse_event(
                 AgentFinalAnswer(
-                    content="抱歉，回答生成过程中发生错误，请重试。"
+                    content="Lo siento, ocurrió un error al generar la respuesta. Inténtalo de nuevo."
                 ).to_sse_payload()
             )
         if not done_emitted:
@@ -1505,15 +1505,15 @@ async def _react_agent_stream_impl(
 
         action_lower = (action or "").lower()
         if action_lower == "sql_query":
-            return "正在查询数据库信息"
+            return "Consultando información de la base de datos"
         if action_lower == "code_interpreter":
-            return "正在生成分析代码"
+            return "Generando código de análisis"
         if action_lower == "html_interpreter":
-            return "正在生成并渲染 HTML 报告"
+            return "Generando y renderizando el reporte HTML"
         if action_lower == "todowrite":
-            return "正在更新任务计划"
+            return "Actualizando el plan de tareas"
         if action_lower in {"execute_skill_script", "execute_skill_script_file"}:
-            return "正在执行分析脚本"
+            return "Ejecutando el script de análisis"
 
         return text
 
@@ -1972,7 +1972,7 @@ print(json.dumps(summary, ensure_ascii=False))
                         "confirm_id": _confirm_id,
                         "tool_name": tool_name,
                         "args_summary": _interceptor._summarize_args(args),
-                        "message": f"即将执行写操作 {tool_name}，是否确认？",
+                        "message": f"Se va a ejecutar la operación de escritura {tool_name}. ¿Confirmas?",
                         "timeout": 300,
                     }
                     try:
@@ -1989,7 +1989,7 @@ print(json.dumps(summary, ensure_ascii=False))
                                 "chunks": [
                                     {
                                         "output_type": "text",
-                                        "content": "用户拒绝了此操作，工具执行已取消。",
+                                        "content": "El usuario rechazó esta operación; se canceló la ejecución de la herramienta.",
                                     }
                                 ]
                             },
@@ -2169,6 +2169,7 @@ print(json.dumps(summary, ensure_ascii=False))
     else:
         # No knowledge space connected — use legacy knowledge_retrieve (no-op without resources)
         kb_tool_list = [make_knowledge_retrieve(react_state, knowledge_resources)]
+        wiki_available = False
     sql_query_tool = make_sql_query(react_state, database_connector)
     code_interpreter_tool = make_code_interpreter(react_state)
     shell_interpreter_tool = make_shell_interpreter(react_state)
@@ -2420,7 +2421,7 @@ print(json.dumps(summary, ensure_ascii=False))
         conv_id=conv_id,
         gpts_app_code="react_agent",
         gpts_app_name="ReAct",
-        language="zh",
+        language="en",
         temperature=dialogue.temperature or 0.2,
         enable_context_management=True,
         enable_native_function_calling=True,
@@ -2529,7 +2530,7 @@ print(json.dumps(summary, ensure_ascii=False))
         # html_interpreter
         workflow_prompt = f"""
 You are the DB-GPT intelligent assistant, executing the skill task selected by the user.
-Please always response in the same language as the user's input language.
+Always reply to the user in Spanish (español), whatever language the user or the data uses. Write Thought, Action Intention, Action Reason and the final answer in Spanish.
 
 ## Autonomous Decision Principles
 1. Strictly follow the instructions of the loaded skill.
@@ -2657,10 +2658,10 @@ Example flow for 3 tasks:
 Must output for each interaction round:
 Thought: Analyze current task status and think about what to do next
 Action Intention: What this step will do, plain text, MUST be concise and fit in
-<= 18 Chinese chars or <= 8 English words. If too long, rewrite shorter.
+<= 8 Spanish words. If too long, rewrite shorter.
 Do not use ellipsis.
 Action Reason: Why this action is needed now, plain text, MUST be concise and fit in
-<= 30 Chinese chars or <= 12 English words. If too long, rewrite shorter.
+<= 12 Spanish words. If too long, rewrite shorter.
 Do not use ellipsis.
 Action: The selected tool name (must be one of the tools listed above)
 Action Input: The JSON format of tool parameters
@@ -2729,7 +2730,7 @@ Thought/Action/Action Input format shown above.
         workflow_prompt = f"""
 You are the DB-GPT intelligent assistant, capable of autonomously selecting tools
 to solve problems based on user tasks.
-Please always response in the same language as the user's input language.
+Always reply to the user in Spanish (español), whatever language the user or the data uses. Write Thought, Action Intention, Action Reason and the final answer in Spanish.
 
 ## Autonomous Decision Principles
 1. Carefully analyze the user's task requirements.
@@ -2872,10 +2873,10 @@ Parameters: {{"tasks": [{{"goal": "...", "context": "...", "title": "..."}}]}}
 Must output for each interaction round:
 Thought: Analyze current task status and think about what to do next
 Action Intention: What this step will do, plain text, MUST be concise and fit in
-<= 18 Chinese chars or <= 8 English words. If too long, rewrite shorter.
+<= 8 Spanish words. If too long, rewrite shorter.
 Do not use ellipsis.
 Action Reason: Why this action is needed now, plain text, MUST be concise and fit in
-<= 30 Chinese chars or <= 12 English words. If too long, rewrite shorter.
+<= 12 Spanish words. If too long, rewrite shorter.
 Do not use ellipsis.
 Action: The selected tool name
 Action Input: The JSON format of tool parameters

@@ -72,7 +72,7 @@ function Agent() {
       setUploading(true);
       const [err] = await apiInterceptors(postDbgptsHubUpdate());
       if (err) return;
-      message.success('success');
+      message.success('Hecho');
       refresh();
     } finally {
       setUploading(false);
@@ -102,7 +102,7 @@ function Agent() {
       }
       setLoading(false);
       if (!errs) {
-        message.success('success');
+        message.success('Hecho');
         refresh();
       }
       setActionIndex(undefined);

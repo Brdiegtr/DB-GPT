@@ -29,14 +29,14 @@ function coerceBatchId(payload: any): number {
 // Map a raw tool name to a human-readable action label (zh). Falls back to the
 // raw name so unknown tools still render something sensible.
 const ACTION_LABELS: Record<string, string> = {
-  sql_query: '查询数据库',
-  code_interpreter: '运行代码',
-  html_interpreter: '生成报告',
-  knowledge_retrieve: '检索知识库',
-  execute_skill_script_file: '执行技能脚本',
-  shell_interpreter: '执行命令',
-  load_skill: '加载技能',
-  load_tools: '准备工具',
+  sql_query: 'Consultar base de datos',
+  code_interpreter: 'Ejecutar código',
+  html_interpreter: 'Generar reporte',
+  knowledge_retrieve: 'Buscar en la base de conocimiento',
+  execute_skill_script_file: 'Ejecutar script de la habilidad',
+  shell_interpreter: 'Ejecutar comando',
+  load_skill: 'Cargar habilidad',
+  load_tools: 'Preparar herramientas',
 };
 
 export function actionLabel(action: string): string {

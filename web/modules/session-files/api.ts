@@ -51,7 +51,10 @@ export class SessionFilesApiError extends Error {
 function unwrap<T>(response: ApiResponse<T>): T {
   const envelope = response?.data;
   if (!envelope || envelope.success !== true) {
-    throw new SessionFilesApiError(envelope?.err_msg ?? 'Session file request failed.', envelope?.err_code ?? null);
+    throw new SessionFilesApiError(
+      envelope?.err_msg ?? 'Falló la solicitud del archivo de sesión.',
+      envelope?.err_code ?? null,
+    );
   }
   return envelope.data;
 }

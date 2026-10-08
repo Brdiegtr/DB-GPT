@@ -56,7 +56,7 @@ function ModelCard({ info }: Props) {
           children: (
             <div>
               <PauseCircleOutlined className='mr-2' />
-              <span className='text-sm'>Stop Model</span>
+              <span className='text-sm'>Detener modelo</span>
             </div>
           ),
           onClick: () => {

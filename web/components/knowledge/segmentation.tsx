@@ -50,7 +50,7 @@ export default function Segmentation(props: IProps) {
       const [, result] = await apiInterceptors(syncBatchDocument(spaceName, data.fileStrategies));
       setLoading(false);
       if (result?.tasks && result?.tasks?.length > 0) {
-        message.success(`Segemation task start successfully. task id: ${result?.tasks.join(',')}`);
+        message.success(`Tarea de fragmentación iniciada. ID de tarea: ${result?.tasks.join(',')}`);
         setSyncStatus('RUNNING');
         const docIds = data.fileStrategies.map(i => i.doc_id);
         intervalId = setInterval(async () => {
@@ -58,7 +58,7 @@ export default function Segmentation(props: IProps) {
           if (status === 'FINISHED') {
             clearInterval(intervalId);
             setSyncStatus('FINISHED');
-            message.success('Congratulation, All files sync successfully.');
+            message.success('Todos los archivos se sincronizaron correctamente.');
             handleStepChange({
               label: 'finish',
             });
@@ -90,13 +90,13 @@ export default function Segmentation(props: IProps) {
     let checked = true;
     if (syncStatus === 'RUNNING') {
       checked = false;
-      message.warning('The task is still running, do not submit it again.');
+      message.warning('La tarea sigue en ejecución; no la envíes de nuevo.');
     }
     const { fileStrategies } = data;
     fileStrategies.map(item => {
       const name = item?.chunk_parameters?.chunk_strategy || 'Automatic';
       if (!name) {
-        message.error(`Please select chunk strategy for ${item.name}.`);
+        message.error(`Selecciona la estrategia de fragmentación para ${item.name}.`);
         checked = false;
       }
       const strategy = strategies.filter(item => item.strategy === name)[0];

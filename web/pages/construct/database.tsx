@@ -90,7 +90,7 @@ function Database() {
   const onDelete = (item: DBItem) => {
     Modal.confirm({
       title: 'Tips',
-      content: `Do you Want to delete the database connection?`,
+      content: `¿Quieres eliminar la conexión a la base de datos?`,
       onOk() {
         return new Promise<void>((resolve, reject) => {
           handleDelete(item.id, resolve, reject);
@@ -107,7 +107,7 @@ function Database() {
         reject();
         return;
       }
-      message.success('success');
+      message.success('Hecho');
       refreshDbList();
       resolve();
     } catch {
@@ -292,7 +292,7 @@ function Database() {
                   setModal({ open: true, dbType: draw.type });
                 }}
               >
-                Create Now
+                Crear ahora
               </Button>
             </Empty>
           )}

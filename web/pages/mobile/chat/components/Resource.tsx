@@ -84,7 +84,7 @@ const Resource: React.FC = () => {
       return (
         <div className='flex items-center gap-1'>
           <Spin size='small' indicator={<LoadingOutlined spin />} />
-          <span className='text-xs'>上传中</span>
+          <span className='text-xs'>Subiendo</span>
         </div>
       );
     }
@@ -99,7 +99,7 @@ const Resource: React.FC = () => {
     return (
       <div className='flex items-center gap-1'>
         <FolderAddOutlined className='text-base' />
-        <span className='text-xs'>上传文件</span>
+        <span className='text-xs'>Subir archivo</span>
       </div>
     );
   }, [loading, resource]);

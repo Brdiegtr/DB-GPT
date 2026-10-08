@@ -5,7 +5,7 @@ import { useRequest } from 'ahooks';
 import { Empty, Input, Pagination, Popconfirm, Spin, Tooltip, message } from 'antd';
 import debounce from 'lodash/debounce';
 import moment from 'moment';
-import 'moment/locale/zh-cn';
+import 'moment/locale/es';
 import { useRouter } from 'next/router';
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -62,7 +62,7 @@ function ConversationsPage() {
       e.preventDefault();
       const [err] = await apiInterceptors(delDialogue(convUid));
       if (!err) {
-        message.success('已删除');
+        message.success('Eliminado');
         const current = totalRef.current;
         if (current) {
           const remaining = current.total_count - 1;
@@ -83,25 +83,27 @@ function ConversationsPage() {
     if (typeof conv.user_input === 'string' && conv.user_input.trim()) {
       return conv.user_input;
     }
-    return t('new_task') || '新对话';
+    return t('new_task') || 'Nueva conversación';
   };
 
   return (
     <div className='flex flex-col h-full w-full dark:bg-gradient-dark bg-gradient-light'>
       <div className='flex items-center justify-between px-6 py-5 border-b border-gray-100 dark:border-gray-800'>
-        <h1 className='text-xl font-semibold text-gray-800 dark:text-gray-100'>{t('all_tasks') || '所有任务'}</h1>
+        <h1 className='text-xl font-semibold text-gray-800 dark:text-gray-100'>
+          {t('all_tasks') || 'Todas las tareas'}
+        </h1>
         <div className='flex items-center gap-3'>
           <Input
             variant='filled'
             prefix={<SearchOutlined />}
-            placeholder='搜索对话...'
+            placeholder='Buscar conversaciones...'
             onChange={e => handleSearch(e.target.value)}
             onClear={() => setSearchKeyword('')}
             allowClear
             className='w-[230px] h-[36px] border-1 border-white backdrop-filter backdrop-blur-lg bg-white bg-opacity-30 dark:border-[#6f7f95] dark:bg-[#6f7f95] dark:bg-opacity-60'
           />
           <span className='text-sm text-gray-400 whitespace-nowrap'>
-            {totalRef.current ? `共 ${totalRef.current.total_count} 条` : ''}
+            {totalRef.current ? `Total: ${totalRef.current.total_count} ` : ''}
           </span>
         </div>
       </div>
@@ -110,11 +112,11 @@ function ConversationsPage() {
         <Spin spinning={loading}>
           {!loading && list.length === 0 ? (
             <div className='flex items-center justify-center h-64'>
-              <Empty description={t('no_tasks') || '暂无历史记录'} />
+              <Empty description={t('no_tasks') || 'No hay historial'} />
             </div>
           ) : !loading && filteredList.length === 0 ? (
             <div className='flex items-center justify-center h-64'>
-              <Empty description='没有匹配的对话' />
+              <Empty description='No hay conversaciones que coincidan' />
             </div>
           ) : (
             <div className='space-y-1'>
@@ -138,17 +140,17 @@ function ConversationsPage() {
                   </div>
 
                   <Popconfirm
-                    title='确认删除这条对话记录吗？'
+                    title='¿Eliminar esta conversación?'
                     onConfirm={e => handleDelete(e as React.MouseEvent, conv.conv_uid)}
                     onCancel={e => {
                       e?.stopPropagation();
                       e?.preventDefault();
                     }}
-                    okText='删除'
-                    cancelText='取消'
+                    okText='Eliminar'
+                    cancelText='Cancelar'
                     okButtonProps={{ danger: true }}
                   >
-                    <Tooltip title='删除'>
+                    <Tooltip title='Eliminar'>
                       <div
                         onClick={e => {
                           e.stopPropagation();
@@ -174,7 +176,7 @@ function ConversationsPage() {
             total={totalRef.current?.total_count || 0}
             pageSize={PAGE_SIZE}
             showSizeChanger={false}
-            showTotal={total => `共 ${total} 条`}
+            showTotal={total => `Total: ${total} `}
             onChange={page => fetchList(page)}
           />
         </div>

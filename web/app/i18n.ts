@@ -1,5 +1,5 @@
 import en from '@/locales/en';
-import zh from '@/locales/zh';
+import es from '@/locales/es';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
@@ -10,11 +10,13 @@ interface Resources {
 
 i18n.use(initReactI18next).init({
   resources: {
+    // El idioma 'en' de la interfaz muestra la traducción al español
     en: {
-      translation: en,
+      translation: es,
     },
+    // Sin chino: cualquier idioma muestra español
     zh: {
-      translation: zh,
+      translation: es,
     },
   },
   lng: 'en',

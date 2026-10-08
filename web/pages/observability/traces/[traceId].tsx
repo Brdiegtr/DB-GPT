@@ -104,7 +104,7 @@ export default function TraceDetailPage() {
       <div className='px-6 py-4 space-y-4'>
         <Spin spinning={loading}>
           {!loading && !trace ? (
-            <Empty description={t('observability_no_trace') || 'Trace not found'} />
+            <Empty description={t('observability_no_trace') || 'No se encontró la traza'} />
           ) : trace ? (
             <>
               <Card size='small'>
@@ -119,7 +119,7 @@ export default function TraceDetailPage() {
                   <Descriptions.Item label={t('observability_time') || 'Start'}>
                     {trace.start_time ? moment(trace.start_time).format('YYYY-MM-DD HH:mm:ss') : '-'}
                   </Descriptions.Item>
-                  <Descriptions.Item label={t('observability_conversation_id') || 'Conversation ID'} span={2}>
+                  <Descriptions.Item label={t('observability_conversation_id') || 'ID de conversación'} span={2}>
                     {trace.conversation_id ? (
                       <Text code copyable className='text-xs'>
                         {trace.conversation_id}
@@ -130,7 +130,7 @@ export default function TraceDetailPage() {
                   </Descriptions.Item>
                 </Descriptions>
               </Card>
-              <Card size='small' title={t('observability_span_tree') || 'Span tree'}>
+              <Card size='small' title={t('observability_span_tree') || 'Árbol de spans'}>
                 {trace.root ? <SpanRow node={trace.root} /> : <Empty />}
               </Card>
             </>

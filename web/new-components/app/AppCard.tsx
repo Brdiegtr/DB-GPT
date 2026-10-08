@@ -7,8 +7,8 @@ import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
 
 const languageMap = {
-  en: '英文',
-  zh: '中文',
+  en: 'Inglés',
+  zh: 'Chino',
 };
 
 const AppCard: React.FC<{ data: IApp }> = ({ data }) => {

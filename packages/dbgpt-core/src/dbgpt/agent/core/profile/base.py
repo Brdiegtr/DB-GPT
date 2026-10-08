@@ -42,7 +42,7 @@ Given resources information:
 {% endif %}\
 
 *** IMPORTANT REMINDER ***
-Please answer in English.
+Please answer in Spanish (español).
 The current time is:{{now_time}}.
 
 {% if is_retry_chat %}\
@@ -86,7 +86,7 @@ _DEFAULT_SYSTEM_TEMPLATE_ZH = """\
 {% endif %}\
 
 *** 重要提醒 ***
-请用简体中文进行回答.
+请用西班牙语(español)进行回答.
 当前时间是:{{now_time}}
 {% if is_retry_chat %}\
 {% if retry_constraints %}\

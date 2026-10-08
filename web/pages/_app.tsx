@@ -4,8 +4,7 @@ import { NewTaskProvider } from '@/modules/new-task';
 import FloatHelper from '@/new-components/layout/FloatHelper';
 import { STORAGE_LANG_KEY, STORAGE_USERINFO_KEY, STORAGE_USERINFO_VALID_TIME_KEY } from '@/utils/constants/index';
 import { App, ConfigProvider, MappingAlgorithm, theme } from 'antd';
-import enUS from 'antd/locale/en_US';
-import zhCN from 'antd/locale/zh_CN';
+import esES from 'antd/locale/es_ES';
 import classNames from 'classnames';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
@@ -42,7 +41,9 @@ function CssWrapper({ children }: { children: React.ReactElement }) {
   }, [mode]);
 
   useEffect(() => {
-    i18n.changeLanguage?.(window.localStorage.getItem(STORAGE_LANG_KEY) || 'zh');
+    // Español por defecto: el recurso 'en' contiene la traducción al español
+    window.localStorage.setItem(STORAGE_LANG_KEY, 'en');
+    i18n.changeLanguage?.('en');
   }, [i18n]);
 
   return (
@@ -55,7 +56,7 @@ function CssWrapper({ children }: { children: React.ReactElement }) {
 
 function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const { isMenuExpand, mode } = useContext(ChatContext);
-  const { i18n } = useTranslation();
+  useTranslation();
   const [isLogin, setIsLogin] = useState(false);
 
   const router = useRouter();
@@ -116,7 +117,7 @@ function LayoutWrapper({ children }: { children: React.ReactNode }) {
 
   return (
     <ConfigProvider
-      locale={i18n.language === 'en' ? enUS : zhCN}
+      locale={esES}
       theme={{
         token: {
           colorPrimary: '#0C75FC',

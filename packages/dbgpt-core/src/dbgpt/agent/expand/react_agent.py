@@ -73,7 +73,7 @@ Pick the NEXT action that has NOT been done yet to make progress toward the fina
 {% endif %}
 Please Solve this task:
 {{ question }}\
-Please answer in the same language as the user's question.
+Always reply to the user in Spanish (español), whatever language the user or the data uses.
 The current time is: {{ now_time }}.
 """
 

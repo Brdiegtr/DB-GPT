@@ -329,10 +329,10 @@ const CopyButton: React.FC<{ text: string }> = ({ text }) => {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
-      message.success('Copied!');
+      message.success('¡Copiado!');
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      message.error('Failed to copy');
+      message.error('No se pudo copiar');
     }
   };
 
@@ -502,7 +502,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error, toolName, cla
               onClick={() => setShowDetails(!showDetails)}
               className='text-xs text-red-500 hover:text-red-600 dark:text-red-400 dark:hover:text-red-300 mt-1 underline'
             >
-              {showDetails ? 'Hide details' : 'Show details'}
+              {showDetails ? 'Ocultar detalles' : 'Mostrar detalles'}
             </button>
           )}
         </div>
@@ -510,7 +510,7 @@ export const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error, toolName, cla
         <div className='flex items-center gap-1 flex-shrink-0'>
           <CopyButton text={error} />
           {showRetry && onRetry && (
-            <Tooltip title='Retry'>
+            <Tooltip title='Reintentar'>
               <button
                 onClick={onRetry}
                 className='p-1 rounded hover:bg-red-100 dark:hover:bg-red-800/50 transition-colors text-red-500'

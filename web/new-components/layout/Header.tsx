@@ -36,7 +36,7 @@ const Header: React.FC = () => {
       </a>
 
       <Tooltip>
-        <span className='text-sm'>帮助中心</span>
+        <span className='text-sm'>Centro de ayuda</span>
       </Tooltip>
       {/* <UserBar /> */}
     </header>

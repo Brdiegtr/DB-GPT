@@ -131,7 +131,7 @@ export default function KnowledgeDetailPage() {
       setGraphHtml(null);
       try {
         const html = await getCodeGraphVisualizeHtml(spaceName);
-        if (!html || html.includes('No code graph found')) {
+        if (!html || html.includes('No se encontró grafo de código')) {
           setGraphError(t('code_graph_not_found_desc'));
         } else {
           setGraphHtml(html);
@@ -513,7 +513,11 @@ export default function KnowledgeDetailPage() {
       );
     }
 
-    return <div className='flex items-center justify-center h-full text-gray-400'>Knowledge space not found</div>;
+    return (
+      <div className='flex items-center justify-center h-full text-gray-400'>
+        No se encontró el espacio de conocimiento
+      </div>
+    );
   };
 
   /** Render the Chat tab content */

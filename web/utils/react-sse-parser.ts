@@ -266,7 +266,7 @@ export class ReActSSEState {
 
     step.status = event.status === 'done' ? 'completed' : 'error';
     if (event.status === 'failed') {
-      step.error = 'Step execution failed';
+      step.error = 'Falló la ejecución del paso';
     }
   }
 

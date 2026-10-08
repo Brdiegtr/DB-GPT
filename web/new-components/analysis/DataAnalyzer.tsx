@@ -236,7 +236,7 @@ const detectAnomalies = (values: any[], type: string, threshold: number = 2.5): 
       } else if (isZScoreAnomaly) {
         reason = `Z-score: ${zscore.toFixed(2)} exceeds threshold`;
       } else if (isIQRAnomaly) {
-        reason = value < lowerBound ? 'Below lower IQR bound' : 'Above upper IQR bound';
+        reason = value < lowerBound ? 'Por debajo del límite IQR inferior' : 'Por encima del límite IQR superior';
       }
 
       return { index, value, zscore, isAnomaly, reason };
@@ -258,7 +258,7 @@ const assessDataQuality = (stats: StatisticalSummary, anomalyCount: number): { s
 
   if (stats.count > 0 && stats.uniqueCount / stats.count < 0.01) {
     score -= 10;
-    issues.push('Very low cardinality');
+    issues.push('Cardinalidad muy baja');
   }
 
   if (anomalyCount > stats.count * 0.1) {
@@ -373,7 +373,7 @@ export const DataAnalysisPanel: React.FC<DataAnalysisPanelProps> = ({ analysis, 
           <Tag color={typeColors[analysis.type]}>{analysis.type}</Tag>
         </div>
         <div className='flex items-center gap-2'>
-          <Tooltip title={quality.issues.length > 0 ? quality.issues.join(', ') : 'Good quality'}>
+          <Tooltip title={quality.issues.length > 0 ? quality.issues.join(', ') : 'Buena calidad'}>
             <Progress
               type='circle'
               percent={quality.score}
@@ -387,14 +387,14 @@ export const DataAnalysisPanel: React.FC<DataAnalysisPanelProps> = ({ analysis, 
 
       <Row gutter={[12, 12]}>
         <Col span={6}>
-          <StatCard title='Count' value={stats.count} precision={0} />
+          <StatCard title='Conteo' value={stats.count} precision={0} />
         </Col>
         <Col span={6}>
-          <StatCard title='Unique' value={stats.uniqueCount} precision={0} />
+          <StatCard title='Únicos' value={stats.uniqueCount} precision={0} />
         </Col>
         <Col span={6}>
           <StatCard
-            title='Missing'
+            title='Vacíos'
             value={stats.nullPercentage}
             suffix='%'
             color={stats.nullPercentage > 10 ? '#ff4d4f' : undefined}
@@ -402,7 +402,7 @@ export const DataAnalysisPanel: React.FC<DataAnalysisPanelProps> = ({ analysis, 
         </Col>
         <Col span={6}>
           <StatCard
-            title='Anomalies'
+            title='Anomalías'
             value={anomalies.length}
             precision={0}
             color={anomalies.length > 0 ? '#faad14' : undefined}
@@ -413,20 +413,20 @@ export const DataAnalysisPanel: React.FC<DataAnalysisPanelProps> = ({ analysis, 
       {analysis.type === 'number' && stats.mean !== undefined && (
         <>
           <div className='mt-4 mb-2 text-xs font-semibold text-gray-500 uppercase tracking-wider'>
-            Statistical Summary
+            Resumen estadístico
           </div>
           <Row gutter={[12, 12]}>
             <Col span={6}>
-              <StatCard title='Mean' value={stats.mean} trend={trend?.direction} trendValue={trend?.changePercent} />
+              <StatCard title='Media' value={stats.mean} trend={trend?.direction} trendValue={trend?.changePercent} />
             </Col>
             <Col span={6}>
-              <StatCard title='Median' value={stats.median || 0} />
+              <StatCard title='Mediana' value={stats.median || 0} />
             </Col>
             <Col span={6}>
-              <StatCard title='Std Dev' value={stats.stdDev || 0} />
+              <StatCard title='Desv. estándar' value={stats.stdDev || 0} />
             </Col>
             <Col span={6}>
-              <StatCard title='Range' value={stats.range || 0} />
+              <StatCard title='Rango' value={stats.range || 0} />
             </Col>
           </Row>
 
@@ -450,7 +450,9 @@ export const DataAnalysisPanel: React.FC<DataAnalysisPanelProps> = ({ analysis, 
           {trend && (
             <div className='mt-4 p-3 rounded-lg bg-gray-50 dark:bg-gray-800'>
               <div className='flex items-center gap-2 mb-2'>
-                <span className='text-xs font-semibold text-gray-500 uppercase tracking-wider'>Trend Analysis</span>
+                <span className='text-xs font-semibold text-gray-500 uppercase tracking-wider'>
+                  Análisis de tendencia
+                </span>
                 {trend.direction === 'up' && (
                   <Tag color='green' icon={<ArrowUpOutlined />}>
                     Upward
@@ -524,7 +526,9 @@ export const DataAnalysisPanel: React.FC<DataAnalysisPanelProps> = ({ analysis, 
         <div className='mt-4'>
           <div className='flex items-center gap-2 mb-2'>
             <InfoCircleOutlined className='text-blue-500' />
-            <span className='text-xs font-semibold text-gray-500 uppercase tracking-wider'>Data Quality Issues</span>
+            <span className='text-xs font-semibold text-gray-500 uppercase tracking-wider'>
+              Problemas de calidad de datos
+            </span>
           </div>
           <div className='flex flex-wrap gap-2'>
             {quality.issues.map((issue, i) => (
@@ -546,7 +550,7 @@ interface DatasetAnalysisSummaryProps {
 
 export const DatasetAnalysisSummary: React.FC<DatasetAnalysisSummaryProps> = ({
   analyses,
-  title = 'Dataset Analysis Summary',
+  title = 'Resumen del análisis del conjunto de datos',
 }) => {
   const summary = useMemo(() => {
     const totalColumns = analyses.length;
@@ -576,15 +580,15 @@ export const DatasetAnalysisSummary: React.FC<DatasetAnalysisSummaryProps> = ({
         <div className='flex items-center gap-2'>
           {summary.avgQuality >= 80 ? (
             <Tag color='success' icon={<CheckCircleOutlined />}>
-              Good Quality
+              Buena calidad
             </Tag>
           ) : summary.avgQuality >= 50 ? (
             <Tag color='warning' icon={<WarningOutlined />}>
-              Moderate Quality
+              Calidad media
             </Tag>
           ) : (
             <Tag color='error' icon={<WarningOutlined />}>
-              Poor Quality
+              Mala calidad
             </Tag>
           )}
         </div>
@@ -592,14 +596,14 @@ export const DatasetAnalysisSummary: React.FC<DatasetAnalysisSummaryProps> = ({
 
       <Row gutter={[16, 16]}>
         <Col span={6}>
-          <StatCard title='Total Columns' value={summary.totalColumns} precision={0} />
+          <StatCard title='Total de columnas' value={summary.totalColumns} precision={0} />
         </Col>
         <Col span={6}>
-          <StatCard title='Numeric Columns' value={summary.numericColumns} precision={0} />
+          <StatCard title='Columnas numéricas' value={summary.numericColumns} precision={0} />
         </Col>
         <Col span={6}>
           <StatCard
-            title='Avg Quality'
+            title='Calidad media'
             value={summary.avgQuality}
             suffix='%'
             color={summary.avgQuality >= 80 ? '#52c41a' : summary.avgQuality >= 50 ? '#faad14' : '#ff4d4f'}
@@ -607,7 +611,7 @@ export const DatasetAnalysisSummary: React.FC<DatasetAnalysisSummaryProps> = ({
         </Col>
         <Col span={6}>
           <StatCard
-            title='Total Anomalies'
+            title='Total de anomalías'
             value={summary.totalAnomalies}
             precision={0}
             color={summary.totalAnomalies > 0 ? '#faad14' : '#52c41a'}

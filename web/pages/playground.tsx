@@ -4,22 +4,28 @@ import React, { useCallback, useRef, useState } from 'react';
 const generateId = () => `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
 
 const demoCommands: SlashCommand[] = [
-  { id: 'clear', trigger: 'clear', title: 'Clear History', description: 'Clear all chat history', type: 'builtin' },
-  { id: 'model', trigger: 'model', title: 'Switch Model', description: 'Change the AI model', type: 'builtin' },
-  { id: 'help', trigger: 'help', title: 'Help', description: 'Show available commands', type: 'builtin' },
+  {
+    id: 'clear',
+    trigger: 'clear',
+    title: 'Borrar historial',
+    description: 'Borrar todo el historial de chat',
+    type: 'builtin',
+  },
+  { id: 'model', trigger: 'model', title: 'Cambiar modelo', description: 'Cambiar el modelo de IA', type: 'builtin' },
+  { id: 'help', trigger: 'help', title: 'Help', description: 'Mostrar comandos disponibles', type: 'builtin' },
   {
     id: 'export',
     trigger: 'export',
-    title: 'Export Chat',
-    description: 'Export conversation as file',
+    title: 'Exportar chat',
+    description: 'Exportar la conversación como archivo',
     type: 'builtin',
   },
 ];
 
 const demoAgents = [
-  { name: 'SQL Expert', description: 'Database query and optimization specialist' },
-  { name: 'Code Assistant', description: 'Help with coding tasks' },
-  { name: 'Data Analyst', description: 'Data analysis and visualization' },
+  { name: 'Experto en SQL', description: 'Especialista en consultas y optimización de bases de datos' },
+  { name: 'Asistente de código', description: 'Ayuda con tareas de programación' },
+  { name: 'Analista de datos', description: 'Análisis y visualización de datos' },
 ];
 
 const PlaygroundPage: React.FC = () => {
@@ -51,7 +57,7 @@ const PlaygroundPage: React.FC = () => {
         userMessage: text,
         isWorking: true,
         startTime,
-        steps: [{ id: '1', name: 'Processing request', status: 'running', tool: 'read', startTime }],
+        steps: [{ id: '1', name: 'Procesando solicitud', status: 'running', tool: 'read', startTime }],
       };
 
       setTurns(prev => [...prev, newTurn]);
@@ -70,13 +76,13 @@ const PlaygroundPage: React.FC = () => {
                   steps: [
                     {
                       id: '1',
-                      name: 'Processing request',
+                      name: 'Procesando solicitud',
                       status: 'completed',
                       tool: 'read',
                       startTime,
                       endTime: Date.now(),
                     },
-                    { id: '2', name: 'Generating response', status: 'running', tool: 'code', startTime: Date.now() },
+                    { id: '2', name: 'Generando respuesta', status: 'running', tool: 'code', startTime: Date.now() },
                   ],
                 }
               : t,
@@ -100,7 +106,7 @@ const PlaygroundPage: React.FC = () => {
                   steps: [
                     {
                       id: '1',
-                      name: 'Processing request',
+                      name: 'Procesando solicitud',
                       status: 'completed',
                       tool: 'read',
                       startTime,
@@ -108,7 +114,7 @@ const PlaygroundPage: React.FC = () => {
                     },
                     {
                       id: '2',
-                      name: 'Generating response',
+                      name: 'Generando respuesta',
                       status: 'completed',
                       tool: 'code',
                       startTime: startTime + 800,
@@ -127,7 +133,7 @@ const PlaygroundPage: React.FC = () => {
             t.id === turnId
               ? {
                   ...t,
-                  assistantMessage: 'Sorry, an error occurred while generating the response.',
+                  assistantMessage: 'Lo sentimos, ocurrió un error al generar la respuesta.',
                   isWorking: false,
                   endTime: Date.now(),
                   steps: t.steps?.map(s => ({ ...s, status: 'failed' as const })),
@@ -155,7 +161,7 @@ const PlaygroundPage: React.FC = () => {
                 ...t,
                 isWorking: false,
                 endTime: Date.now(),
-                assistantMessage: t.assistantMessage || 'Generation stopped by user.',
+                assistantMessage: t.assistantMessage || 'Generación detenida por el usuario.',
                 steps: t.steps?.map(s =>
                   s.status === 'running' ? { ...s, status: 'failed' as const, error: 'Cancelled' } : s,
                 ),

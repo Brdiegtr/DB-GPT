@@ -15,9 +15,9 @@ import ToolsBar from './ToolsBar';
 const USE_ENHANCED_INPUT = false;
 
 const defaultCommands: SlashCommand[] = [
-  { id: 'clear', trigger: 'clear', title: 'Clear chat history', type: 'builtin' },
-  { id: 'help', trigger: 'help', title: 'Show available commands', type: 'builtin' },
-  { id: 'model', trigger: 'model', title: 'Switch AI model', type: 'builtin' },
+  { id: 'clear', trigger: 'clear', title: 'Borrar historial de chat', type: 'builtin' },
+  { id: 'help', trigger: 'help', title: 'Mostrar comandos disponibles', type: 'builtin' },
+  { id: 'model', trigger: 'model', title: 'Cambiar modelo de IA', type: 'builtin' },
 ];
 
 const ChatInputPanel: React.ForwardRefRenderFunction<any, { ctrl: AbortController }> = ({ ctrl }, ref) => {

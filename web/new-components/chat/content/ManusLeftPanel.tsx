@@ -203,9 +203,9 @@ const getTypeLabel = (type: StepType, t: any): string => {
     sql: t('step_type_sql'),
     python: t('step_type_python'),
     html: t('step_type_html'),
-    question: t('step_type_question') || 'Ask User',
+    question: t('step_type_question') || 'Preguntar al usuario',
     kb: t('step_type_kb') || 'Knowledge',
-    code_graph: t('step_type_code_graph') || 'Code Graph',
+    code_graph: t('step_type_code_graph') || 'Grafo de código',
     other: t('step_type_other'),
   };
   return labels[type] || t('step_type_other');
@@ -581,10 +581,12 @@ const StepCard: React.FC<{
           </div>
           <div className='flex flex-col min-w-0 flex-1'>
             <span className='text-[10px] font-semibold uppercase tracking-wider text-amber-600/80 dark:text-amber-400/80'>
-              {isWaiting ? t('waiting_for_user') || 'Waiting for User' : t('step_type_question') || 'Ask User'}
+              {isWaiting
+                ? t('waiting_for_user') || 'Esperando al usuario'
+                : t('step_type_question') || 'Preguntar al usuario'}
             </span>
             <span className='text-sm font-medium text-slate-800 dark:text-slate-200 truncate'>
-              {step.title === 'question' ? t('user_confirmation') || '需要您的确认' : step.title}
+              {step.title === 'question' ? t('user_confirmation') || 'Necesita tu confirmación' : step.title}
             </span>
           </div>
           <div className='flex-shrink-0'>
@@ -1247,7 +1249,7 @@ const ManusLeftPanel: React.FC<ManusLeftPanelProps> = ({
                 className='mt-3 inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium text-blue-600 transition-colors hover:bg-blue-50 hover:text-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/40 dark:text-blue-400 dark:hover:bg-blue-500/10 dark:hover:text-blue-300'
               >
                 <BookOutlined aria-hidden />
-                查看 {citationIndexes.length} 条参考来源
+                Ver {citationIndexes.length} fuentes
               </button>
             )}
           </div>

@@ -1,0 +1,31 @@
+# Configuración DB-GPT para Grupo Sotavento: Ollama local (CPU) + Text-to-SQL
+[system]
+language = "${env:DBGPT_LANG:-en}"
+api_keys = []
+encrypt_key = "cd2b2b45b9e2c60ce6b59ec9fe091f287ec1064b61cb19cd"
+
+[service.web]
+host = "0.0.0.0"
+port = 5670
+
+[service.web.database]
+type = "sqlite"
+path = "pilot/meta_data/dbgpt.db"
+
+[rag.storage]
+[rag.storage.vector]
+type = "chroma"
+persist_path = "pilot/data"
+
+[models]
+[[models.llms]]
+name = "qwen2.5-coder:7b"
+provider = "proxy/ollama"
+api_base = "http://localhost:11434"
+api_key = ""
+
+[[models.embeddings]]
+name = "bge-m3:latest"
+provider = "proxy/ollama"
+api_url = "http://localhost:11434"
+api_key = ""

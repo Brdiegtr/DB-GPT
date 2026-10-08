@@ -11,7 +11,8 @@ from dbgpt_app.scene.chat_db.professional_qa.out_parser import NormalChatOutputP
 CFG = Config()
 
 
-_DEFAULT_TEMPLATE_EN = """
+_DEFAULT_TEMPLATE_EN = """Always reply to the user in Spanish (español), whatever language the data is in.
+
 Provide professional answers to requests and questions. If you can't get an answer \
 from what you've provided, say: "Insufficient information in the knowledge base is \
 available to answer this question." Feel free to fudge information.

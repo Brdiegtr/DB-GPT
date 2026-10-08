@@ -291,7 +291,7 @@ const AddOrEditPrompt: React.FC = () => {
         });
       } catch {
         setLlmLoading(false);
-        tempHistory[index].context = 'Sorry, we meet some error, please try again later';
+        tempHistory[index].context = 'Lo sentimos, ocurrió un error; inténtalo más tarde';
         setHistory([...tempHistory]);
       }
     });
@@ -309,7 +309,7 @@ const AddOrEditPrompt: React.FC = () => {
       manual: true,
       onSuccess: res => {
         if (res?.data?.success) {
-          setErrorMessage({ msg: '验证通过', status: 'success' });
+          setErrorMessage({ msg: 'Validación correcta', status: 'success' });
         } else {
           setErrorMessage({ msg: res?.data?.err_msg, status: 'error' });
         }
@@ -404,7 +404,7 @@ const AddOrEditPrompt: React.FC = () => {
             <Card
               title={
                 <Space>
-                  <span>LLM OUT</span>
+                  <span>SALIDA DEL LLM</span>
                   {errorMessage && <Alert message={errorMessage.msg} type={errorMessage.status} showIcon />}
                 </Space>
               }
@@ -422,7 +422,7 @@ const AddOrEditPrompt: React.FC = () => {
             <Form form={topForm}>
               <div className='flex w-full gap-1 justify-between'>
                 <Form.Item
-                  label='Type'
+                  label='Tipo'
                   name='prompt_type'
                   className='w-2/5'
                   rules={[{ required: true, message: t('select_type') }]}
@@ -448,12 +448,12 @@ const AddOrEditPrompt: React.FC = () => {
                 </Form.Item>
               </div>
               {type === 'edit' && (
-                <Form.Item label='Code' name='prompt_code'>
+                <Form.Item label='Código' name='prompt_code'>
                   <Input disabled />
                 </Form.Item>
               )}
               <Form.Item
-                label='Name'
+                label='Nombre'
                 name='prompt_name'
                 className='m-0'
                 rules={[{ required: true, message: t('Please_input_prompt_name') }]}

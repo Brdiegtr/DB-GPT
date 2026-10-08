@@ -70,7 +70,7 @@ export const NewEvaluationModal = (props: Props) => {
             parsedHeaders = JSON.parse(values.headers);
           }
         } catch (_error) {
-          throw new Error('Header信息格式不正确,请输入有效的JSON格式');
+          throw new Error('Los encabezados no tienen un formato válido, escribe un JSON válido');
         }
 
         try {
@@ -78,7 +78,7 @@ export const NewEvaluationModal = (props: Props) => {
             parsedMapping = JSON.parse(values.response_mapping);
           }
         } catch (_error) {
-          throw new Error('Response Mapping配置格式不正确,请输入有效的JSON格式');
+          throw new Error('El mapeo de respuesta no tiene un formato válido, escribe un JSON válido');
         }
 
         // 构造Agent评测参数,使用Agent专有字段
@@ -103,7 +103,7 @@ export const NewEvaluationModal = (props: Props) => {
       onSuccess: () => {
         message.success(t('create_evaluation_success'));
         form.resetFields();
-        setEvaluationType('LLM'); // 重置评测类型
+        setEvaluationType('LLM'); // 重置评测Tipo
         setParseStrategy('JSON_PATH'); // 重置解析策略
         onOk?.(); // 触发外部的onOk回调，用于刷新列表
         onCancel();
@@ -119,7 +119,7 @@ export const NewEvaluationModal = (props: Props) => {
       const values = await form.validateFields();
       await submitEvaluation(values);
     } catch (error) {
-      console.error('表单验证失败:', error);
+      console.error('Falló la validación del formulario:', error);
     }
   };
 

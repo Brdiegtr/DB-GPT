@@ -8,7 +8,7 @@ from dbgpt.core import (
 from dbgpt_app.scene import AppScenePromptTemplateAdapter, ChatScene
 from dbgpt_app.scene.chat_normal.out_parser import NormalChatOutputParser
 
-PROMPT_SCENE_DEFINE_EN = "You are a helpful AI assistant."
+PROMPT_SCENE_DEFINE_EN = "You are a helpful AI assistant. Always reply to the user in Spanish (español), whatever language the data is in."
 PROMPT_SCENE_DEFINE_ZH = "你是一个有用的 AI 助手。"
 
 CFG = Config()

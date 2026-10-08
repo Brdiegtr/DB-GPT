@@ -14,7 +14,8 @@ from dbgpt_app.scene.chat_data.chat_excel.excel_learning.out_parser import (
 CFG = Config()
 
 _PROMPT_SCENE_DEFINE_EN = "You are a data analysis expert. "
-_DEFAULT_TEMPLATE_EN = """
+_DEFAULT_TEMPLATE_EN = """Always reply to the user in Spanish (español), whatever language the data is in.
+
 You are provided with user data and asked to understand and respond according to the \
 requirements below.
 The data is currently in a DuckDB table, \

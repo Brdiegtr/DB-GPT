@@ -57,7 +57,7 @@ function MyPlugins() {
 
   const onChange: UploadProps['onChange'] = async info => {
     if (!info) {
-      message.error('Please select the *.zip,*.rar file');
+      message.error('Selecciona un archivo *.zip o *.rar');
       return;
     }
     try {
@@ -68,10 +68,10 @@ function MyPlugins() {
       messageApi.open({ content: `Uploading ${file.name}`, type: 'loading', duration: 0 });
       const [err] = await apiInterceptors(postAgentUpload(undefined, formData, { timeout: 60000 }));
       if (err) return;
-      message.success('success');
+      message.success('Hecho');
       refresh();
     } catch (e: any) {
-      message.error(e?.message || 'Upload Error');
+      message.error(e?.message || 'Error al subir');
     } finally {
       setUploading(false);
       messageApi.destroy();

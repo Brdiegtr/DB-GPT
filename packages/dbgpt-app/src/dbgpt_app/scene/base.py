@@ -29,68 +29,68 @@ class Scene:
 class ChatScene(Enum):
     ChatWithDbExecute = Scene(
         code="chat_with_db_execute",
-        name="Chat Data",
-        describe="Dialogue with your private data through natural language.",
+        name="Chat con Datos",
+        describe="Conversa con tus datos privados en lenguaje natural.",
         param_types=["DB Select"],
     )
     ExcelLearning = Scene(
         code="excel_learning",
-        name="Excel Learning",
-        describe="Analyze and summarize your excel files.",
+        name="Aprendizaje de Excel",
+        describe="Analiza y resume tus archivos Excel.",
         is_inner=True,
     )
     ChatExcel = Scene(
         code="chat_excel",
-        name="Chat Excel",
-        describe="Dialogue with your excel, use natural language.",
+        name="Chat con Excel",
+        describe="Análisis de archivos Excel en lenguaje natural.",
         param_types=["File Select"],
         prepare_scene_code="excel_learning",
     )
 
     ChatWithDbQA = Scene(
         code="chat_with_db_qa",
-        name="Chat DB",
-        describe="Have a Professional Conversation with Metadata.",
+        name="Consulta de Base de Datos",
+        describe="Preguntas y respuestas sobre la estructura de la base de datos.",
         param_types=["DB Select"],
     )
     ChatExecution = Scene(
         code="chat_execution",
-        name="Use Plugin",
-        describe="Use tools through dialogue to accomplish your goals.",
+        name="Usar Plugin",
+        describe="Usa herramientas conversando para lograr tus objetivos.",
         param_types=["Plugin Select"],
     )
 
     ChatAgent = Scene(
         code="chat_agent",
-        name="Agent Chat",
-        describe="Use tools through dialogue to accomplish your goals.",
+        name="Chat con Agente",
+        describe="Usa herramientas conversando para lograr tus objetivos.",
         param_types=["Plugin Select"],
     )
 
     ChatFlow = Scene(
         code="chat_flow",
-        name="Flow Chat",
-        describe="Have conversations with conversational AWEL flow.",
+        name="Chat con Flujo",
+        describe="Conversa usando un flujo AWEL.",
         param_types=["Flow Select"],
     )
 
     InnerChatDBSummary = Scene(
-        "inner_chat_db_summary", "DB Summary", "Db Summary.", True
+        "inner_chat_db_summary", "Resumen de BD", "Resumen de la base de datos.", True
     )
 
     ChatNormal = Scene(
-        "chat_normal", "Chat Normal", "Native LLM large model AI dialogue."
+        "chat_normal", "Chat Libre", "Conversación directa con el modelo de IA."
     )
     ChatDashboard = Scene(
         "chat_dashboard",
-        "Dashboard",
-        "Provide you with professional analysis reports through natural language.",
+        "Panel de Análisis",
+        "Informes profesionales de análisis de datos en lenguaje natural.",
         ["DB Select"],
     )
     ChatKnowledge = Scene(
         "chat_knowledge",
-        "Chat Knowledge",
-        "Dialogue through natural language and private documents and knowledge bases.",
+        "Chat con Conocimiento",
+        "Preguntas y respuestas sobre tu base de conocimiento privada.",
         ["Knowledge Space Select"],
     )
     ExtractTriplet = Scene(

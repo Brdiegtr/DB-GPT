@@ -14,7 +14,7 @@ export default function DocTypeForm(props: IProps) {
     {
       type: 'TEXT',
       title: t('Text'),
-      subTitle: t('Fill your raw text'),
+      subTitle: t('Escribe tu texto'),
       iconType: 'TEXT',
     },
     {

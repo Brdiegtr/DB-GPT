@@ -334,7 +334,7 @@ export default function AppModal(props: IProps) {
             onFinish={handleSubmit}
           >
             <Form.Item<FieldType>
-              label={'App Name'}
+              label={'Nombre de la aplicación'}
               name='app_name'
               rules={[{ required: true, message: t('Please_input_the_name') }]}
             >

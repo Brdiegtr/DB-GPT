@@ -35,13 +35,13 @@ interface ChatContentProps {
   temperatureValue: any;
   maxNewTokensValue: any;
   resourceValue: any;
-  knowledgeValue: string | null; // 选中的知识库
+  knowledgeValue: string | null; // 选中的Base de conocimiento
   modelValue: string;
   setModelValue: React.Dispatch<React.SetStateAction<string>>;
   setTemperatureValue: React.Dispatch<React.SetStateAction<any>>;
   setMaxNewTokensValue: React.Dispatch<React.SetStateAction<any>>;
   setResourceValue: React.Dispatch<React.SetStateAction<any>>;
-  setKnowledgeValue: React.Dispatch<React.SetStateAction<string | null>>; // 设置选中的知识库
+  setKnowledgeValue: React.Dispatch<React.SetStateAction<string | null>>; // 设置选中的Base de conocimiento
   setAppInfo: React.Dispatch<React.SetStateAction<IApp>>;
   setAgent: React.Dispatch<React.SetStateAction<string>>;
   setCanAbort: React.Dispatch<React.SetStateAction<boolean>>;

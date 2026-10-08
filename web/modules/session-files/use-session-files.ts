@@ -193,7 +193,7 @@ export function useSessionFiles(options: UseSessionFilesOptions): UseSessionFile
           },
         });
         const snapshot = snapshots[0];
-        if (!snapshot) throw new Error('Upload response contained no file snapshot.');
+        if (!snapshot) throw new Error('La respuesta de la subida no incluyó el archivo.');
         return snapshot;
       });
       settleUpload(draft, sessionId, attempt, promise);

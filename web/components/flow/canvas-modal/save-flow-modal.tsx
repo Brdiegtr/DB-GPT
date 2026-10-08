@@ -127,26 +127,26 @@ export const SaveFlowModal: React.FC<Props> = ({
           autoComplete='off'
         >
           <Form.Item
-            label='Title'
+            label='Título'
             name='label'
             initialValue={flowInfo?.label}
-            rules={[{ required: true, message: 'Please input flow title!' }]}
+            rules={[{ required: true, message: '¡Escribe el título del flujo!' }]}
           >
             <Input onChange={onLabelChange} />
           </Form.Item>
 
           <Form.Item
-            label='Name'
+            label='Nombre'
             name='name'
             initialValue={flowInfo?.name}
             rules={[
-              { required: true, message: 'Please input flow name!' },
+              { required: true, message: '¡Escribe el nombre del flujo!' },
               () => ({
                 validator(_, value) {
                   // eslint-disable-next-line no-useless-escape
                   const regex = /^[a-zA-Z0-9_\-]+$/;
                   if (!regex.test(value)) {
-                    return Promise.reject('Can only contain numbers, letters, underscores, and dashes');
+                    return Promise.reject('Solo puede contener números, letras, guiones bajos y guiones');
                   }
                   return Promise.resolve();
                 },
@@ -156,7 +156,7 @@ export const SaveFlowModal: React.FC<Props> = ({
             <Input />
           </Form.Item>
 
-          <Form.Item label='Description' initialValue={flowInfo?.description} name='description'>
+          <Form.Item label='Descripción' initialValue={flowInfo?.description} name='description'>
             <TextArea rows={3} />
           </Form.Item>
 
@@ -168,7 +168,7 @@ export const SaveFlowModal: React.FC<Props> = ({
             <Input />
           </Form.Item>
 
-          <Form.Item label='Deploy'>
+          <Form.Item label='Desplegar'>
             <Checkbox
               checked={deploy}
               onChange={e => {

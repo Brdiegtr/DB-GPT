@@ -214,7 +214,7 @@ function ModelForm({ onCancel, onSuccess, defaultProvider, defaultWorkerType, pr
       {!isPreset && (
         <>
           <FormItem
-            label='Worker Type'
+            label='Tipo de worker'
             name='worker_type'
             rules={[{ required: true, message: t('worker_type_select_tips') }]}
           >
@@ -228,7 +228,11 @@ function ModelForm({ onCancel, onSuccess, defaultProvider, defaultWorkerType, pr
           </FormItem>
 
           {selectedWorkerType && (
-            <FormItem label='Provider' name='provider' rules={[{ required: true, message: t('provider_select_tips') }]}>
+            <FormItem
+              label='Proveedor'
+              name='provider'
+              rules={[{ required: true, message: t('provider_select_tips') }]}
+            >
               <Select onChange={handleProviderChange} placeholder={t('model_select_provider')} value={selectedProvider}>
                 {providers.map(provider => (
                   <Option key={provider} value={provider}>

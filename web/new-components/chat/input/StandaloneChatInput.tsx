@@ -31,11 +31,11 @@ const defaultCommands: SlashCommand[] = [
   {
     id: 'clear',
     trigger: 'clear',
-    title: 'Clear chat',
-    description: 'Clear the conversation history',
+    title: 'Borrar chat',
+    description: 'Borrar el historial de la conversación',
     type: 'builtin',
   },
-  { id: 'help', trigger: 'help', title: 'Help', description: 'Show available commands', type: 'builtin' },
+  { id: 'help', trigger: 'help', title: 'Help', description: 'Mostrar comandos disponibles', type: 'builtin' },
 ];
 
 const StandaloneChatInput = forwardRef<StandaloneChatInputRef, StandaloneChatInputProps>(
@@ -118,7 +118,7 @@ const StandaloneChatInput = forwardRef<StandaloneChatInputRef, StandaloneChatInp
                 'hover:border-[var(--oc-error-base)]',
               )}
             >
-              {t('stop_generating', 'Stop generating')}
+              {t('stop_generating', 'Detener generación')}
             </Button>
           </div>
         )}

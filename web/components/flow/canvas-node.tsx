@@ -137,7 +137,7 @@ const CanvasNode: React.FC<CanvasNodeProps> = ({ data }) => {
     if (flowType === 'operator' && outputs?.length > 0) {
       return (
         <div className='bg-zinc-100 dark:bg-zinc-700 rounded p-2'>
-          <TypeLabel label='Outputs' />
+          <TypeLabel label='Salidas' />
           {outputs?.map((output, index) => (
             <NodeHandler
               key={`${data.id}_output_${index}`}
@@ -154,7 +154,7 @@ const CanvasNode: React.FC<CanvasNodeProps> = ({ data }) => {
       // resource nodes show output default
       return (
         <div className='bg-zinc-100 dark:bg-zinc-700 rounded p-2'>
-          <TypeLabel label='Outputs' />
+          <TypeLabel label='Salidas' />
           <NodeHandler key={`${data.id}_input_0`} node={data} data={data} type='source' label='outputs' index={0} />
         </div>
       );
@@ -216,7 +216,7 @@ const CanvasNode: React.FC<CanvasNodeProps> = ({ data }) => {
 
         {inputs?.length > 0 && (
           <div className='bg-zinc-100 dark:bg-zinc-700 rounded p-2'>
-            <TypeLabel label='Inputs' />
+            <TypeLabel label='Entradas' />
             <div className='flex flex-col space-y-2'>
               {inputs?.map((item, index) => (
                 <NodeHandler
@@ -234,7 +234,7 @@ const CanvasNode: React.FC<CanvasNodeProps> = ({ data }) => {
 
         {parameters?.length > 0 && (
           <div className='bg-zinc-100 dark:bg-zinc-700 rounded p-2'>
-            <TypeLabel label='Parameters' />
+            <TypeLabel label='Parámetros' />
             <Form
               form={form}
               layout='vertical'

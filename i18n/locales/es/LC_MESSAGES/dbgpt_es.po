@@ -1,0 +1,4069 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2026-10-08 21:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+msgid " Split Knowledge Documents into chunks."
+msgstr " Divide los documentos de conocimiento en fragmentos."
+
+msgid "5e-6 is a good value for llama-2 models."
+msgstr "5e-6 es un buen valor para modelos llama-2."
+
+msgid "8-bit models can offload weights between the CPU and GPU to support fitting very large models into memory. The weights dispatched to the CPU are actually stored in float32, and aren’t converted to 8-bit. "
+msgstr "Los modelos de 8 bits pueden descargar pesos entre la CPU y la GPU para poder cargar modelos muy grandes en memoria. Los pesos enviados a la CPU se guardan en float32 y no se convierten a 8 bits. "
+
+msgid ""
+"A composer operator for conversation.\n"
+"Including chat history handling, prompt composing, etc. Output is ModelRequest."
+msgstr ""
+"Operador compositor para la conversación.\n"
+"Incluye manejo del historial de chat, composición del prompt, etc. La salida es un ModelRequest."
+
+msgid "A distributed fault-tolerant data warehouse system."
+msgstr "Sistema de almacén de datos distribuido y tolerante a fallos."
+
+msgid "A new-generation open-source real-time data warehouse."
+msgstr "Almacén de datos en tiempo real de código abierto de nueva generación."
+
+msgid "A operator to build prompt format dict from common LLM http request body."
+msgstr "Operador que construye el diccionario de formato del prompt a partir del cuerpo de una solicitud HTTP común al LLM."
+
+msgid "A scalable,enterprise-grade relational database with distributed architecture."
+msgstr "Base de datos relacional escalable de nivel empresarial con arquitectura distribuida."
+
+msgid "AES-256 master key for encrypting knowledge source credentials at rest (falls back to env DB_GPT_KS_ENCRYPT_KEY)"
+msgstr "Clave maestra AES-256 para cifrar en reposo las credenciales de fuentes de conocimiento (si no, usa la variable de entorno DB_GPT_KS_ENCRYPT_KEY)"
+
+msgid "AI/ML API Proxy LLM"
+msgstr "LLM proxy de AI/ML API"
+
+msgid "AI/ML API proxy LLM configuration."
+msgstr "Configuración del LLM proxy de AI/ML API."
+
+msgid "API Endpoint"
+msgstr "Endpoint de la API"
+
+msgid "API Key"
+msgstr "Clave de API"
+
+msgid "API URL"
+msgstr "URL de la API"
+
+msgid "API key for the chosen provider.  Can also be set via the provider's own environment variable (e.g. OPENAI_API_KEY)."
+msgstr "Clave de API del proveedor elegido. También se puede definir con la variable de entorno propia del proveedor (p. ej. OPENAI_API_KEY)."
+
+msgid "API key to use for authentication (env: LLAMA_API_KEY)"
+msgstr "Clave de API para autenticación (entorno: LLAMA_API_KEY)"
+
+msgid "API keys"
+msgstr "Claves de API"
+
+msgid "API keys for the endpoint, if None, allow all"
+msgstr "Claves de API del endpoint; si es None, se permiten todas"
+
+msgid "AWEL Flow Serve Configurations"
+msgstr "Configuración del servicio de flujos AWEL"
+
+msgid "Agent Branch Join Operator"
+msgstr "Operador de unión de ramas de agente"
+
+msgid "Agent Branch Operator"
+msgstr "Operador de ramificación de agente"
+
+msgid "Agent Output"
+msgstr "Salida del agente"
+
+msgid "Agent Request"
+msgstr "Solicitud del agente"
+
+msgid "Agent context-window management configuration"
+msgstr "Configuración de la gestión de la ventana de contexto del agente"
+
+msgid "Alias"
+msgstr "Alias"
+
+msgid "Alibaba Cloud AccessKey ID"
+msgstr "AccessKey ID de Alibaba Cloud"
+
+msgid "Alibaba Cloud AccessKey Secret"
+msgstr "AccessKey Secret de Alibaba Cloud"
+
+msgid "Alibaba Cloud MaxCompute (ODPS), a fully managed, large-scale data warehouse service for batch analytics."
+msgstr "Alibaba Cloud MaxCompute (ODPS), servicio de almacén de datos totalmente gestionado y a gran escala para análisis por lotes."
+
+msgid "Alibaba Cloud MaxCompute datasource"
+msgstr "Fuente de datos Alibaba Cloud MaxCompute"
+
+msgid "All AWEL Flow Nodes"
+msgstr "Todos los nodos de flujo AWEL"
+
+msgid "All AWEL Flows"
+msgstr "Todos los flujos AWEL"
+
+msgid "All Agents"
+msgstr "Todos los agentes"
+
+msgid "All Data Sources"
+msgstr "Todas las fuentes de datos"
+
+msgid "All Embeddings"
+msgstr "Todos los modelos de embeddings"
+
+msgid "All Knowledge Spaces"
+msgstr "Todos los espacios de conocimiento"
+
+msgid "All LLMs"
+msgstr "Todos los LLM"
+
+msgid "All Rerankers"
+msgstr "Todos los reordenadores"
+
+msgid "All Secrets"
+msgstr "Todos los secretos"
+
+msgid "All Variables"
+msgstr "Todas las variables"
+
+msgid "An Open-Source, High-Performance Analytical Database."
+msgstr "Base de datos analítica de código abierto y alto rendimiento."
+
+msgid "An Ultra-Fast & Cost-Effective Distributed SQL Database."
+msgstr "Base de datos SQL distribuida ultrarrápida y económica."
+
+msgid "An explicit list of the modules that we do not want to convert in 8-bit. This is useful for models such as Jukebox that has several heads in different places and not necessarily at the last position. For example for `CausalLM` models, the last `lm_head` is kept in its original `dtype`"
+msgstr "Lista explícita de módulos que no se quieren convertir a 8 bits. Es útil para modelos como Jukebox, que tienen varias cabezas en distintos lugares y no necesariamente en la última posición. Por ejemplo, en los modelos `CausalLM` el último `lm_head` se mantiene en su `dtype` original"
+
+msgid "An open-source relational database with PostgreSQL compatibility."
+msgstr "Base de datos relacional de código abierto compatible con PostgreSQL."
+
+msgid "An “outlier” is a hidden state value greater than a certain threshold, and these values are computed in fp16. While the values are usually normally distributed ([-3.5, 3.5]), this distribution can be very different for large models ([-60, 6] or [6, 60]). 8-bit quantization works well for values ~5, but beyond that, there is a significant performance penalty. A good default threshold value is 6, but a lower threshold may be needed for more unstable models (small models or finetuning)."
+msgstr "Un “valor atípico” es un valor del estado oculto mayor que cierto umbral; estos valores se calculan en fp16. Aunque normalmente siguen una distribución normal ([-3.5, 3.5]), en modelos grandes puede ser muy distinta ([-60, 6] o [6, 60]). La cuantización de 8 bits funciona bien con valores de ~5, pero por encima hay una penalización de rendimiento importante. Un buen umbral por defecto es 6, aunque los modelos más inestables (pequeños o con ajuste fino) pueden necesitar uno menor."
+
+msgid "Apache Doris datasource"
+msgstr "Fuente de datos Apache Doris"
+
+msgid "Apache Hive datasource"
+msgstr "Fuente de datos Apache Hive"
+
+msgid "Apache Spark datasource"
+msgstr "Fuente de datos Apache Spark"
+
+msgid "App code"
+msgstr "Código de la aplicación"
+
+msgid "Authentication mode: NONE, NOSASL, LDAP, KERBEROS, CUSTOM"
+msgstr "Modo de autenticación: NONE, NOSASL, LDAP, KERBEROS, CUSTOM"
+
+msgid "Auto Convert Message"
+msgstr "Convertir mensaje automáticamente"
+
+msgid "BAAI BGE models for precise and high‑performance language embeddings."
+msgstr "Modelos BAAI BGE para embeddings de lenguaje precisos y de alto rendimiento."
+
+msgid "Backend to use for distributed model workers, either \"ray\" or \"mp\" (multiprocessing). If the product of pipeline_parallel_size and tensor_parallel_size is less than or equal to the number of GPUs available, \"mp\" will be used to keep processing on a single host. Otherwise, this will default to \"ray\" if Ray is installed and fail otherwise. Note that tpu only supports Ray for distributed inference."
+msgstr "Backend para los workers distribuidos del modelo: \"ray\" o \"mp\" (multiprocesamiento). Si el producto de pipeline_parallel_size y tensor_parallel_size es menor o igual al número de GPU disponibles, se usa \"mp\" para procesar en un solo host. Si no, se usa \"ray\" si está instalado, y en caso contrario falla. Nota: TPU solo admite Ray para inferencia distribuida."
+
+msgid "Baichuan Proxy LLM"
+msgstr "LLM proxy de Baichuan"
+
+msgid "Baidu Wenxin Proxy LLM"
+msgstr "LLM proxy de Baidu Wenxin"
+
+msgid "Baidu Wenxin proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Baidu Wenxin."
+
+msgid "Base Output Operator"
+msgstr "Operador de salida base"
+
+msgid "Batch size of parallel community building process"
+msgstr "Tamaño de lote del proceso paralelo de construcción de comunidades"
+
+msgid "Batch size of triplets extraction from the text"
+msgstr "Tamaño de lote de la extracción de tripletas del texto"
+
+msgid "Boolean"
+msgstr "Booleano"
+
+msgid "Boolean to String"
+msgstr "Booleano a texto"
+
+msgid "Branch Output"
+msgstr "Salida de rama"
+
+msgid "Branch the workflow based on the agent actionreport nexspeakers of the request."
+msgstr "Ramifica el flujo según los siguientes interlocutores del informe de acción del agente en la solicitud."
+
+msgid "Branch the workflow based on the stream flag of the request."
+msgstr "Ramifica el flujo según el indicador de streaming de la solicitud."
+
+msgid "Build Model Request"
+msgstr "Construir solicitud al modelo"
+
+msgid "Build messages from prompt template and chat history."
+msgstr "Construye mensajes a partir de la plantilla de prompt y el historial del chat."
+
+msgid "Build messages from prompt template."
+msgstr "Construye mensajes a partir de la plantilla de prompt."
+
+msgid "Build the model request from the http request body."
+msgstr "Construye la solicitud al modelo a partir del cuerpo de la solicitud HTTP."
+
+msgid "Builtin Knowledge Graph"
+msgstr "Grafo de conocimiento integrado"
+
+msgid "Builtin Knowledge Graph."
+msgstr "Grafo de conocimiento integrado."
+
+msgid "BurnCloud Proxy LLM"
+msgstr "LLM proxy de BurnCloud"
+
+msgid "BurnCloud proxy LLM configuration."
+msgstr "Configuración del LLM proxy de BurnCloud."
+
+msgid "CA bundle path for platform HTTP calls (corporate TLS-intercepting proxies; env DB_GPT_KS_CA_BUNDLE)"
+msgstr "Ruta del paquete de CA para llamadas HTTP a la plataforma (proxies corporativos que interceptan TLS; entorno DB_GPT_KS_CA_BUNDLE)"
+
+msgid "CPU swap space size (GiB) per GPU."
+msgstr "Tamaño del espacio de intercambio en CPU (GiB) por GPU."
+
+msgid "Call Name"
+msgstr "Nombre de la llamada"
+
+msgid "Candidates"
+msgstr "Candidatos"
+
+msgid "Character Text Splitter"
+msgstr "Divisor de texto por caracteres"
+
+msgid "Chat History Load Operator"
+msgstr "Operador de carga del historial de chat"
+
+msgid "Chat Prompt Template"
+msgstr "Plantilla de prompt de chat"
+
+msgid "Check same thread or not, default is False. Set False to allow sharing connection across threads"
+msgstr "Comprobar si es el mismo hilo; por defecto False. Usa False para permitir compartir la conexión entre hilos"
+
+msgid "Check the hash of the file when downloading"
+msgstr "Comprobar el hash del archivo al descargarlo"
+
+msgid "Chroma Config"
+msgstr "Configuración de Chroma"
+
+msgid "Chroma Vector Store"
+msgstr "Almacén vectorial Chroma"
+
+msgid "Chroma vector store config."
+msgstr "Configuración del almacén vectorial Chroma."
+
+msgid "Chroma vector store."
+msgstr "Almacén vectorial Chroma."
+
+msgid "Chunk Manager Operator"
+msgstr "Operador gestor de fragmentos"
+
+msgid "Chunk Overlap"
+msgstr "Solapamiento de fragmentos"
+
+msgid "Chunk Parameters"
+msgstr "Parámetros de fragmentos"
+
+msgid "Chunk Size"
+msgstr "Tamaño del fragmento"
+
+msgid "Chunk Split Parameters"
+msgstr "Parámetros de división en fragmentos"
+
+msgid "Chunk Split Parameters."
+msgstr "Parámetros de división en fragmentos."
+
+msgid "Chunk Strategy"
+msgstr "Estrategia de fragmentación"
+
+msgid "Chunk separator"
+msgstr "Separador de fragmentos"
+
+msgid "Chunk size"
+msgstr "Tamaño del fragmento"
+
+msgid "Chunks"
+msgstr "Fragmentos"
+
+msgid "Chunks To String Operator"
+msgstr "Operador de fragmentos a texto"
+
+msgid "Chunks for Full Text Connector."
+msgstr "Fragmentos para el conector de texto completo."
+
+msgid "Chunks for Knowledge Graph Connector."
+msgstr "Fragmentos para el conector de grafo de conocimiento."
+
+msgid "Chunks for Vector Storage Connector."
+msgstr "Fragmentos para el conector de almacenamiento vectorial."
+
+msgid "Claude Proxy LLM"
+msgstr "LLM proxy de Claude"
+
+msgid "Clickhouse datasource"
+msgstr "Fuente de datos Clickhouse"
+
+msgid "Code Dict to Model Request Operator"
+msgstr "Operador de diccionario de código a solicitud de modelo"
+
+msgid "Code Editor"
+msgstr "Editor de código"
+
+msgid "Code Map Operator"
+msgstr "Operador de mapeo con código"
+
+msgid "Collection Name"
+msgstr "Nombre de la colección"
+
+msgid "Columnar database for high-performance analytics and real-time queries."
+msgstr "Base de datos columnar para análisis de alto rendimiento y consultas en tiempo real."
+
+msgid "Comma-separated allowed CORS origins for the standalone model API server. Default '*' allows all. Set explicit origins (e.g. http://localhost:3000) to restrict."
+msgstr "Orígenes CORS permitidos, separados por comas, para el servidor API independiente del modelo. El valor por defecto '*' permite todos. Indica orígenes explícitos (p. ej. http://localhost:3000) para restringir."
+
+msgid "Comma-separated allowed CORS origins. Default '*' allows all (any website can read API responses cross-origin). Set to explicit origins to restrict, e.g. http://localhost:3000,https://your-app.com."
+msgstr "Orígenes CORS permitidos, separados por comas. El valor por defecto '*' permite todos (cualquier sitio web puede leer las respuestas de la API). Indica orígenes explícitos para restringir, p. ej. http://localhost:3000,https://tu-app.com."
+
+msgid "Comma-separated values that should be treated as True."
+msgstr "Valores separados por comas que se considerarán True."
+
+msgid "Common Chat Prompt Template"
+msgstr "Plantilla de prompt de chat común"
+
+msgid "Common LLM Http Request Body"
+msgstr "Cuerpo de solicitud HTTP común al LLM"
+
+msgid "Common LLM Http Response Body"
+msgstr "Cuerpo de respuesta HTTP común del LLM"
+
+msgid "Common LLM Http Trigger"
+msgstr "Disparador HTTP común del LLM"
+
+msgid "Common LLM Request Body"
+msgstr "Cuerpo de solicitud común al LLM"
+
+msgid "Common Response Body"
+msgstr "Cuerpo de respuesta común"
+
+msgid "Common Streaming Output Operator"
+msgstr "Operador común de salida en streaming"
+
+msgid "Community Summary KG Config"
+msgstr "Configuración del grafo de conocimiento con resumen de comunidades"
+
+msgid "Community Summary Knowledge Graph"
+msgstr "Grafo de conocimiento con resumen de comunidades"
+
+msgid "Community Summary Knowledge Graph."
+msgstr "Grafo de conocimiento con resumen de comunidades."
+
+msgid "Concurrency limit with LLM"
+msgstr "Límite de concurrencia con el LLM"
+
+msgid "Configuration for the observability serve module."
+msgstr "Configuración del módulo de servicio de observabilidad."
+
+msgid "Configuration hooks, which will be executed before the configuration loading"
+msgstr "Hooks de configuración, que se ejecutan antes de cargar la configuración"
+
+msgid "Connect to a datasource(retrieve table schemas and execute SQL to fetch data)."
+msgstr "Conecta con una fuente de datos (obtiene los esquemas de tablas y ejecuta SQL para traer datos)."
+
+msgid "Connection String"
+msgstr "Cadena de conexión"
+
+msgid "Connection pool pre ping, default True"
+msgstr "Ping previo del pool de conexiones; por defecto True"
+
+msgid "Connection pool recycle, default 3600"
+msgstr "Reciclado del pool de conexiones; por defecto 3600"
+
+msgid "Connection pool size, default 5"
+msgstr "Tamaño del pool de conexiones; por defecto 5"
+
+msgid "Connection pool timeout, default 30"
+msgstr "Tiempo de espera del pool de conexiones; por defecto 30"
+
+msgid "Consecutive compaction failures before circuit break"
+msgstr "Fallos de compactación consecutivos antes de cortar el circuito"
+
+msgid "Context Key"
+msgstr "Clave de contexto"
+
+msgid "Context Length"
+msgstr "Longitud del contexto"
+
+msgid "Context usage ratio considered critical"
+msgstr "Proporción de uso del contexto considerada crítica"
+
+msgid "Context usage ratio that triggers LLM compaction"
+msgstr "Proporción de uso del contexto que activa la compactación con LLM"
+
+msgid "Context usage ratio that triggers light compaction"
+msgstr "Proporción de uso del contexto que activa la compactación ligera"
+
+msgid "Controller Address"
+msgstr "Dirección del controlador"
+
+msgid "Conversation Composer Operator"
+msgstr "Operador compositor de conversación"
+
+msgid "Conversation Serve Configurations"
+msgstr "Configuración del servicio de conversaciones"
+
+msgid "Conversation Storage"
+msgstr "Almacenamiento de conversaciones"
+
+msgid "Convert chunks to string."
+msgstr "Convierte fragmentos a texto."
+
+msgid "Converts a boolean to a string."
+msgstr "Convierte un booleano a texto."
+
+msgid "Converts a float to a string."
+msgstr "Convierte un decimal a texto."
+
+msgid "Converts a model output to a dictionary."
+msgstr "Convierte la salida de un modelo a un diccionario."
+
+msgid "Converts a string to a boolean, true: 'true', '1', 'y'"
+msgstr "Convierte un texto a booleano; verdadero: 'true', '1', 'y'"
+
+msgid "Converts a string to a float."
+msgstr "Convierte un texto a decimal."
+
+msgid "Converts a string to an integer."
+msgstr "Convierte un texto a entero."
+
+msgid "Converts an integer to a string."
+msgstr "Convierte un entero a texto."
+
+msgid "Cookies"
+msgstr "Cookies"
+
+msgid "CrossEncoder Rerank"
+msgstr "Reordenamiento CrossEncoder"
+
+msgid "CrossEncoder ranker."
+msgstr "Reordenador CrossEncoder."
+
+msgid "DB Name"
+msgstr "Nombre de la BD"
+
+msgid "DB-GPT Open API"
+msgstr "API abierta de DB-GPT"
+
+msgid "DISABLE TLS verification for platform calls (env DB_GPT_KS_INSECURE). Last resort only."
+msgstr "DESACTIVA la verificación TLS en las llamadas a la plataforma (entorno DB_GPT_KS_INSECURE). Solo como último recurso."
+
+msgid "Data type for kv cache storage. If \"auto\", will use model data type. CUDA 11.8+ supports fp8 (=fp8_e4m3) and fp8_e5m2. ROCm (AMD GPU) supports fp8 (=fp8_e4m3)"
+msgstr "Tipo de dato para el almacenamiento de la caché kv. Si es \"auto\", usa el tipo de dato del modelo. CUDA 11.8+ admite fp8 (=fp8_e4m3) y fp8_e5m2. ROCm (GPU AMD) admite fp8 (=fp8_e4m3)"
+
+msgid ""
+"Data type for model weights and activations.\n"
+"\n"
+"* \"auto\" will use FP16 precision for FP32 and FP16 models, and BF16 precision for BF16 models.\n"
+"* \"half\" for FP16. Recommended for AWQ quantization.\n"
+"* \"float16\" is the same as \"half\".\n"
+"* \"bfloat16\" for a balance between precision and range.\n"
+"* \"float\" is shorthand for FP32 precision.\n"
+"* \"float32\" for FP32 precision."
+msgstr ""
+"Tipo de dato para los pesos y activaciones del modelo.\n"
+"\n"
+"* \"auto\" usa precisión FP16 para modelos FP32 y FP16, y BF16 para modelos BF16.\n"
+"* \"half\" para FP16. Recomendado para cuantización AWQ.\n"
+"* \"float16\" equivale a \"half\".\n"
+"* \"bfloat16\" equilibra precisión y rango.\n"
+"* \"float\" es abreviatura de precisión FP32.\n"
+"* \"float32\" para precisión FP32."
+
+msgid "Database configuration for model registry"
+msgstr "Configuración de base de datos para el registro de modelos"
+
+msgid "Database connect timeout, default 15s"
+msgstr "Tiempo de espera de conexión a la base de datos; por defecto 15 s"
+
+msgid "Database connection config, now support SQLite, OceanBase and MySQL"
+msgstr "Configuración de conexión a la base de datos; admite SQLite, OceanBase y MySQL"
+
+msgid "Database driver, e.g., mysql+pymysql"
+msgstr "Driver de base de datos, p. ej. mysql+pymysql"
+
+msgid "Database host, e.g., localhost"
+msgstr "Host de la base de datos, p. ej. localhost"
+
+msgid "Database name"
+msgstr "Nombre de la base de datos"
+
+msgid "Database name, default 'default'"
+msgstr "Nombre de la base de datos; por defecto 'default'"
+
+msgid "Database name, default 'neo4j'"
+msgstr "Nombre de la base de datos; por defecto 'neo4j'"
+
+#, python-brace-format
+msgid "Database password, you can write your password directly, of course, you can also use environment variables, such as ${env:DBGPT_DB_PASSWORD}"
+msgstr "Contraseña de la base de datos; puedes escribirla directamente o usar variables de entorno, como ${env:DBGPT_DB_PASSWORD}"
+
+msgid "Database port, e.g., 3306"
+msgstr "Puerto de la base de datos, p. ej. 3306"
+
+msgid "Database port, e.g., 8123"
+msgstr "Puerto de la base de datos, p. ej. 8123"
+
+msgid "Database schema, defaults to 'public'"
+msgstr "Esquema de la base de datos; por defecto 'public'"
+
+msgid "Database user to connect"
+msgstr "Usuario de la base de datos para conectarse"
+
+msgid "Datasource"
+msgstr "Fuente de datos"
+
+msgid "Datasource Dashboard Operator"
+msgstr "Operador de panel de fuente de datos"
+
+msgid "Datasource Executor Operator"
+msgstr "Operador ejecutor de fuente de datos"
+
+msgid "Datasource Name"
+msgstr "Nombre de la fuente de datos"
+
+msgid "Datasource Resource"
+msgstr "Recurso de fuente de datos"
+
+msgid "Datasource Retriever Operator"
+msgstr "Operador recuperador de fuente de datos"
+
+msgid "Datasource Serve Configurations"
+msgstr "Configuración del servicio de fuentes de datos"
+
+msgid "Datasource Structed Operator"
+msgstr "Operador estructurado de fuente de datos"
+
+msgid "Deepseek Proxy LLM"
+msgstr "LLM proxy de Deepseek"
+
+msgid "Deepseek proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Deepseek."
+
+msgid "Default Chat History Load Operator"
+msgstr "Operador de carga del historial de chat por defecto"
+
+msgid "Default Embeddings"
+msgstr "Embeddings por defecto"
+
+msgid "Default LLM Client"
+msgstr "Cliente LLM por defecto"
+
+msgid "Default LLM client(Connect to your DB-GPT model serving)"
+msgstr "Cliente LLM por defecto (se conecta al servicio de modelos de DB-GPT)"
+
+msgid "Default LLM model name, used to specify which model to use when you have multiple LLMs"
+msgstr "Nombre del LLM por defecto; indica qué modelo usar cuando hay varios LLM"
+
+msgid "Default Model Name"
+msgstr "Nombre del modelo por defecto"
+
+msgid "Default Ranker"
+msgstr "Reordenador por defecto"
+
+msgid "Default datasource"
+msgstr "Fuente de datos por defecto"
+
+msgid "Default datasource."
+msgstr "Fuente de datos por defecto."
+
+msgid "Default embedding model name, used to specify which model to use when you have multiple embedding models"
+msgstr "Nombre del modelo de embeddings por defecto; indica qué modelo usar cuando hay varios modelos de embeddings"
+
+msgid "Default embeddings(using default embedding model of current system)"
+msgstr "Embeddings por defecto (usa el modelo de embeddings por defecto del sistema)"
+
+msgid "Default model for the conversation"
+msgstr "Modelo por defecto para la conversación"
+
+msgid "Default ranker(Rank by score)."
+msgstr "Reordenador por defecto (ordena por puntuación)."
+
+msgid "Default reranker model name, used to specify which model to use when you have multiple reranker models"
+msgstr "Nombre del modelo reordenador por defecto; indica qué modelo usar cuando hay varios reordenadores"
+
+msgid "Default system code for prompt"
+msgstr "Código de sistema por defecto para el prompt"
+
+msgid "Default user name for prompt"
+msgstr "Nombre de usuario por defecto para el prompt"
+
+msgid "Device to run model. If None, the device is automatically determined"
+msgstr "Dispositivo donde ejecutar el modelo. Si es None, se determina automáticamente"
+
+msgid "Dict Http Body"
+msgstr "Cuerpo HTTP de diccionario"
+
+msgid "Dict Http Trigger"
+msgstr "Disparador HTTP de diccionario"
+
+msgid "Dict SQL Output"
+msgstr "Salida SQL de diccionario"
+
+msgid "Dictionary"
+msgstr "Diccionario"
+
+msgid "Directory to download and load the weights, default to the default cache dir of huggingface."
+msgstr "Directorio para descargar y cargar los pesos; por defecto, la caché de huggingface."
+
+msgid "Disable SSL verification. This is not recommended for production use."
+msgstr "Desactivar la verificación SSL. No se recomienda en producción."
+
+msgid "Disable web UI"
+msgstr "Desactivar la interfaz web"
+
+msgid "Disables context shift on infinite text generation"
+msgstr "Desactiva el desplazamiento de contexto en la generación de texto infinita"
+
+msgid "Display Type"
+msgstr "Tipo de visualización"
+
+msgid "Distance"
+msgstr "Distancia"
+
+msgid "Distance Metric"
+msgstr "Métrica de distancia"
+
+msgid "Distance metric used to compare vectors. One of: Cosine, Euclid, Dot, Manhattan."
+msgstr "Métrica de distancia para comparar vectores. Una de: Cosine, Euclid, Dot, Manhattan."
+
+msgid "Distributed ddl task timeout, default 300s"
+msgstr "Tiempo de espera de tareas DDL distribuidas; por defecto 300 s"
+
+msgid "Document Chunks"
+msgstr "Fragmentos del documento"
+
+msgid "Document summary"
+msgstr "Resumen del documento"
+
+msgid "Dotted-path class of the ObservabilityProvider implementation (default SQLite; set to the ZizkaDB provider for causal/drift/memory)"
+msgstr "Clase (ruta con puntos) de la implementación de ObservabilityProvider (por defecto SQLite; usa el proveedor ZizkaDB para causalidad/deriva/memoria)"
+
+msgid "Draft model file path"
+msgstr "Ruta del archivo del modelo borrador"
+
+msgid "Driver name for Doris, default is mysql+pymysql (MySQL compatible)."
+msgstr "Driver para Doris; por defecto mysql+pymysql (compatible con MySQL)."
+
+msgid "Driver name for DuckDB, default is duckdb."
+msgstr "Driver para DuckDB; por defecto duckdb."
+
+msgid "Driver name for Hive, default is hive."
+msgstr "Driver para Hive; por defecto hive."
+
+msgid "Driver name for MSSQL, default is mssql+pymssql."
+msgstr "Driver para MSSQL; por defecto mssql+pymssql."
+
+msgid "Driver name for MySQL, default is mysql+pymysql."
+msgstr "Driver para MySQL; por defecto mysql+pymysql."
+
+msgid "Driver name for Oracle, default is oracle+oracledb."
+msgstr "Driver para Oracle; por defecto oracle+oracledb."
+
+msgid "Driver name for oceanbase, default is mysql+ob."
+msgstr "Driver para OceanBase; por defecto mysql+ob."
+
+msgid "Driver name for postgres, default is postgresql+psycopg2."
+msgstr "Driver para PostgreSQL; por defecto postgresql+psycopg2."
+
+msgid "Driver name for starrocks, default is starrocks."
+msgstr "Driver para StarRocks; por defecto starrocks."
+
+msgid "Driver name for vertica, default is vertica+vertica_python"
+msgstr "Driver para Vertica; por defecto vertica+vertica_python"
+
+msgid "Driver name, default is sqlite"
+msgstr "Nombre del driver; por defecto sqlite"
+
+msgid "DuckDB datasource"
+msgstr "Fuente de datos DuckDB"
+
+msgid "Elastic Config"
+msgstr "Configuración de Elastic"
+
+msgid "Elastic Vector Config"
+msgstr "Configuración vectorial de Elastic"
+
+msgid "Elastic Vector Store"
+msgstr "Almacén vectorial Elastic"
+
+msgid "Elastic vector store."
+msgstr "Almacén vectorial Elastic."
+
+msgid "Elasticsearch vector config."
+msgstr "Configuración vectorial de Elasticsearch."
+
+msgid "Embed Instruction"
+msgstr "Instrucción de embedding"
+
+msgid "Embedding Assembler Operator"
+msgstr "Operador ensamblador de embeddings"
+
+msgid "Embedding Field"
+msgstr "Campo de embedding"
+
+msgid "Embedding Function"
+msgstr "Función de embedding"
+
+msgid "Embedding Model"
+msgstr "Modelo de embeddings"
+
+msgid "Embedding Retriever Operator"
+msgstr "Operador recuperador por embeddings"
+
+msgid "Embedding batch size"
+msgstr "Tamaño de lote de embeddings"
+
+msgid "Embedding model deploy configuration. If you deploy in cluster mode, you just deploy one model."
+msgstr "Configuración de despliegue del modelo de embeddings. En modo clúster solo despliegas un modelo."
+
+msgid "Embedding-V1 by Baidu Qianfan. "
+msgstr "Embedding-V1 de Baidu Qianfan. "
+
+msgid "Enable Merge"
+msgstr "Activar fusión"
+
+msgid "Enable chunk merge by chunk_size."
+msgstr "Activa la fusión de fragmentos según chunk_size."
+
+msgid "Enable continuous batching (a.k.a dynamic batching)"
+msgstr "Activar procesamiento por lotes continuo (también llamado dinámico)"
+
+msgid "Enable debug mode"
+msgstr "Activar modo de depuración"
+
+msgid "Enable prometheus compatible metrics endpoint (env: LLAMA_ARG_ENDPOINT_METRICS)"
+msgstr "Activar endpoint de métricas compatible con Prometheus (entorno: LLAMA_ARG_ENDPOINT_METRICS)"
+
+msgid "Enable reranking endpoint on server (env: LLAMA_ARG_RERANKING)"
+msgstr "Activar endpoint de reordenamiento en el servidor (entorno: LLAMA_ARG_RERANKING)"
+
+msgid "Enable slots monitoring endpoint (env: LLAMA_ARG_ENDPOINT_SLOTS)"
+msgstr "Activar endpoint de monitoreo de slots (entorno: LLAMA_ARG_ENDPOINT_SLOTS)"
+
+msgid "Enable the graph search for documents and chunks"
+msgstr "Activar la búsqueda en grafo para documentos y fragmentos"
+
+msgid "Enable the graph search for triplets"
+msgstr "Activar la búsqueda en grafo para tripletas"
+
+msgid "Enables automatic prefix caching. "
+msgstr "Activa la caché automática de prefijos. "
+
+msgid "Enterprise-grade relational database with oracledb driver (python-oracledb)."
+msgstr "Base de datos relacional de nivel empresarial con driver oracledb (python-oracledb)."
+
+msgid "Evaluate Serve Configurations"
+msgstr "Configuración del servicio de evaluación"
+
+msgid "Example Http Hello Operator"
+msgstr "Operador HTTP de ejemplo Hola"
+
+msgid "Example Http Request"
+msgstr "Solicitud HTTP de ejemplo"
+
+msgid "Example Http Response"
+msgstr "Respuesta HTTP de ejemplo"
+
+msgid "Execute the context from the datasource and output structed data."
+msgstr "Ejecuta el contexto en la fuente de datos y devuelve datos estructurados."
+
+msgid "Execute the context from the datasource."
+msgstr "Ejecuta el contexto en la fuente de datos."
+
+msgid "External knowledge source configuration"
+msgstr "Configuración de fuentes de conocimiento externas"
+
+msgid "Extra Context"
+msgstr "Contexto adicional"
+
+msgid "Extra context for building prompt(Knowledge context, database schema, etc), you can add multiple context."
+msgstr "Contexto adicional para construir el prompt (contexto de conocimiento, esquema de la base de datos, etc.); puedes añadir varios."
+
+msgid "Extra parameters, it will be passed to the vllm engine."
+msgstr "Parámetros adicionales; se pasan al motor vllm."
+
+msgid "Extract Documents and persist into graph database."
+msgstr "Extrae documentos y los guarda en la base de datos de grafos."
+
+msgid "Fast, reliable, scalable open-source relational database management system."
+msgstr "Sistema de gestión de bases de datos relacionales de código abierto, rápido, fiable y escalable."
+
+msgid "Feedback Serve Configurations"
+msgstr "Configuración del servicio de comentarios"
+
+msgid "Fetch all AWEL flow nodes in the system"
+msgstr "Obtiene todos los nodos de flujo AWEL del sistema"
+
+msgid "Fetch all AWEL flows in the system"
+msgstr "Obtiene todos los flujos AWEL del sistema"
+
+msgid "Fetch all LLMs in the system"
+msgstr "Obtiene todos los LLM del sistema"
+
+msgid "Fetch all agents in the system"
+msgstr "Obtiene todos los agentes del sistema"
+
+msgid "Fetch all data sources in the system"
+msgstr "Obtiene todas las fuentes de datos del sistema"
+
+msgid "Fetch all embeddings models in the system"
+msgstr "Obtiene todos los modelos de embeddings del sistema"
+
+msgid "Fetch all knowledge spaces in the system"
+msgstr "Obtiene todos los espacios de conocimiento del sistema"
+
+msgid "Fetch all rerankers in the system"
+msgstr "Obtiene todos los reordenadores del sistema"
+
+msgid "Fetch all secrets in the system"
+msgstr "Obtiene todos los secretos del sistema"
+
+msgid "Fetch all variables in the system"
+msgstr "Obtiene todas las variables del sistema"
+
+msgid "File Serve Configurations"
+msgstr "Configuración del servicio de archivos"
+
+msgid "First Key"
+msgstr "Primera clave"
+
+msgid "First String"
+msgstr "Primer texto"
+
+msgid "Float"
+msgstr "Decimal"
+
+msgid "Float to String"
+msgstr "Decimal a texto"
+
+msgid "Formatted Messages"
+msgstr "Mensajes formateados"
+
+msgid "Full Text"
+msgstr "Texto completo"
+
+msgid "Full Text Connector"
+msgstr "Conector de texto completo"
+
+msgid "Full Text Storage Operator"
+msgstr "Operador de almacenamiento de texto completo"
+
+msgid "GPTs application configuration"
+msgstr "Configuración de aplicaciones GPTs"
+
+msgid "GaussDB datasource"
+msgstr "Fuente de datos GaussDB"
+
+msgid "Gecko and multilingual embedding models with 2k token context window."
+msgstr "Modelos de embeddings Gecko y multilingües con ventana de contexto de 2k tokens."
+
+msgid "Gemini Proxy LLM"
+msgstr "LLM proxy de Gemini"
+
+msgid "GitHub Copilot Proxy LLM"
+msgstr "LLM proxy de GitHub Copilot"
+
+msgid "GitHub Copilot proxy LLM configuration."
+msgstr "Configuración del LLM proxy de GitHub Copilot."
+
+msgid "Gitee Proxy LLM"
+msgstr "LLM proxy de Gitee"
+
+msgid "Gitee proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Gitee."
+
+msgid "Global tracer configuration"
+msgstr "Configuración global del trazador"
+
+msgid "Google Gemini proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Google Gemini."
+
+msgid "Graph Name"
+msgstr "Nombre del grafo"
+
+msgid "Graph Store Config"
+msgstr "Configuración del almacén de grafos"
+
+msgid "Graph Store Name"
+msgstr "Nombre del almacén de grafos"
+
+msgid "Groq Proxy LLM"
+msgstr "LLM proxy de Groq"
+
+msgid "Groq proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Groq."
+
+msgid "Group-attention factor (default: 1)"
+msgstr "Factor de atención por grupos (por defecto: 1)"
+
+msgid "Group-attention width (default: 512)"
+msgstr "Ancho de atención por grupos (por defecto: 512)"
+
+msgid "Grouped-query attention. Must be 8 for llama-2 70b."
+msgstr "Atención por consultas agrupadas. Debe ser 8 para llama-2 70b."
+
+msgid "HNSW: construction time quality factor."
+msgstr "HNSW: factor de calidad en la construcción."
+
+msgid "HNSW: number of connections per node."
+msgstr "HNSW: número de conexiones por nodo."
+
+msgid "HNSW: runtime search quality factor."
+msgstr "HNSW: factor de calidad de búsqueda en ejecución."
+
+msgid "HTTP Address"
+msgstr "Dirección HTTP"
+
+msgid "HTTP Method DELETE"
+msgstr "Método HTTP DELETE"
+
+msgid "HTTP Method GET"
+msgstr "Método HTTP GET"
+
+msgid "HTTP Method POST"
+msgstr "Método HTTP POST"
+
+msgid "HTTP Method PUT"
+msgstr "Método HTTP PUT"
+
+msgid "HTTP Sender"
+msgstr "Emisor HTTP"
+
+msgid "Handle input dictionary with code and return output ModelRequest after execution."
+msgstr "Procesa el diccionario de entrada con código y devuelve un ModelRequest tras ejecutarlo."
+
+msgid "Handle input dictionary with code and return output dictionary after execution."
+msgstr "Procesa el diccionario de entrada con código y devuelve un diccionario tras ejecutarlo."
+
+msgid "High-level LLM operator, supports multi-round conversation (conversation window, token length and no multi-round)."
+msgstr "Operador LLM de alto nivel; admite conversación de varias rondas (ventana de conversación, longitud de tokens o sin varias rondas)."
+
+msgid "High-level streaming LLM operator, supports multi-round conversation (conversation window, token length and no multi-round)."
+msgstr "Operador LLM de alto nivel en streaming; admite conversación de varias rondas (ventana de conversación, longitud de tokens o sin varias rondas)."
+
+msgid "High‑capacity embedding models with 32k token context window for retrieval and specialized domains."
+msgstr "Modelos de embeddings de gran capacidad con ventana de contexto de 32k tokens para recuperación y dominios especializados."
+
+msgid "High‑performance embedding models with flexible dimensions and superior accuracy."
+msgstr "Modelos de embeddings de alto rendimiento con dimensiones flexibles y gran precisión."
+
+msgid "History"
+msgstr "Historial"
+
+msgid "History Key"
+msgstr "Clave del historial"
+
+msgid "History Message Merge Mode"
+msgstr "Modo de fusión de mensajes del historial"
+
+msgid "History Prompt Builder Operator"
+msgstr "Operador constructor de prompt con historial"
+
+msgid "Hive server host"
+msgstr "Host del servidor Hive"
+
+msgid "Hive server port, default 10000"
+msgstr "Puerto del servidor Hive; por defecto 10000"
+
+msgid "Hook init params to pass to the hook constructor(Just for class hook), must be key-value pairs"
+msgstr "Parámetros de inicialización del hook para su constructor (solo hooks de clase); deben ser pares clave-valor"
+
+msgid "Hook params to pass to the hook, must be key-value pairs"
+msgstr "Parámetros que se pasan al hook; deben ser pares clave-valor"
+
+msgid "Hook path, it can be a class path or a function path. eg: 'dbgpt.config.hooks.env_var_hook'"
+msgstr "Ruta del hook: ruta de una clase o de una función. Ej.: 'dbgpt.config.hooks.env_var_hook'"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "Host address to bind the server"
+msgstr "Dirección del host donde se enlaza el servidor"
+
+msgid "Http Methods"
+msgstr "Métodos HTTP"
+
+msgid "Http Request Body"
+msgstr "Cuerpo de la solicitud HTTP"
+
+msgid "Http Response Body"
+msgstr "Cuerpo de la respuesta HTTP"
+
+msgid "Http Status Code"
+msgstr "Código de estado HTTP"
+
+msgid "Hub dbgpts Serve Configurations"
+msgstr "Configuración del servicio Hub de dbgpts"
+
+msgid "Hugging Face repository for model download"
+msgstr "Repositorio de Hugging Face para descargar el modelo"
+
+msgid "HuggingFace Embeddings"
+msgstr "Embeddings de HuggingFace"
+
+msgid "HuggingFace Inference API Embeddings"
+msgstr "Embeddings de la API de inferencia de HuggingFace"
+
+msgid "HuggingFace Inference API embeddings."
+msgstr "Embeddings de la API de inferencia de HuggingFace."
+
+msgid "HuggingFace Instructor Embeddings"
+msgstr "Embeddings HuggingFace Instructor"
+
+msgid "HuggingFace Instructor embeddings."
+msgstr "Embeddings HuggingFace Instructor."
+
+msgid "HuggingFace sentence_transformers embedding models."
+msgstr "Modelos de embeddings sentence_transformers de HuggingFace."
+
+msgid "Human Message"
+msgstr "Mensaje del usuario"
+
+msgid "Human Message Key"
+msgstr "Clave del mensaje del usuario"
+
+msgid "If a GPU is available, it will be preferred by default, unless prefer_cpu=False is configured."
+msgstr "Si hay una GPU disponible se usará por defecto, salvo que se configure prefer_cpu=False."
+
+msgid "Ignore exceeds stop words error"
+msgstr "Ignorar el error de exceso de palabras de parada"
+
+msgid "In-memory analytical database with efficient query processing."
+msgstr "Base de datos analítica en memoria con procesamiento eficiente de consultas."
+
+msgid "Index Name"
+msgstr "Nombre del índice"
+
+msgid "Index Type"
+msgstr "Tipo de índice"
+
+msgid "InfiniAI Proxy LLM"
+msgstr "LLM proxy de InfiniAI"
+
+msgid "InfiniAI proxy LLM configuration."
+msgstr "Configuración del LLM proxy de InfiniAI."
+
+msgid "Input Data"
+msgstr "Datos de entrada"
+
+msgid "Input Strings"
+msgstr "Textos de entrada"
+
+msgid "Installed dbgpts"
+msgstr "dbgpts instalados"
+
+msgid "Instruction to use for embedding documents."
+msgstr "Instrucción para generar embeddings de documentos."
+
+msgid "Instruction to use for embedding documents. Just for Instructor model."
+msgstr "Instrucción para generar embeddings de documentos. Solo para el modelo Instructor."
+
+msgid "Instruction to use for embedding query."
+msgstr "Instrucción para generar embeddings de consultas."
+
+msgid "Instruction to use for embedding query. Just for Instructor model."
+msgstr "Instrucción para generar embeddings de consultas. Solo para el modelo Instructor."
+
+msgid "Integer"
+msgstr "Entero"
+
+msgid "Integer to String"
+msgstr "Entero a texto"
+
+msgid "Interval to load dbgpts from installed packages"
+msgstr "Intervalo para cargar dbgpts de los paquetes instalados"
+
+msgid "Jina AI Embeddings"
+msgstr "Embeddings de Jina AI"
+
+msgid "Jina AI embeddings."
+msgstr "Embeddings de Jina AI."
+
+msgid "Join Branch the workflow based on the Knowledge Process Results."
+msgstr "Une las ramas del flujo según los resultados del procesamiento de conocimiento."
+
+msgid "Joined String"
+msgstr "Texto unido"
+
+msgid "Json Serializer"
+msgstr "Serializador JSON"
+
+msgid "Just keep the first non-empty output."
+msgstr "Conserva solo la primera salida no vacía."
+
+msgid "Keep End Rounds"
+msgstr "Conservar rondas finales"
+
+msgid "Keep Start Rounds"
+msgstr "Conservar rondas iniciales"
+
+msgid "Kerberos service name"
+msgstr "Nombre del servicio Kerberos"
+
+msgid "Key"
+msgstr "Clave"
+
+msgid "Keyword arguments to pass to the model."
+msgstr "Argumentos con nombre que se pasan al modelo."
+
+msgid "Keyword arguments to pass when calling the `encode` method."
+msgstr "Argumentos con nombre que se pasan al llamar al método `encode`."
+
+msgid "Knowledge"
+msgstr "Conocimiento"
+
+msgid "Knowledge Graph"
+msgstr "Grafo de conocimiento"
+
+msgid "Knowledge Graph Connector"
+msgstr "Conector de grafo de conocimiento"
+
+msgid "Knowledge Graph Operator"
+msgstr "Operador de grafo de conocimiento"
+
+msgid "Knowledge Graph Storage Results"
+msgstr "Resultados del almacenamiento en grafo de conocimiento"
+
+msgid "Knowledge Graph Type"
+msgstr "Tipo de grafo de conocimiento"
+
+msgid "Knowledge Loader Operator"
+msgstr "Operador cargador de conocimiento"
+
+msgid "Knowledge Process Branch Operator"
+msgstr "Operador de ramificación del procesamiento de conocimiento"
+
+msgid "Knowledge Process Join Operator"
+msgstr "Operador de unión del procesamiento de conocimiento"
+
+msgid "Knowledge Process Results."
+msgstr "Resultados del procesamiento de conocimiento."
+
+msgid "Knowledge Space Name"
+msgstr "Nombre del espacio de conocimiento"
+
+msgid "Knowledge Space Operator"
+msgstr "Operador de espacio de conocimiento"
+
+msgid "Knowledge Space Operator, retrieve your knowledge from knowledge space"
+msgstr "Operador de espacio de conocimiento: recupera tu conocimiento del espacio de conocimiento"
+
+msgid "Knowledge Space Prompt Builder Operator"
+msgstr "Operador constructor de prompt con espacio de conocimiento"
+
+msgid "Knowledge datasource"
+msgstr "Fuente de datos de conocimiento"
+
+msgid "Knowledge object."
+msgstr "Objeto de conocimiento."
+
+msgid "Knowledge retriver top k"
+msgstr "Top k del recuperador de conocimiento"
+
+msgid "Knowledge space name"
+msgstr "Nombre del espacio de conocimiento"
+
+msgid "Knowledge type"
+msgstr "Tipo de conocimiento"
+
+msgid "Knowledge type."
+msgstr "Tipo de conocimiento."
+
+msgid "LLM Branch Join Operator"
+msgstr "Operador de unión de ramas LLM"
+
+msgid "LLM Branch Operator"
+msgstr "Operador de ramificación LLM"
+
+msgid "LLM Client"
+msgstr "Cliente LLM"
+
+msgid "LLM Model Name"
+msgstr "Nombre del modelo LLM"
+
+msgid "LLM Operator"
+msgstr "Operador LLM"
+
+msgid "LLM model deploy configuration. If you deploy in cluster mode, you just deploy one model."
+msgstr "Configuración de despliegue del LLM. En modo clúster solo despliegas un modelo."
+
+msgid "LLM model name"
+msgstr "Nombre del modelo LLM"
+
+msgid "LLM model name."
+msgstr "Nombre del modelo LLM."
+
+msgid "Language"
+msgstr "Idioma"
+
+msgid "Language setting"
+msgstr "Configuración de idioma"
+
+msgid "Libro Serve Configurations"
+msgstr "Configuración del servicio Libro"
+
+msgid "Lightweight embedded relational database with simplicity and portability."
+msgstr "Base de datos relacional embebida y ligera, sencilla y portable."
+
+msgid "List SQL Output"
+msgstr "Salida SQL de lista"
+
+msgid "LiteLLM AI Gateway"
+msgstr "Pasarela de IA LiteLLM"
+
+msgid "LiteLLM as an embedded AI gateway — call 100+ LLM providers (OpenAI, Anthropic, Vertex AI, Bedrock, Azure, Cohere, Mistral, Groq, Ollama, ...) through a single client without running a separate proxy server. Specify the model with a provider prefix, for example 'anthropic/claude-3-5-sonnet-20241022', 'vertex_ai/gemini-1.5-pro', 'bedrock/anthropic.claude-3-haiku-20240307-v1:0', or 'azure/gpt-4o'."
+msgstr "LiteLLM como pasarela de IA embebida: llama a más de 100 proveedores de LLM (OpenAI, Anthropic, Vertex AI, Bedrock, Azure, Cohere, Mistral, Groq, Ollama, ...) con un solo cliente, sin ejecutar un servidor proxy aparte. Indica el modelo con el prefijo del proveedor, por ejemplo 'anthropic/claude-3-5-sonnet-20241022', 'vertex_ai/gemini-1.5-pro', 'bedrock/anthropic.claude-3-haiku-20240307-v1:0' o 'azure/gpt-4o'."
+
+msgid "Load chat history from the storage of the serve component.It is the default storage of DB-GPT"
+msgstr "Carga el historial de chat desde el almacenamiento del componente de servicio. Es el almacenamiento por defecto de DB-GPT"
+
+msgid "Load knowledge and assemble embedding chunks to vector store."
+msgstr "Carga el conocimiento y guarda los fragmentos con embeddings en el almacén vectorial."
+
+msgid "Load model sequentially in multiple batches, to avoid RAM OOM when using tensor parallel and large models."
+msgstr "Carga el modelo por lotes de forma secuencial para evitar quedarse sin RAM al usar paralelismo de tensores y modelos grandes."
+
+msgid "Local model file path"
+msgstr "Ruta local del archivo del modelo"
+
+msgid "Logging configuration"
+msgstr "Configuración de registros"
+
+msgid "Logging configuration for web server, if None, use global config"
+msgstr "Configuración de registros del servidor web; si es None, usa la configuración global"
+
+msgid "Logging level"
+msgstr "Nivel de registro"
+
+msgid "Logging level, just support FATAL, ERROR, WARNING, INFO, DEBUG, NOTSET"
+msgstr "Nivel de registro; solo admite FATAL, ERROR, WARNING, INFO, DEBUG, NOTSET"
+
+msgid "Logical maximum batch size (default: 2048) (env: LLAMA_ARG_BATCH)"
+msgstr "Tamaño lógico máximo del lote (por defecto: 2048) (entorno: LLAMA_ARG_BATCH)"
+
+msgid "MCP SSE Server URL, split by ';'"
+msgstr "URL del servidor MCP SSE, separadas por ';'"
+
+#, python-brace-format
+msgid "MCP SSE Server token, split by \";\", It will be added to the header({\"Authorization\": \"Bearer your_token\"}"
+msgstr "Token del servidor MCP SSE, separados por \";\". Se añade a la cabecera ({\"Authorization\": \"Bearer tu_token\"}"
+
+msgid "MSSQL datasource"
+msgstr "Fuente de datos MSSQL"
+
+msgid "Map Model Output to Common Response Body"
+msgstr "Mapear salida del modelo a cuerpo de respuesta común"
+
+msgid "Map String to ModelOutput"
+msgstr "Mapear texto a ModelOutput"
+
+msgid "Map String to ModelOutput."
+msgstr "Mapear texto a ModelOutput."
+
+msgid "Map the model output to the common response body."
+msgstr "Mapea la salida del modelo al cuerpo de respuesta común."
+
+msgid "Markdown Header Text Splitter"
+msgstr "Divisor de texto por encabezados Markdown"
+
+msgid "Markdown result"
+msgstr "Resultado en Markdown"
+
+msgid "Max Chunks Once Load"
+msgstr "Máximo de fragmentos por carga"
+
+msgid "Max New Tokens"
+msgstr "Máximo de tokens nuevos"
+
+msgid "Max Number of Results"
+msgstr "Número máximo de resultados"
+
+msgid "Max Threads"
+msgstr "Máximo de hilos"
+
+msgid "Max Token Limit"
+msgstr "Límite máximo de tokens"
+
+msgid "Max concurrent sub-agents per dispatch_parallel_tasks call. Higher values fan out more sub-tasks at once but multiply token cost. The DBGPT_MAX_PARALLEL_SUBAGENTS environment variable overrides this value."
+msgstr "Máximo de subagentes simultáneos por llamada a dispatch_parallel_tasks. Valores más altos reparten más subtareas a la vez pero multiplican el coste en tokens. La variable de entorno DBGPT_MAX_PARALLEL_SUBAGENTS tiene prioridad sobre este valor."
+
+msgid "Max iteration with LLM"
+msgstr "Máximo de iteraciones con el LLM"
+
+msgid "Max length for input sequences. Longer sequences will be truncated."
+msgstr "Longitud máxima de las secuencias de entrada. Las más largas se truncan."
+
+msgid "Max number of log probs to return logprobs is specified in SamplingParams."
+msgstr "Número máximo de log probs a devolver cuando se indica logprobs en SamplingParams."
+
+msgid "Max overflow connections, default 10"
+msgstr "Máximo de conexiones adicionales; por defecto 10"
+
+msgid "MaxCompute project name"
+msgstr "Nombre del proyecto de MaxCompute"
+
+msgid "MaxCompute service endpoint, e.g. https://service.cn-hangzhou.maxcompute.aliyun.com/api"
+msgstr "Endpoint del servicio MaxCompute, p. ej. https://service.cn-hangzhou.maxcompute.aliyun.com/api"
+
+msgid "Maximum cache capacity. Examples: 2000MiB, 2GiB. When provided without units, bytes will be assumed. "
+msgstr "Capacidad máxima de la caché. Ejemplos: 2000MiB, 2GiB. Sin unidades, se asumen bytes. "
+
+msgid "Maximum chars kept for old compacted observations"
+msgstr "Máximo de caracteres conservados de observaciones antiguas compactadas"
+
+msgid "Maximum context-window tokens for agent calls. Non-positive values fall back to the default context budget."
+msgstr "Máximo de tokens de la ventana de contexto en las llamadas del agente. Los valores no positivos usan el presupuesto de contexto por defecto."
+
+msgid "Maximum number of batched tokens per iteration."
+msgstr "Número máximo de tokens por lote en cada iteración."
+
+msgid "Maximum number of prompt tokens to batch together when calling llama_eval"
+msgstr "Número máximo de tokens del prompt que se agrupan al llamar a llama_eval"
+
+msgid "Maximum number of sequences per iteration."
+msgstr "Número máximo de secuencias por iteración."
+
+msgid "Maximum sequence length covered by CUDA graphs. When a sequence has context length larger than this, we fall back to eager mode. Additionally for encoder-decoder models, if the sequence length of the encoder input is larger than this, we fall back to the eager mode."
+msgstr "Longitud máxima de secuencia cubierta por los grafos CUDA. Si una secuencia tiene un contexto mayor, se vuelve al modo eager. En modelos codificador-decodificador, si la entrada del codificador es más larga, también se vuelve al modo eager."
+
+msgid "Memory Storage"
+msgstr "Almacenamiento de memoria"
+
+msgid "Memory configuration"
+msgstr "Configuración de memoria"
+
+msgid "Merge Model Request Messages"
+msgstr "Fusionar mensajes de la solicitud al modelo"
+
+msgid "Merge String to Dict Operator"
+msgstr "Operador de fusión de textos en diccionario"
+
+msgid "Merge multiple inputs into a single string."
+msgstr "Fusiona varias entradas en un único texto."
+
+msgid "Merge the model request from the input value."
+msgstr "Fusiona la solicitud al modelo a partir del valor de entrada."
+
+msgid "Merge two strings to a dict, the fist string which is the value from first upstream is the value of the key `first_key`, the second string which is the value from second upstream is the value of the key `second_key`."
+msgstr "Fusiona dos textos en un diccionario: el primer texto (del primer nodo anterior) es el valor de la clave `first_key` y el segundo (del segundo nodo anterior) es el valor de la clave `second_key`."
+
+msgid "Message Storage"
+msgstr "Almacenamiento de mensajes"
+
+msgid "Message placeholder"
+msgstr "Marcador de mensajes"
+
+#, python-brace-format
+msgid "Metadata fields to index for filtering. Dict mapping field name to type: 'tag' (string) or 'numeric'. E.g. {'source': 'tag', 'page': 'numeric'}. Must be defined at store creation time."
+msgstr "Campos de metadatos que se indexan para filtrar. Diccionario de nombre de campo a tipo: 'tag' (texto) o 'numeric'. Ej.: {'source': 'tag', 'page': 'numeric'}. Debe definirse al crear el almacén."
+
+msgid "Method used to quantize the weights. If None, we first check the `quantization_config` attribute in the model config file. If that is None, we assume the model weights are not quantized and use `dtype` to determine the data type of the weights."
+msgstr "Método usado para cuantizar los pesos. Si es None, primero se revisa el atributo `quantization_config` del archivo de configuración del modelo. Si también es None, se asume que los pesos no están cuantizados y se usa `dtype` para determinar su tipo de dato."
+
+msgid "Milvus Config"
+msgstr "Configuración de Milvus"
+
+msgid "Milvus Vector Store"
+msgstr "Almacén vectorial Milvus"
+
+msgid "Milvus vector config."
+msgstr "Configuración vectorial de Milvus."
+
+msgid "Milvus vector store."
+msgstr "Almacén vectorial Milvus."
+
+msgid "MiniMax Proxy LLM"
+msgstr "LLM proxy de MiniMax"
+
+msgid "MiniMax proxy LLM configuration."
+msgstr "Configuración del LLM proxy de MiniMax."
+
+msgid "Minimum Match Score"
+msgstr "Puntuación mínima de coincidencia"
+
+msgid "Minimum number of draft tokens to use for speculative decoding (default: 5)"
+msgstr "Número mínimo de tokens borrador para la decodificación especulativa (por defecto: 5)"
+
+msgid "Minimum recent ReAct rounds to keep uncompressed"
+msgstr "Mínimo de rondas ReAct recientes que se conservan sin comprimir"
+
+msgid "Minimum tokens to keep when dropping old rounds"
+msgstr "Mínimo de tokens que se conservan al descartar rondas antiguas"
+
+msgid "Mistral AI proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Mistral AI."
+
+msgid "Mistral Proxy LLM"
+msgstr "LLM proxy de Mistral"
+
+msgid "Model API"
+msgstr "API del modelo"
+
+msgid "Model API server deploy port"
+msgstr "Puerto de despliegue del servidor API del modelo"
+
+msgid "Model Controller deploy port"
+msgstr "Puerto de despliegue del controlador de modelos"
+
+msgid "Model Name"
+msgstr "Nombre del modelo"
+
+msgid "Model Output"
+msgstr "Salida del modelo"
+
+msgid "Model Output to Dict"
+msgstr "Salida del modelo a diccionario"
+
+msgid "Model Request"
+msgstr "Solicitud al modelo"
+
+msgid "Model Serve Configurations"
+msgstr "Configuración del servicio de modelos"
+
+msgid "Model cache configuration"
+msgstr "Configuración de la caché del modelo"
+
+msgid "Model concurrency limit"
+msgstr "Límite de concurrencia del modelo"
+
+msgid "Model context length. If unspecified, will be automatically derived from the model config."
+msgstr "Longitud de contexto del modelo. Si no se indica, se obtiene automáticamente de la configuración del modelo."
+
+msgid "Model controller"
+msgstr "Controlador de modelos"
+
+msgid "Model controller address"
+msgstr "Dirección del controlador de modelos"
+
+msgid "Model deployment configuration"
+msgstr "Configuración de despliegue del modelo"
+
+msgid "Model download URL (env: LLAMA_ARG_MODEL_URL)"
+msgstr "URL de descarga del modelo (entorno: LLAMA_ARG_MODEL_URL)"
+
+msgid "Model file name in the Hugging Face repository"
+msgstr "Nombre del archivo del modelo en el repositorio de Hugging Face"
+
+msgid "Model messages"
+msgstr "Mensajes del modelo"
+
+msgid "Model name"
+msgstr "Nombre del modelo"
+
+msgid "Model name to use."
+msgstr "Nombre del modelo a usar."
+
+msgid "Model registry configuration. If None, use embedded registry"
+msgstr "Configuración del registro de modelos; si es None, usa el registro embebido"
+
+msgid "Model service configuration"
+msgstr "Configuración del servicio de modelos"
+
+msgid "Model worker class, dbgpt.model.cluster.DefaultModelWorker"
+msgstr "Clase del worker del modelo, dbgpt.model.cluster.DefaultModelWorker"
+
+msgid "Model worker configuration"
+msgstr "Configuración del worker del modelo"
+
+msgid "Model worker deploy port"
+msgstr "Puerto de despliegue del worker del modelo"
+
+msgid "Moonshot Proxy LLM"
+msgstr "LLM proxy de Moonshot"
+
+msgid "Moonshot proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Moonshot."
+
+msgid "My Agent Resource"
+msgstr "Mi recurso de agente"
+
+msgid "My dbgpts Serve Configurations"
+msgstr "Configuración del servicio Mis dbgpts"
+
+msgid "MySQL datasource"
+msgstr "Fuente de datos MySQL"
+
+msgid "NVIDIA NIM proxy LLM configuration."
+msgstr "Configuración del LLM proxy de NVIDIA NIM."
+
+msgid "NVIDIA Proxy LLM"
+msgstr "LLM proxy de NVIDIA"
+
+msgid "Name"
+msgstr "Nombre"
+
+msgid "Name of the provider profile to use (openai / kimi / qwen / minimax / deepseek / ollama).  Overrides the active profile in ~/.dbgpt/config.toml."
+msgstr "Nombre del perfil de proveedor a usar (openai / kimi / qwen / minimax / deepseek / ollama). Tiene prioridad sobre el perfil activo en ~/.dbgpt/config.toml."
+
+msgid "Neo4j Graph Config"
+msgstr "Configuración del grafo Neo4j"
+
+msgid "Neo4j config."
+msgstr "Configuración de Neo4j."
+
+msgid "Neo4j database name"
+msgstr "Nombre de la base de datos Neo4j"
+
+msgid "Neo4j datasource"
+msgstr "Fuente de datos Neo4j"
+
+msgid "Neo4j host"
+msgstr "Host de Neo4j"
+
+msgid "Neo4j is a highly scalable native graph database, purpose-built to leverage data relationships."
+msgstr "Neo4j es una base de datos de grafos nativa y muy escalable, diseñada para aprovechar las relaciones entre datos."
+
+msgid "Neo4j password"
+msgstr "Contraseña de Neo4j"
+
+msgid "Neo4j port"
+msgstr "Puerto de Neo4j"
+
+msgid "Neo4j server host"
+msgstr "Host del servidor Neo4j"
+
+msgid "Neo4j server port, default 7687"
+msgstr "Puerto del servidor Neo4j; por defecto 7687"
+
+msgid "Neo4j server user"
+msgstr "Usuario del servidor Neo4j"
+
+msgid "Neo4j username"
+msgstr "Usuario de Neo4j"
+
+msgid "Nested quantization is a technique that can save additional memory at no additional performance cost. This feature performs a second quantization of the already quantized weights to save an additional 0.4 bits/parameter. "
+msgstr "La cuantización anidada es una técnica que ahorra memoria adicional sin coste de rendimiento. Realiza una segunda cuantización de los pesos ya cuantizados para ahorrar 0,4 bits/parámetro adicionales. "
+
+msgid "Non-Streaming Model Output"
+msgstr "Salida del modelo sin streaming"
+
+msgid "Non-Streaming Model Request"
+msgstr "Solicitud al modelo sin streaming"
+
+msgid "Non-Streaming String Output"
+msgstr "Salida de texto sin streaming"
+
+msgid "Non-interactive mode: skip the setup wizard and use defaults / environment variables.  Useful for CI/CD and scripted installs."
+msgstr "Modo no interactivo: omite el asistente de configuración y usa valores por defecto / variables de entorno. Útil para CI/CD e instalaciones automatizadas."
+
+msgid "Normalize embeddings."
+msgstr "Normalizar embeddings."
+
+msgid "Number of layers to offload to the GPU, Set this to 1000000000 to offload all layers to the GPU."
+msgstr "Número de capas que se descargan en la GPU. Usa 1000000000 para descargar todas las capas en la GPU."
+
+msgid "Number of layers to store in VRAM (env: LLAMA_ARG_N_GPU_LAYERS), set 1000000000 to use all layers"
+msgstr "Número de capas que se guardan en VRAM (entorno: LLAMA_ARG_N_GPU_LAYERS); usa 1000000000 para todas las capas"
+
+msgid "Number of pipeline stages."
+msgstr "Número de etapas del pipeline."
+
+msgid "Number of results"
+msgstr "Número de resultados"
+
+msgid "Number of slots for KV cache"
+msgstr "Número de slots de la caché KV"
+
+msgid "Number of tensor parallel replicas."
+msgstr "Número de réplicas en paralelo de tensores."
+
+msgid "Number of threads to use during generation (default: -1) (env: LLAMA_ARG_THREADS)"
+msgstr "Número de hilos durante la generación (por defecto: -1) (entorno: LLAMA_ARG_THREADS)"
+
+msgid "Number of threads to use. If None, the number of threads is automatically determined"
+msgstr "Número de hilos a usar. Si es None, se determina automáticamente"
+
+msgid "Number of tokens to draft for speculative decoding (default: 16) (env: LLAMA_ARG_DRAFT_MAX)"
+msgstr "Número de tokens borrador para la decodificación especulativa (por defecto: 16) (entorno: LLAMA_ARG_DRAFT_MAX)"
+
+msgid "Number of tokens to predict (default: -1, -1 = infinity, -2 = until context filled) (env: LLAMA_ARG_N_PREDICT)"
+msgstr "Número de tokens a predecir (por defecto: -1; -1 = infinito, -2 = hasta llenar el contexto) (entorno: LLAMA_ARG_N_PREDICT)"
+
+msgid "Observability Serve Configurations"
+msgstr "Configuración del servicio de observabilidad"
+
+msgid "Observation age before micro-compaction can truncate"
+msgstr "Antigüedad de una observación antes de que la microcompactación pueda truncarla"
+
+msgid "OceanBase Config"
+msgstr "Configuración de OceanBase"
+
+msgid "OceanBase Database"
+msgstr "Base de datos OceanBase"
+
+msgid "OceanBase Host"
+msgstr "Host de OceanBase"
+
+msgid "OceanBase Password"
+msgstr "Contraseña de OceanBase"
+
+msgid "OceanBase Port"
+msgstr "Puerto de OceanBase"
+
+msgid "OceanBase User"
+msgstr "Usuario de OceanBase"
+
+msgid "OceanBase Vector Store"
+msgstr "Almacén vectorial OceanBase"
+
+msgid "OceanBase datasource"
+msgstr "Fuente de datos OceanBase"
+
+msgid "OceanBase vector store."
+msgstr "Almacén vectorial OceanBase."
+
+msgid "Ollama Proxy LLM"
+msgstr "LLM proxy de Ollama"
+
+msgid "Ollama proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Ollama."
+
+msgid "OpenAI API Base"
+msgstr "URL base de la API de OpenAI"
+
+msgid "OpenAI API Base, not required if you have set OPENAI_API_BASE environment variable."
+msgstr "URL base de la API de OpenAI; no es necesaria si definiste la variable de entorno OPENAI_API_BASE."
+
+msgid "OpenAI API Key"
+msgstr "Clave de API de OpenAI"
+
+msgid "OpenAI API Key, not required if you have set OPENAI_API_KEY environment variable."
+msgstr "Clave de API de OpenAI; no es necesaria si definiste la variable de entorno OPENAI_API_KEY."
+
+msgid "OpenAI Compatible Proxy LLM"
+msgstr "LLM proxy compatible con OpenAI"
+
+msgid "OpenAI LLM Client"
+msgstr "Cliente LLM de OpenAI"
+
+msgid "OpenAI Streaming Output Operator"
+msgstr "Operador de salida en streaming de OpenAI"
+
+msgid "OpenAPI Embeddings"
+msgstr "Embeddings OpenAPI"
+
+msgid "OpenAPI embeddings."
+msgstr "Embeddings OpenAPI."
+
+msgid "Optional API base URL. LiteLLM resolves the per-provider endpoint from the model prefix and provider-specific environment variables; set this only when calling an OpenAI-compatible custom endpoint."
+msgstr "URL base de la API (opcional). LiteLLM resuelve el endpoint de cada proveedor a partir del prefijo del modelo y de sus variables de entorno; defínela solo al llamar a un endpoint personalizado compatible con OpenAI."
+
+msgid "Optional API key. LiteLLM resolves provider-specific keys from environment variables (OPENAI_API_KEY, ANTHROPIC_API_KEY, AZURE_API_KEY, GROQ_API_KEY, ...) by default; set this only if your model requires a single shared key."
+msgstr "Clave de API (opcional). Por defecto LiteLLM toma las claves de cada proveedor de las variables de entorno (OPENAI_API_KEY, ANTHROPIC_API_KEY, AZURE_API_KEY, GROQ_API_KEY, ...); defínela solo si tu modelo requiere una única clave compartida."
+
+msgid "Optional list of comma separated API keys"
+msgstr "Lista opcional de claves de API separadas por comas"
+
+msgid "Oracle SID (System ID, alternative to service name)."
+msgstr "SID de Oracle (ID del sistema, alternativa al nombre del servicio)."
+
+msgid "Oracle datasource"
+msgstr "Fuente de datos Oracle"
+
+msgid "Oracle service name (alternative to SID)."
+msgstr "Nombre del servicio de Oracle (alternativa al SID)."
+
+msgid "OrcaRouter Proxy LLM"
+msgstr "LLM proxy de OrcaRouter"
+
+msgid "OrcaRouter proxy LLM configuration."
+msgstr "Configuración del LLM proxy de OrcaRouter."
+
+msgid "Output"
+msgstr "Salida"
+
+msgid "Output Data"
+msgstr "Datos de salida"
+
+msgid "Overlap between chunks."
+msgstr "Solapamiento entre fragmentos."
+
+msgid "PG Config"
+msgstr "Configuración de PG"
+
+msgid "PG Vector Store"
+msgstr "Almacén vectorial PG"
+
+msgid "PG vector store."
+msgstr "Almacén vectorial PG."
+
+msgid "PGVector Config"
+msgstr "Configuración de PGVector"
+
+msgid "Page Text Splitter"
+msgstr "Divisor de texto por páginas"
+
+msgid "Parse the SQL list output of an LLM call, mostly used for dashboard."
+msgstr "Analiza la salida SQL en forma de lista de una llamada al LLM; se usa sobre todo en paneles."
+
+msgid "Parse the SQL output of an LLM call."
+msgstr "Analiza la salida SQL de una llamada al LLM."
+
+msgid "Parse the request body as a common LLM http body"
+msgstr "Interpreta el cuerpo de la solicitud como un cuerpo HTTP común al LLM"
+
+msgid "Parse the request body as a dict or response body as a dict"
+msgstr "Interpreta el cuerpo de la solicitud o de la respuesta como un diccionario"
+
+msgid "Parse the request body as a starlette Request"
+msgstr "Interpreta el cuerpo de la solicitud como un Request de starlette"
+
+msgid "Parse the request body as a string or response body as string"
+msgstr "Interpreta el cuerpo de la solicitud o de la respuesta como texto"
+
+msgid "Parse the response body as a common LLM http body"
+msgstr "Interpreta el cuerpo de la respuesta como un cuerpo HTTP común del LLM"
+
+msgid "Password"
+msgstr "Contraseña"
+
+msgid "Password for LDAP or CUSTOM auth"
+msgstr "Contraseña para autenticación LDAP o CUSTOM"
+
+msgid "Path"
+msgstr "Ruta"
+
+msgid "Path of the cache folder."
+msgstr "Ruta de la carpeta de caché."
+
+msgid "Path to LoRA adapter (can be repeated to use multiple adapters)"
+msgstr "Ruta del adaptador LoRA (se puede repetir para usar varios adaptadores)"
+
+msgid "Path to a TOML config file.  If omitted, DB-GPT will use the active profile from ~/.dbgpt/ or run the first-time setup wizard."
+msgstr "Ruta a un archivo de configuración TOML. Si se omite, DB-GPT usará el perfil activo de ~/.dbgpt/ o ejecutará el asistente de configuración inicial."
+
+msgid "Path to save slot kv cache (default: disabled)"
+msgstr "Ruta donde guardar la caché kv de los slots (por defecto: desactivado)"
+
+msgid "Path to the CA certificate file. split by ';' "
+msgstr "Ruta del archivo de certificado de la CA, separadas por ';' "
+
+msgid "Path to the DuckDB file."
+msgstr "Ruta del archivo DuckDB."
+
+msgid "Path to the server binary executable"
+msgstr "Ruta del ejecutable del servidor"
+
+msgid "Persist Path"
+msgstr "Ruta de persistencia"
+
+msgid "Persist embeddings into full text storage."
+msgstr "Guarda los embeddings en el almacenamiento de texto completo."
+
+msgid "Persist embeddings into vector storage."
+msgstr "Guarda los embeddings en el almacenamiento vectorial."
+
+msgid "Physical maximum batch size (default: 512) (env: LLAMA_ARG_UBATCH)"
+msgstr "Tamaño físico máximo del lote (por defecto: 512) (entorno: LLAMA_ARG_UBATCH)"
+
+msgid "Pipeline"
+msgstr "Pipeline"
+
+msgid "Please input the call name"
+msgstr "Escribe el nombre de la llamada"
+
+msgid "Please input your code"
+msgstr "Escribe tu código"
+
+msgid "Please select the language"
+msgstr "Selecciona el idioma"
+
+msgid "Port"
+msgstr "Puerto"
+
+msgid "Port to bind the server. 0 for random available port"
+msgstr "Puerto donde se enlaza el servidor; 0 para un puerto libre aleatorio"
+
+msgid "PostreSQL datasource"
+msgstr "Fuente de datos PostgreSQL"
+
+msgid "Powerful open-source relational database with extensibility and SQL standards."
+msgstr "Potente base de datos relacional de código abierto, extensible y fiel a los estándares SQL."
+
+msgid "Powerful, scalable, secure relational database system by Microsoft."
+msgstr "Sistema de base de datos relacional potente, escalable y seguro de Microsoft."
+
+msgid "Prefer gRPC"
+msgstr "Preferir gRPC"
+
+msgid "Prefix Key"
+msgstr "Clave de prefijo"
+
+msgid "Primary Field"
+msgstr "Campo principal"
+
+msgid "Prompt Builder Operator"
+msgstr "Operador constructor de prompt"
+
+msgid "Prompt Format Dict"
+msgstr "Diccionario de formato del prompt"
+
+msgid "Prompt Format Dict Builder Operator"
+msgstr "Operador constructor del diccionario de formato del prompt"
+
+msgid "Prompt Input Dict"
+msgstr "Diccionario de entrada del prompt"
+
+msgid "Prompt Serve Configurations"
+msgstr "Configuración del servicio de prompts"
+
+msgid "Prompt Template"
+msgstr "Plantilla de prompt"
+
+msgid "Prompt language"
+msgstr "Idioma del prompt"
+
+msgid "Prompt language."
+msgstr "Idioma del prompt."
+
+msgid "Prompt template. If None, the prompt template is automatically determined from model. Just for local deployment."
+msgstr "Plantilla de prompt. Si es None, se determina automáticamente según el modelo. Solo para despliegue local."
+
+msgid "Python modules to import at startup for self-registering community knowledge-source connectors"
+msgstr "Módulos de Python que se importan al iniciar para que se registren los conectores comunitarios de fuentes de conocimiento"
+
+msgid "Qdrant Config"
+msgstr "Configuración de Qdrant"
+
+msgid "Qdrant Vector Store"
+msgstr "Almacén vectorial Qdrant"
+
+msgid "Qdrant vector store config."
+msgstr "Configuración del almacén vectorial Qdrant."
+
+msgid "Qdrant vector store."
+msgstr "Almacén vectorial Qdrant."
+
+msgid "Quantization datatypes, `fp4` (four bit float) and `nf4` (normal four bit float), only valid when load_4bit=True"
+msgstr "Tipos de datos de cuantización: `fp4` (flotante de cuatro bits) y `nf4` (flotante normal de cuatro bits); solo válido con load_4bit=True"
+
+msgid "Query"
+msgstr "Consulta"
+
+msgid "Query Instruction"
+msgstr "Instrucción de consulta"
+
+msgid "Query Rewrite"
+msgstr "Reescritura de consulta"
+
+msgid "Query Rewrite Operator"
+msgstr "Operador de reescritura de consulta"
+
+msgid "Query context"
+msgstr "Contexto de la consulta"
+
+msgid "Query rewrite operator."
+msgstr "Operador de reescritura de consulta."
+
+msgid "Query rewrite."
+msgstr "Reescritura de consulta."
+
+msgid "Qwen3-Embedding-0.6B is a multilingual embedding model trained by Qwen team, supporting more than 100 languages. It has 0.6B parameters and a context length of 32k tokens and the dimension is 1024."
+msgstr "Qwen3-Embedding-0.6B es un modelo de embeddings multilingüe entrenado por el equipo de Qwen; admite más de 100 idiomas. Tiene 0,6B parámetros, contexto de 32k tokens y dimensión 1024."
+
+msgid "Qwen3-Embedding-4B is a multilingual embedding model trained by Qwen team, supporting more than 100 languages. It has 4B parameters and a context length of 32k tokens and the dimension is 2560."
+msgstr "Qwen3-Embedding-4B es un modelo de embeddings multilingüe entrenado por el equipo de Qwen; admite más de 100 idiomas. Tiene 4B parámetros, contexto de 32k tokens y dimensión 2560."
+
+msgid "Qwen3-Embedding-8B is a multilingual embedding model trained by Qwen team, supporting more than 100 languages. It has 8B parameters and a context length of 32k tokens and the dimension is 4096."
+msgstr "Qwen3-Embedding-8B es un modelo de embeddings multilingüe entrenado por el equipo de Qwen; admite más de 100 idiomas. Tiene 8B parámetros, contexto de 32k tokens y dimensión 4096."
+
+msgid "Qwen3-Reranker-0.6B is a multilingual reranker model trained by Qwen team, supporting more than 100 languages. It has 0.6B parameters and a context length of 32k tokens."
+msgstr "Qwen3-Reranker-0.6B es un modelo reordenador multilingüe entrenado por el equipo de Qwen; admite más de 100 idiomas. Tiene 0,6B parámetros y contexto de 32k tokens."
+
+msgid "Qwen3-Reranker-4B is a multilingual reranker model trained by Qwen team, supporting more than 100 languages. It has 4B parameters and a context length of 32k tokens."
+msgstr "Qwen3-Reranker-4B es un modelo reordenador multilingüe entrenado por el equipo de Qwen; admite más de 100 idiomas. Tiene 4B parámetros y contexto de 32k tokens."
+
+msgid "Qwen3-Reranker-8B is a multilingual reranker model trained by Qwen team, supporting more than 100 languages. It has 8B parameters and a context length of 32k tokens."
+msgstr "Qwen3-Reranker-8B es un modelo reordenador multilingüe entrenado por el equipo de Qwen; admite más de 100 idiomas. Tiene 8B parámetros y contexto de 32k tokens."
+
+msgid "RAG Serve Configurations"
+msgstr "Configuración del servicio RAG"
+
+msgid "Rag Knowledge Parameters"
+msgstr "Parámetros de conocimiento RAG"
+
+msgid "Random seed for llama-cpp models. -1 for random"
+msgstr "Semilla aleatoria para modelos llama-cpp; -1 para aleatoria"
+
+msgid "Random seed for operations."
+msgstr "Semilla aleatoria para las operaciones."
+
+msgid "Random seed for reproducibility"
+msgstr "Semilla aleatoria para reproducibilidad"
+
+msgid "Recall Score of Community Search in Knowledge Graph"
+msgstr "Puntuación de recuperación de la búsqueda de comunidades en el grafo de conocimiento"
+
+msgid "Recall Score of Knowledge Graph Extract"
+msgstr "Puntuación de recuperación de la extracción del grafo de conocimiento"
+
+msgid "Recall score of community search in knowledge graph"
+msgstr "Puntuación de recuperación de la búsqueda de comunidades en el grafo de conocimiento"
+
+msgid "Recall score of knowledge graph extract"
+msgstr "Puntuación de recuperación de la extracción del grafo de conocimiento"
+
+msgid "Recursive Character Text Splitter"
+msgstr "Divisor de texto recursivo por caracteres"
+
+msgid "Register current worker to model controller"
+msgstr "Registrar el worker actual en el controlador de modelos"
+
+msgid "Remote LLM Client"
+msgstr "Cliente LLM remoto"
+
+msgid "Remote LLM client(Connect to the remote DB-GPT model serving)"
+msgstr "Cliente LLM remoto (se conecta al servicio de modelos remoto de DB-GPT)"
+
+msgid "Report Analyst"
+msgstr "Analista de informes"
+
+msgid "Report Analyst Result"
+msgstr "Resultado del analista de informes"
+
+msgid "Repos"
+msgstr "Repositorios"
+
+msgid "Repository"
+msgstr "Repositorio"
+
+msgid "Request Body"
+msgstr "Cuerpo de la solicitud"
+
+msgid "Request Body Parsed To String Operator"
+msgstr "Operador de cuerpo de solicitud a texto"
+
+msgid "Request Body To Dict Operator"
+msgstr "Operador de cuerpo de solicitud a diccionario"
+
+msgid "Request Http Body"
+msgstr "Cuerpo HTTP de la solicitud"
+
+msgid "Request Http Trigger"
+msgstr "Disparador HTTP de solicitud"
+
+msgid "Request String Messages"
+msgstr "Mensajes de texto de la solicitud"
+
+msgid "Request timeout in milliseconds for Valkey operations. Prevents indefinite hangs on network issues."
+msgstr "Tiempo de espera en milisegundos de las operaciones de Valkey. Evita bloqueos indefinidos por problemas de red."
+
+msgid "Rerank"
+msgstr "Reordenar"
+
+msgid "Rerank Model"
+msgstr "Modelo reordenador"
+
+msgid "Reranker Enabled"
+msgstr "Reordenador activado"
+
+msgid "Reranker Top K"
+msgstr "Top K del reordenador"
+
+msgid "Reranker model deploy configuration. If you deploy in cluster mode, you just deploy one model."
+msgstr "Configuración de despliegue del modelo reordenador. En modo clúster solo despliegas un modelo."
+
+msgid "Resource name"
+msgstr "Nombre del recurso"
+
+msgid "Response Body"
+msgstr "Cuerpo de la respuesta"
+
+msgid "Response Format"
+msgstr "Formato de respuesta"
+
+msgid "Response Media Type"
+msgstr "Tipo de medio de la respuesta"
+
+msgid "Restrict to only support embedding use case; use only with dedicated embedding models (env: LLAMA_ARG_EMBEDDINGS)"
+msgstr "Limitar a solo embeddings; úsalo únicamente con modelos de embeddings dedicados (entorno: LLAMA_ARG_EMBEDDINGS)"
+
+msgid "Retrieve candidates from vector store."
+msgstr "Recupera candidatos del almacén vectorial."
+
+msgid "Retrieve the table schemas from the datasource."
+msgstr "Obtiene los esquemas de las tablas de la fuente de datos."
+
+msgid "Retrieved context"
+msgstr "Contexto recuperado"
+
+msgid "Retrieved schema chunks"
+msgstr "Fragmentos de esquema recuperados"
+
+msgid "Return Each Line"
+msgstr "Devolver cada línea"
+
+msgid "Return each line with associated headers."
+msgstr "Devuelve cada línea con sus encabezados asociados."
+
+msgid "Revision of the huggingface tokenizer to use. It can be a branch name, a tag name, or a commit id. If unspecified, will use the default version."
+msgstr "Revisión del tokenizador de huggingface a usar. Puede ser una rama, una etiqueta o un id de commit. Si no se indica, se usa la versión por defecto."
+
+msgid "Rewritten queries"
+msgstr "Consultas reescritas"
+
+msgid "Run Webserver in light mode"
+msgstr "Ejecutar el servidor web en modo ligero"
+
+msgid "Run encode() on multiple GPUs."
+msgstr "Ejecutar encode() en varias GPU."
+
+msgid "Run in daemon mode. It will run in the background. If you want to stop it, use `dbgpt stop` command"
+msgstr "Ejecutar en modo demonio, en segundo plano. Para detenerlo, usa el comando `dbgpt stop`"
+
+msgid "Run the server as a daemon."
+msgstr "Ejecutar el servidor como demonio."
+
+msgid "SQL List Output Parser"
+msgstr "Analizador de salida de lista SQL"
+
+msgid "SQL Output Parser"
+msgstr "Analizador de salida SQL"
+
+msgid "SQL dict"
+msgstr "Diccionario SQL"
+
+msgid "SQL dict list"
+msgstr "Lista de diccionarios SQL"
+
+msgid "SQL result"
+msgstr "Resultado SQL"
+
+msgid "SQLAlchemy driver name for MaxCompute, default 'odps'"
+msgstr "Nombre del driver SQLAlchemy para MaxCompute; por defecto 'odps'"
+
+msgid "SQLite database file path. Use ':memory:' for in-memory database"
+msgstr "Ruta del archivo de base de datos SQLite. Usa ':memory:' para una base de datos en memoria"
+
+msgid "SQLite datasource"
+msgstr "Fuente de datos SQLite"
+
+msgid "SQLite file path for the default provider (default logs/observability.db)"
+msgstr "Ruta del archivo SQLite del proveedor por defecto (por defecto logs/observability.db)"
+
+msgid "Same as draft"
+msgstr "Igual que el borrador"
+
+msgid "Sampling temperature for text generation"
+msgstr "Temperatura de muestreo para la generación de texto"
+
+msgid "Save your data in memory."
+msgstr "Guarda tus datos en memoria."
+
+msgid "Score Threshold"
+msgstr "Umbral de puntuación"
+
+msgid "Second Key"
+msgstr "Segunda clave"
+
+msgid "Second String"
+msgstr "Segundo texto"
+
+msgid "Send a HTTP request to a specified endpoint"
+msgstr "Envía una solicitud HTTP a un endpoint indicado"
+
+msgid "Send heartbeat to model controller"
+msgstr "Enviar latido al controlador de modelos"
+
+msgid "Separator"
+msgstr "Separador"
+
+msgid "Separator Text Splitter"
+msgstr "Divisor de texto por separador"
+
+msgid "Separator to split the text."
+msgstr "Separador para dividir el texto."
+
+msgid "Serializer"
+msgstr "Serializador"
+
+msgid "Serve configuration"
+msgstr "Configuración del servicio"
+
+msgid "Server startup timeout in seconds"
+msgstr "Tiempo de espera de arranque del servidor en segundos"
+
+msgid "Show verbose output."
+msgstr "Mostrar salida detallada."
+
+msgid "SiliconFlow Proxy LLM"
+msgstr "LLM proxy de SiliconFlow"
+
+msgid "SiliconFlow proxy LLM configuration."
+msgstr "Configuración del LLM proxy de SiliconFlow."
+
+msgid "Size of each chunk."
+msgstr "Tamaño de cada fragmento."
+
+msgid "Size of the prompt context (default: 4096, 0 = loaded from model) (env: LLAMA_ARG_CTX_SIZE)"
+msgstr "Tamaño del contexto del prompt (por defecto: 4096; 0 = se toma del modelo) (entorno: LLAMA_ARG_CTX_SIZE)"
+
+msgid "Space Name"
+msgstr "Nombre del espacio"
+
+msgid "Spacy Text Splitter"
+msgstr "Divisor de texto Spacy"
+
+msgid "Spacy pipeline to use for tokenization."
+msgstr "Pipeline de Spacy para la tokenización."
+
+msgid "Split markdown text by headers."
+msgstr "Divide texto Markdown por encabezados."
+
+msgid "Split text by characters recursively."
+msgstr "Divide el texto por caracteres de forma recursiva."
+
+msgid "Split text by page."
+msgstr "Divide el texto por páginas."
+
+msgid "Split text by sentences using Spacy."
+msgstr "Divide el texto en oraciones usando Spacy."
+
+msgid "Split text by separator."
+msgstr "Divide el texto por separador."
+
+msgid "Splitter Type"
+msgstr "Tipo de divisor"
+
+msgid "Splitter type"
+msgstr "Tipo de divisor"
+
+msgid "Standalone mode. If True, embedded Run ModelController"
+msgstr "Modo independiente. Si es True, ejecuta el ModelController embebido"
+
+msgid "StarRocks datasource"
+msgstr "Fuente de datos StarRocks"
+
+msgid "Storage Index Store"
+msgstr "Almacén de índices de almacenamiento"
+
+msgid "Storage configuration"
+msgstr "Configuración de almacenamiento"
+
+msgid "Storage engine, e.g., MergeTree"
+msgstr "Motor de almacenamiento, p. ej. MergeTree"
+
+msgid "Stored Messages"
+msgstr "Mensajes almacenados"
+
+msgid "Streaming LLM Operator"
+msgstr "Operador LLM en streaming"
+
+msgid "Streaming Model Output"
+msgstr "Salida del modelo en streaming"
+
+msgid "Streaming Model Request"
+msgstr "Solicitud al modelo en streaming"
+
+msgid "Streaming Response"
+msgstr "Respuesta en streaming"
+
+msgid "Streaming String Output"
+msgstr "Salida de texto en streaming"
+
+msgid "String"
+msgstr "Texto"
+
+msgid "String Branch Join Operator"
+msgstr "Operador de unión de ramas de texto"
+
+msgid "String History"
+msgstr "Historial de texto"
+
+msgid "String Http Body"
+msgstr "Cuerpo HTTP de texto"
+
+msgid "String Http Trigger"
+msgstr "Disparador HTTP de texto"
+
+msgid "String Join Operator"
+msgstr "Operador de unión de textos"
+
+msgid "String Output"
+msgstr "Salida de texto"
+
+msgid "String to Boolean"
+msgstr "Texto a booleano"
+
+msgid "String to Float"
+msgstr "Texto a decimal"
+
+msgid "String to Integer"
+msgstr "Texto a entero"
+
+msgid "Summary Operator"
+msgstr "Operador de resumen"
+
+msgid "Synthorai Proxy LLM"
+msgstr "LLM proxy de Synthorai"
+
+msgid "Synthorai proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Synthorai."
+
+msgid "System Message"
+msgstr "Mensaje del sistema"
+
+msgid "System configuration"
+msgstr "Configuración del sistema"
+
+msgid "System prompt"
+msgstr "Prompt del sistema"
+
+msgid "TBatch size of parallel community building process"
+msgstr "Tamaño de lote del proceso paralelo de construcción de comunidades"
+
+msgid "Temperature"
+msgstr "Temperatura"
+
+msgid "Text Field"
+msgstr "Campo de texto"
+
+msgid "Text Splitter"
+msgstr "Divisor de texto"
+
+msgid "Text splitter, if not set, will use the default text splitter."
+msgstr "Divisor de texto; si no se indica, se usa el divisor por defecto."
+
+msgid "The API endpoint"
+msgstr "El endpoint de la API"
+
+msgid "The API key for Qdrant Cloud or secured Qdrant instances."
+msgstr "Clave de API para Qdrant Cloud o instancias protegidas de Qdrant."
+
+msgid "The API key for the embeddings API."
+msgstr "Clave de la API de embeddings."
+
+msgid "The API key for the rerank API."
+msgstr "Clave de la API de reordenamiento."
+
+msgid "The API key of the AI/ML API."
+msgstr "Clave de API de AI/ML."
+
+msgid "The API key of the Baichuan API."
+msgstr "Clave de API de Baichuan."
+
+msgid "The API key of the BurnCloud API."
+msgstr "Clave de API de BurnCloud."
+
+msgid "The API key of the DeepSeek API."
+msgstr "Clave de API de DeepSeek."
+
+msgid "The API key of the Gitee API."
+msgstr "Clave de API de Gitee."
+
+msgid "The API key of the Groq API."
+msgstr "Clave de API de Groq."
+
+msgid "The API key of the InfiniAI API."
+msgstr "Clave de API de InfiniAI."
+
+msgid "The API key of the MiniMax API."
+msgstr "Clave de API de MiniMax."
+
+msgid "The API key of the Mistral AI API."
+msgstr "Clave de API de Mistral AI."
+
+msgid "The API key of the Moonshot API."
+msgstr "Clave de API de Moonshot."
+
+msgid "The API key of the NVIDIA NIM API."
+msgstr "Clave de API de NVIDIA NIM."
+
+msgid "The API key of the OpenAI API."
+msgstr "Clave de API de OpenAI."
+
+msgid "The API key of the OrcaRouter API."
+msgstr "Clave de API de OrcaRouter."
+
+msgid "The API key of the SiliconFlow API."
+msgstr "Clave de API de SiliconFlow."
+
+msgid "The API key of the Spark API."
+msgstr "Clave de API de Spark."
+
+msgid "The API key of the Synthorai API."
+msgstr "Clave de API de Synthorai."
+
+msgid "The API key of the Vercel AI Gateway API."
+msgstr "Clave de API de Vercel AI Gateway."
+
+msgid "The API key of the Volcengine API."
+msgstr "Clave de API de Volcengine."
+
+msgid "The API key of the Wenxin API."
+msgstr "Clave de API de Wenxin."
+
+msgid "The API key of the Yi API."
+msgstr "Clave de API de Yi."
+
+msgid "The API key of the Zhipu API."
+msgstr "Clave de API de Zhipu."
+
+msgid "The API key of the claude API."
+msgstr "Clave de API de claude."
+
+msgid "The API key of the gemini API."
+msgstr "Clave de API de gemini."
+
+msgid "The API key of the tongyi API."
+msgstr "Clave de API de tongyi."
+
+msgid "The API key of the xAI API."
+msgstr "Clave de API de xAI."
+
+msgid "The API secret key of the Wenxin API."
+msgstr "Clave secreta de la API de Wenxin."
+
+msgid "The Agent output."
+msgstr "La salida del agente."
+
+msgid "The GTE models are trained by Alibaba DAMO Academy, supporting Chinese."
+msgstr "Los modelos GTE están entrenados por Alibaba DAMO Academy y admiten chino."
+
+msgid "The GTE models are trained by Alibaba DAMO Academy, supporting English."
+msgstr "Los modelos GTE están entrenados por Alibaba DAMO Academy y admiten inglés."
+
+msgid "The GitHub OAuth token used to obtain Copilot tokens (obtained via the device-flow sign-in)."
+msgstr "Token OAuth de GitHub usado para obtener tokens de Copilot (se obtiene con el inicio de sesión por dispositivo)."
+
+msgid "The HTTP port of Qdrant store."
+msgstr "Puerto HTTP del almacén Qdrant."
+
+msgid "The LLM Client, how to connect to the LLM model, if not provided, it will use the default client deployed by DB-GPT."
+msgstr "Cliente LLM: cómo conectarse al modelo LLM. Si no se indica, se usa el cliente por defecto desplegado por DB-GPT."
+
+msgid "The LLM Client."
+msgstr "El cliente LLM."
+
+msgid "The LLM model name."
+msgstr "Nombre del modelo LLM."
+
+msgid "The LLM operator."
+msgstr "El operador LLM."
+
+msgid "The Model controller address to connect"
+msgstr "Dirección del controlador de modelos al que conectarse"
+
+msgid "The Model controller address to connect. If None, read model controller address from environment key `MODEL_SERVER`."
+msgstr "Dirección del controlador de modelos al que conectarse. Si es None, se lee de la variable de entorno `MODEL_SERVER`."
+
+msgid "The Model controller address to register"
+msgstr "Dirección del controlador de modelos donde registrarse"
+
+msgid "The OpenAI streaming LLM operator."
+msgstr "Operador LLM en streaming de OpenAI."
+
+msgid "The REST port of the Qdrant instance."
+msgstr "Puerto REST de la instancia de Qdrant."
+
+msgid "The SQL list to be executed wrapped in a dictionary, generated by LLM"
+msgstr "Lista de SQL a ejecutar envuelta en un diccionario, generada por el LLM"
+
+msgid "The SQL to be executed wrapped in a dictionary, generated by LLM"
+msgstr "SQL a ejecutar envuelto en un diccionario, generado por el LLM"
+
+msgid "The Secret key for the embeddings API. It's the sk for qianfan."
+msgstr "Clave secreta de la API de embeddings. Es la sk de qianfan."
+
+msgid "The URL of the embeddings API."
+msgstr "URL de la API de embeddings."
+
+msgid "The URL of the rerank API."
+msgstr "URL de la API de reordenamiento."
+
+msgid "The access key ID of the OSS server. You can also set it in the environment variable OSS_ACCESS_KEY_ID"
+msgstr "ID de clave de acceso del servidor OSS. También puedes definirlo en la variable de entorno OSS_ACCESS_KEY_ID"
+
+msgid "The access key ID of the s3 server. You can also set it in the environment variable AWS_ACCESS_KEY_ID"
+msgstr "ID de clave de acceso del servidor S3. También puedes definirlo en la variable de entorno AWS_ACCESS_KEY_ID"
+
+msgid "The access key secret of the OSS server. You can also set it in the environment variable OSS_ACCESS_KEY_SECRET"
+msgstr "Secreto de la clave de acceso del servidor OSS. También puedes definirlo en la variable de entorno OSS_ACCESS_KEY_SECRET"
+
+msgid "The access key secret of the s3 server. You can also set it in the environment variable AWS_SECRET_ACCESS_KEY"
+msgstr "Secreto de la clave de acceso del servidor S3. También puedes definirlo en la variable de entorno AWS_SECRET_ACCESS_KEY"
+
+msgid "The additional configuration for the S3 client."
+msgstr "Configuración adicional del cliente S3."
+
+msgid "The address to send the HTTP request to"
+msgstr "Dirección a la que se envía la solicitud HTTP"
+
+msgid "The agent request to agent Operator."
+msgstr "La solicitud del agente al operador de agente."
+
+msgid "The alias of elasticsearch store, if not set, will use the default alias."
+msgstr "Alias del almacén Elasticsearch; si no se indica, se usa el alias por defecto."
+
+msgid "The alias of milvus store, if not set, will use the default alias."
+msgstr "Alias del almacén Milvus; si no se indica, se usa el alias por defecto."
+
+msgid "The assembled chunks, it has been persisted to full text store."
+msgstr "Los fragmentos ensamblados, ya guardados en el almacén de texto completo."
+
+msgid "The assembled chunks, it has been persisted to graph store."
+msgstr "Los fragmentos ensamblados, ya guardados en el almacén de grafos."
+
+msgid "The assembled chunks, it has been persisted to vector store."
+msgstr "Los fragmentos ensamblados, ya guardados en el almacén vectorial."
+
+msgid "The attention implementation, only valid in multi-GPU configuration"
+msgstr "Implementación de atención; solo válida en configuración con varias GPU"
+
+msgid "The base LLM out parse."
+msgstr "Analizador base de la salida del LLM."
+
+msgid "The base url of the AI/ML API."
+msgstr "URL base de la API de AI/ML."
+
+msgid "The base url of the Baichuan API."
+msgstr "URL base de la API de Baichuan."
+
+msgid "The base url of the BurnCloud API."
+msgstr "URL base de la API de BurnCloud."
+
+msgid "The base url of the DeepSeek API."
+msgstr "URL base de la API de DeepSeek."
+
+msgid "The base url of the GitHub Copilot API. Leave empty to use the plan-specific endpoint resolved automatically."
+msgstr "URL base de la API de GitHub Copilot. Déjala vacía para usar el endpoint de tu plan, que se resuelve automáticamente."
+
+msgid "The base url of the Gitee API."
+msgstr "URL base de la API de Gitee."
+
+msgid "The base url of the Groq API."
+msgstr "URL base de la API de Groq."
+
+msgid "The base url of the InfiniAI API."
+msgstr "URL base de la API de InfiniAI."
+
+msgid "The base url of the MiniMax API."
+msgstr "URL base de la API de MiniMax."
+
+msgid "The base url of the Mistral AI API."
+msgstr "URL base de la API de Mistral AI."
+
+msgid "The base url of the Moonshot API."
+msgstr "URL base de la API de Moonshot."
+
+msgid "The base url of the NVIDIA NIM API."
+msgstr "URL base de la API de NVIDIA NIM."
+
+msgid "The base url of the Ollama API."
+msgstr "URL base de la API de Ollama."
+
+msgid "The base url of the OpenAI API."
+msgstr "URL base de la API de OpenAI."
+
+msgid "The base url of the OrcaRouter API."
+msgstr "URL base de la API de OrcaRouter."
+
+msgid "The base url of the SiliconFlow API."
+msgstr "URL base de la API de SiliconFlow."
+
+msgid "The base url of the Spark API."
+msgstr "URL base de la API de Spark."
+
+msgid "The base url of the Synthorai API."
+msgstr "URL base de la API de Synthorai."
+
+msgid "The base url of the Vercel AI Gateway API."
+msgstr "URL base de la API de Vercel AI Gateway."
+
+msgid "The base url of the Volcengine API."
+msgstr "URL base de la API de Volcengine."
+
+msgid "The base url of the Yi API."
+msgstr "URL base de la API de Yi."
+
+msgid "The base url of the Zhipu API."
+msgstr "URL base de la API de Zhipu."
+
+msgid "The base url of the claude API."
+msgstr "URL base de la API de claude."
+
+msgid "The base url of the gemini API."
+msgstr "URL base de la API de gemini."
+
+msgid "The base url of the tongyi API."
+msgstr "URL base de la API de tongyi."
+
+msgid "The base url of the xAI API."
+msgstr "URL base de la API de xAI."
+
+msgid "The boolean converted from other types."
+msgstr "El booleano convertido desde otros tipos."
+
+msgid "The boolean to be converted to other types."
+msgstr "El booleano que se convertirá a otros tipos."
+
+msgid "The call name of the function."
+msgstr "Nombre de llamada de la función."
+
+msgid "The chat history key, with chat history message pass to prompt template, if not provided, it will parse the prompt template to get the key."
+msgstr "Clave del historial de chat con la que se pasan los mensajes del historial a la plantilla de prompt; si no se indica, se obtiene analizando la plantilla."
+
+msgid "The chat history key, with chat history message pass to prompt template."
+msgstr "Clave del historial de chat con la que se pasan los mensajes del historial a la plantilla de prompt."
+
+msgid "The chat history message placeholder."
+msgstr "Marcador de los mensajes del historial de chat."
+
+msgid "The chat prompt template."
+msgstr "La plantilla de prompt de chat."
+
+msgid "The chunk parameters."
+msgstr "Los parámetros de fragmentación."
+
+msgid "The chunk size when downloading the file"
+msgstr "Tamaño de bloque al descargar el archivo"
+
+msgid "The chunk size when saving the file"
+msgstr "Tamaño de bloque al guardar el archivo"
+
+msgid "The chunk size when saving the file. When the file is larger 10x than this value, it will be uploaded in multiple parts. Default is 1M."
+msgstr "Tamaño de bloque al guardar el archivo. Si el archivo es 10 veces mayor que este valor, se sube en varias partes. Por defecto 1M."
+
+msgid "The chunk size when transferring the file"
+msgstr "Tamaño de bloque al transferir el archivo"
+
+msgid "The class of the tracer storage"
+msgstr "Clase del almacenamiento del trazador"
+
+msgid "The code to be executed."
+msgstr "El código a ejecutar."
+
+msgid "The common LLM http request body."
+msgstr "El cuerpo de solicitud HTTP común al LLM."
+
+msgid "The common LLM request body."
+msgstr "El cuerpo de solicitud común al LLM."
+
+msgid "The common streaming LLM operator, for chat flow."
+msgstr "Operador LLM en streaming común, para flujos de chat."
+
+msgid "The concurrency limit with llm"
+msgstr "Límite de concurrencia con el LLM"
+
+msgid "The config file to start server"
+msgstr "Archivo de configuración para iniciar el servidor"
+
+msgid "The configs for specific app"
+msgstr "Configuraciones para una aplicación específica"
+
+msgid "The connection string of vector store, if not set, will use the default connection string."
+msgstr "Cadena de conexión del almacén vectorial; si no se indica, se usa la cadena por defecto."
+
+msgid "The context key can be used as the key for formatting prompt."
+msgstr "La clave de contexto puede usarse como clave para formatear el prompt."
+
+msgid "The context length of the OpenAI API. If None, it is determined by the model."
+msgstr "Longitud de contexto de la API de OpenAI. Si es None, la determina el modelo."
+
+msgid "The context length of the model request."
+msgstr "Longitud de contexto de la solicitud al modelo."
+
+msgid "The context length of the model. If None, it is automatically determined from model."
+msgstr "Longitud de contexto del modelo. Si es None, se determina automáticamente a partir del modelo."
+
+msgid "The context."
+msgstr "El contexto."
+
+msgid "The conversation id of the AWEL flow"
+msgstr "ID de conversación del flujo AWEL"
+
+msgid "The conversation storage(Not include message detail)."
+msgstr "Almacenamiento de conversaciones (sin el detalle de los mensajes)."
+
+msgid "The conversation storage, store the conversation items(Not include message items). If None, we will use InMemoryStorage."
+msgstr "Almacenamiento de conversaciones: guarda las conversaciones (sin los mensajes). Si es None, se usa InMemoryStorage."
+
+msgid "The cookies to use for the HTTP request"
+msgstr "Cookies para la solicitud HTTP"
+
+msgid "The current version of the flow, if not set, will read from dbgpt.__version__"
+msgstr "Versión actual del flujo; si no se indica, se lee de dbgpt.__version__"
+
+msgid "The data report"
+msgstr "El informe de datos"
+
+msgid "The data report in markdown format."
+msgstr "El informe de datos en formato Markdown."
+
+msgid "The database configuration file"
+msgstr "Archivo de configuración de la base de datos"
+
+msgid "The datasource to retrieve the context"
+msgstr "Fuente de datos de la que obtener el contexto"
+
+msgid "The default storage backend"
+msgstr "Backend de almacenamiento por defecto"
+
+msgid "The default thread pool size, If None, use default config of python thread pool"
+msgstr "Tamaño por defecto del pool de hilos; si es None, usa la configuración por defecto de Python"
+
+msgid "The dict output after parsing."
+msgstr "El diccionario de salida tras el análisis."
+
+msgid "The directories to search awel files, split by `,`"
+msgstr "Directorios donde buscar archivos AWEL, separados por `,`"
+
+msgid "The directory of the duckdb extensions.Duckdb will download the extensions from the internet if not provided.This configuration is used to tell duckdb where to find the extensions and avoid downloading. Note that the extensions are platform-specific and version-specific."
+msgstr "Directorio de extensiones de DuckDB. Si no se indica, DuckDB descarga las extensiones de internet. Sirve para decirle a DuckDB dónde encontrarlas y evitar la descarga. Las extensiones dependen de la plataforma y de la versión."
+
+msgid "The display type for the data"
+msgstr "Tipo de visualización de los datos"
+
+msgid "The distance metric: 'COSINE', 'L2' (Euclidean), or 'IP' (Inner Product)."
+msgstr "Métrica de distancia: 'COSINE', 'L2' (euclidiana) o 'IP' (producto interno)."
+
+msgid "The dtype of the model, default is None."
+msgstr "dtype del modelo; por defecto None."
+
+msgid "The embedding field of milvus store, if not set, will use the default embedding field."
+msgstr "Campo de embedding del almacén Milvus; si no se indica, se usa el campo por defecto."
+
+msgid "The embedding function of vector store, if not set, will use the default embedding function."
+msgstr "Función de embedding del almacén vectorial; si no se indica, se usa la función por defecto."
+
+msgid "The embedding model are trained by BAAI, it support Chinese."
+msgstr "Modelo de embeddings entrenado por BAAI; admite chino."
+
+msgid "The embedding model are trained by BAAI, it support English."
+msgstr "Modelo de embeddings entrenado por BAAI; admite inglés."
+
+msgid "The embedding model are trained by BAAI, it support more than 100 working languages."
+msgstr "Modelo de embeddings entrenado por BAAI; admite más de 100 idiomas."
+
+msgid "The embedding model are trained by HKUNLP, it support English."
+msgstr "Modelo de embeddings entrenado por HKUNLP; admite inglés."
+
+msgid "The embedding model are trained by Jina AI, it support multiple languages. And it has 0.57B parameters."
+msgstr "Modelo de embeddings entrenado por Jina AI; admite varios idiomas y tiene 0,57B parámetros."
+
+msgid "The embedding model are trained by MokaAI, this version support Chinese."
+msgstr "Modelo de embeddings entrenado por MokaAI; esta versión admite chino."
+
+msgid "The embedding model are trained by MokaAI, this version support English and Chinese."
+msgstr "Modelo de embeddings entrenado por MokaAI; esta versión admite inglés y chino."
+
+msgid "The embedding model are trained by OpenAI, it support English."
+msgstr "Modelo de embeddings entrenado por OpenAI; admite inglés."
+
+msgid "The embedding model are trained by TongYi, it support more than 50 working languages."
+msgstr "Modelo de embeddings entrenado por TongYi; admite más de 50 idiomas."
+
+msgid "The embedding model is provided by SiliconFlow, supporting multiple languages and high-quality text embeddings."
+msgstr "Modelo de embeddings de SiliconFlow; admite varios idiomas y embeddings de texto de alta calidad."
+
+msgid "The end rounds to keep in the chat history."
+msgstr "Rondas finales que se conservan en el historial de chat."
+
+msgid "The endpoint of the OSS server. e.g. https://oss-cn-hangzhou.aliyuncs.com"
+msgstr "Endpoint del servidor OSS, p. ej. https://oss-cn-hangzhou.aliyuncs.com"
+
+#, python-brace-format
+msgid "The endpoint of the OpenTelemetry Protocol, you can set '${env:OTEL_EXPORTER_OTLP_TRACES_ENDPOINT}' to use the environment variable"
+msgstr "Endpoint del protocolo OpenTelemetry; puedes usar '${env:OTEL_EXPORTER_OTLP_TRACES_ENDPOINT}' para tomarlo de la variable de entorno"
+
+msgid "The endpoint of the s3 server. e.g. https://s3.us-east-1.amazonaws.com"
+msgstr "Endpoint del servidor S3, p. ej. https://s3.us-east-1.amazonaws.com"
+
+msgid "The exporter of the tracer, e.g. telemetry"
+msgstr "Exportador del trazador, p. ej. telemetry"
+
+msgid "The extra json data to run AWEL flow."
+msgstr "Datos JSON adicionales para ejecutar el flujo AWEL."
+
+msgid "The file path of the data source."
+msgstr "Ruta del archivo de la fuente de datos."
+
+msgid "The file to store the tracer, e.g. dbgpt_webserver_tracer.jsonl"
+msgstr "Archivo donde se guarda el trazador, p. ej. dbgpt_webserver_tracer.jsonl"
+
+msgid "The filename to store logs"
+msgstr "Nombre del archivo donde se guardan los registros"
+
+msgid "The first string from first upstream."
+msgstr "El primer texto, del primer nodo anterior."
+
+msgid "The fixed bucket name to use. If set, all logical buckets in DB-GPT will be mapped to this bucket. We suggest you set this value to avoid bucket name conflicts."
+msgstr "Nombre fijo del bucket. Si se indica, todos los buckets lógicos de DB-GPT se asignan a este bucket. Se recomienda definirlo para evitar conflictos de nombres."
+
+msgid "The float converted from other types."
+msgstr "El decimal convertido desde otros tipos."
+
+msgid "The float to be converted to other types."
+msgstr "El decimal que se convertirá a otros tipos."
+
+msgid "The format of the media"
+msgstr "Formato del medio"
+
+msgid ""
+"The format of the model config to load.\n"
+"\n"
+"* \"auto\" will try to load the config in hf format if available else it will try to load in mistral format "
+msgstr ""
+"Formato de la configuración del modelo a cargar.\n"
+"\n"
+"* \"auto\" intenta cargarla en formato hf si existe; si no, en formato mistral "
+
+msgid ""
+"The format of the model weights to load.\n"
+"\n"
+"* \"auto\" will try to load the weights in the safetensors format and fall back to the pytorch bin format if safetensors format is not available.\n"
+"* \"pt\" will load the weights in the pytorch bin format.\n"
+"* \"safetensors\" will load the weights in the safetensors format.\n"
+"* \"npcache\" will load the weights in pytorch format and store a numpy cache to speed up the loading.\n"
+"* \"dummy\" will initialize the weights with random values, which is mainly for profiling.\n"
+"* \"tensorizer\" will load the weights using tensorizer from CoreWeave. See the Tensorize vLLM Model script in the Examples section for more information.\n"
+"* \"runai_streamer\" will load the Safetensors weights using Run:aiModel Streamer \n"
+"* \"bitsandbytes\" will load the weights using bitsandbytes quantization.\n"
+msgstr ""
+"Formato de los pesos del modelo a cargar.\n"
+"\n"
+"* \"auto\" intenta cargar los pesos en formato safetensors y, si no existe, usa el formato bin de pytorch.\n"
+"* \"pt\" carga los pesos en formato bin de pytorch.\n"
+"* \"safetensors\" carga los pesos en formato safetensors.\n"
+"* \"npcache\" carga los pesos en formato pytorch y guarda una caché numpy para acelerar la carga.\n"
+"* \"dummy\" inicializa los pesos con valores aleatorios, sobre todo para perfilado.\n"
+"* \"tensorizer\" carga los pesos con tensorizer de CoreWeave. Consulta el script Tensorize vLLM Model en la sección de ejemplos.\n"
+"* \"runai_streamer\" carga los pesos Safetensors con Run:ai Model Streamer \n"
+"* \"bitsandbytes\" carga los pesos con cuantización bitsandbytes.\n"
+
+msgid "The formatted messages."
+msgstr "Los mensajes formateados."
+
+#, python-format
+msgid "The fraction of GPU memory to be used for the model executor, which can range from 0 to 1. For example, a value of 0.5 would imply 50%% GPU memory utilization. If unspecified, will use the default value of 0.9. This is a per-instance limit, and only applies to the current vLLM instance.It does not matter if you have another vLLM instance running on the same GPU. For example, if you have two vLLM instances running on the same GPU, you can set the GPU memory utilization to 0.5 for each instance."
+msgstr "Fracción de la memoria de la GPU que usará el ejecutor del modelo, de 0 a 1. Por ejemplo, 0.5 implica un 50%% de uso de memoria de la GPU. Si no se indica, se usa 0.9. Es un límite por instancia y solo aplica a la instancia actual de vLLM; no importa si hay otra instancia en la misma GPU. Por ejemplo, con dos instancias de vLLM en la misma GPU puedes poner 0.5 a cada una."
+
+msgid "The full text store."
+msgstr "El almacén de texto completo."
+
+msgid "The gRPC port of Qdrant store."
+msgstr "Puerto gRPC del almacén Qdrant."
+
+msgid "The gRPC port of the Qdrant instance."
+msgstr "Puerto gRPC de la instancia de Qdrant."
+
+msgid "The history merge mode, supports 'none', 'window' and 'token'. 'none': no history merge, 'window': merge by conversation window, 'token': merge by token length."
+msgstr "Modo de fusión del historial: 'none', 'window' y 'token'. 'none': sin fusión; 'window': fusiona por ventana de conversación; 'token': fusiona por longitud de tokens."
+
+msgid "The history."
+msgstr "El historial."
+
+msgid "The host IP address to bind to."
+msgstr "Dirección IP del host donde enlazarse."
+
+msgid "The host of Qdrant store."
+msgstr "Host del almacén Qdrant."
+
+msgid "The host of Valkey store."
+msgstr "Host del almacén Valkey."
+
+msgid "The host of the Qdrant instance."
+msgstr "Host de la instancia de Qdrant."
+
+msgid "The host of the Valkey instance."
+msgstr "Host de la instancia de Valkey."
+
+msgid "The host of the file server"
+msgstr "Host del servidor de archivos"
+
+msgid "The http or https proxy to use openai"
+msgstr "Proxy http o https para usar OpenAI"
+
+msgid "The http status code"
+msgstr "El código de estado HTTP"
+
+msgid "The human message."
+msgstr "El mensaje del usuario."
+
+msgid "The index name of elasticsearch store, if not set, will use the default index name."
+msgstr "Nombre del índice del almacén Elasticsearch; si no se indica, se usa el nombre por defecto."
+
+msgid "The input chunks."
+msgstr "Los fragmentos de entrada."
+
+msgid "The input dictionary."
+msgstr "El diccionario de entrada."
+
+msgid "The input strings to join."
+msgstr "Los textos de entrada que se unirán."
+
+msgid "The input value of the operator."
+msgstr "Valor de entrada del operador."
+
+msgid "The integer converted from other types."
+msgstr "El entero convertido desde otros tipos."
+
+msgid "The integer to be converted to other types."
+msgstr "El entero que se convertirá a otros tipos."
+
+msgid "The interval for checking heartbeats (seconds)"
+msgstr "Intervalo para comprobar latidos (segundos)"
+
+msgid "The interval for sending heartbeats (seconds)"
+msgstr "Intervalo para enviar latidos (segundos)"
+
+msgid "The ip address of current worker to register to ModelController. If None, the address is automatically determined"
+msgstr "Dirección IP del worker actual para registrarse en el ModelController. Si es None, se determina automáticamente"
+
+msgid "The joined string."
+msgstr "El texto unido."
+
+msgid "The json data to run AWEL flow, if set, will overwrite other options"
+msgstr "Datos JSON para ejecutar el flujo AWEL; si se indican, sustituyen a las demás opciones"
+
+msgid "The key for human message in the prompt format dict."
+msgstr "Clave del mensaje del usuario en el diccionario de formato del prompt."
+
+msgid "The key for the first string, default is `user_input`."
+msgstr "Clave del primer texto; por defecto `user_input`."
+
+msgid "The key for the second string, default is `context`."
+msgstr "Clave del segundo texto; por defecto `context`."
+
+msgid "The key of history in prompt dict."
+msgstr "Clave del historial en el diccionario del prompt."
+
+msgid "The key of the context, it will be used in building the prompt"
+msgstr "Clave del contexto; se usa al construir el prompt"
+
+msgid "The key of the dict, link 'user_input'"
+msgstr "Clave del diccionario, como 'user_input'"
+
+msgid "The key of the user message in your prompt, default is 'user_input'."
+msgstr "Clave del mensaje del usuario en tu prompt; por defecto 'user_input'."
+
+msgid "The key prefix for all vector store keys."
+msgstr "Prefijo de todas las claves del almacén vectorial."
+
+msgid "The key to encrypt the data"
+msgstr "Clave para cifrar los datos"
+
+msgid "The knowledge graph."
+msgstr "El grafo de conocimiento."
+
+msgid "The knowledge operator, which can create knowledge from datasource."
+msgstr "Operador de conocimiento, que puede crear conocimiento desde una fuente de datos."
+
+msgid "The knowledge to be loaded."
+msgstr "El conocimiento que se cargará."
+
+msgid "The language of the code."
+msgstr "Lenguaje del código."
+
+msgid "The language of the query rewrite prompt."
+msgstr "Idioma del prompt de reescritura de consultas."
+
+msgid "The last version to compatible, if not set, will big than the current version by one minor version."
+msgstr "Última versión compatible; si no se indica, será una versión menor mayor que la actual."
+
+msgid "The list output after parsing."
+msgstr "La lista de salida tras el análisis."
+
+msgid "The llm client."
+msgstr "El cliente LLM."
+
+msgid "The local storage path"
+msgstr "Ruta de almacenamiento local"
+
+msgid "The markdown result of the SQL execution"
+msgstr "Resultado en Markdown de la ejecución SQL"
+
+msgid "The max chunks once load in vector store, if not set, will use the default value 10."
+msgstr "Máximo de fragmentos por carga en el almacén vectorial; si no se indica, se usa 10."
+
+msgid "The max memory in MB, default is 256"
+msgstr "Memoria máxima en MB; por defecto 256"
+
+msgid "The max new tokens for LLM generation"
+msgstr "Máximo de tokens nuevos en la generación del LLM"
+
+msgid "The max new tokens of the model request."
+msgstr "Máximo de tokens nuevos de la solicitud al modelo."
+
+msgid "The max new tokens to run AWEL flow"
+msgstr "Máximo de tokens nuevos para ejecutar el flujo AWEL"
+
+msgid "The max number of chunks to load at once. If your document is large, you can set this value to a larger number to speed up the loading process. Default is 10."
+msgstr "Número máximo de fragmentos que se cargan a la vez. Si tu documento es grande, puedes aumentarlo para acelerar la carga. Por defecto 10."
+
+msgid "The max number of threads to use. Default is 1. If you set this bigger than 1, please make sure your vector store is thread-safe."
+msgstr "Número máximo de hilos. Por defecto 1. Si usas más de 1, asegúrate de que tu almacén vectorial sea seguro para hilos."
+
+msgid "The max sequence length of the embedding model, default is 512"
+msgstr "Longitud máxima de secuencia del modelo de embeddings; por defecto 512"
+
+msgid "The max threads in vector store, if not set, will use the default value 1."
+msgstr "Máximo de hilos en el almacén vectorial; si no se indica, se usa 1."
+
+msgid "The max token limit to keep in the chat history."
+msgstr "Límite máximo de tokens que se conservan en el historial de chat."
+
+msgid "The max token limit. Default is 100k"
+msgstr "Límite máximo de tokens. Por defecto 100k"
+
+msgid "The maximum memory limit of each GPU, only valid in multi-GPU configuration, eg: 10GiB, 24GiB"
+msgstr "Límite máximo de memoria por GPU; solo válido con varias GPU, p. ej. 10GiB, 24GiB"
+
+msgid "The maximum number of results to return"
+msgstr "Número máximo de resultados a devolver"
+
+msgid "The maximum number of results to return from the query."
+msgstr "Número máximo de resultados que devuelve la consulta."
+
+msgid "The maximum number of tokens to pass to the model, default 100 * 1024.Just work for the schema retrieval failed, and load all tables schema."
+msgstr "Número máximo de tokens que se pasan al modelo; por defecto 100 * 1024. Solo aplica cuando falla la recuperación de esquemas y se cargan los esquemas de todas las tablas."
+
+msgid "The media data"
+msgstr "Los datos del medio"
+
+msgid "The media object"
+msgstr "El objeto del medio"
+
+msgid "The memory configuration"
+msgstr "La configuración de memoria"
+
+#, python-brace-format
+msgid "The merged dict. example: {'user_input': 'first', 'context': 'second'}."
+msgstr "El diccionario fusionado. Ejemplo: {'user_input': 'first', 'context': 'second'}."
+
+msgid "The message storage, store the messages of one conversation. If None, we will use InMemoryStorage."
+msgstr "Almacenamiento de mensajes: guarda los mensajes de una conversación. Si es None, se usa InMemoryStorage."
+
+msgid "The message storage."
+msgstr "El almacenamiento de mensajes."
+
+msgid "The messages stored in the storage."
+msgstr "Los mensajes guardados en el almacenamiento."
+
+msgid "The messages to run AWEL flow"
+msgstr "Mensajes para ejecutar el flujo AWEL"
+
+msgid "The metadata field of milvus store, if not set, will use the default metadata field."
+msgstr "Campo de metadatos del almacén Milvus; si no se indica, se usa el campo por defecto."
+
+msgid "The metadata of collection."
+msgstr "Metadatos de la colección."
+
+msgid "The methods of the API endpoint"
+msgstr "Métodos del endpoint de la API"
+
+msgid "The minimum match score for the retrieved chunks, it will be dropped if the match score is less than the threshold"
+msgstr "Puntuación mínima de coincidencia de los fragmentos recuperados; se descartan si la puntuación es menor que el umbral"
+
+msgid "The minimum similarity score to return from the query."
+msgstr "Puntuación mínima de similitud que devuelve la consulta."
+
+msgid "The model messages of upstream."
+msgstr "Los mensajes del modelo del nodo anterior."
+
+msgid "The model name of AWEL flow"
+msgstr "Nombre del modelo del flujo AWEL"
+
+msgid "The model name of the model request."
+msgstr "Nombre del modelo de la solicitud."
+
+msgid "The model name."
+msgstr "El nombre del modelo."
+
+msgid "The model output after parsing."
+msgstr "La salida del modelo tras el análisis."
+
+msgid "The model output after transform to common stream format"
+msgstr "La salida del modelo tras transformarla al formato de streaming común"
+
+msgid "The model output after transformed to openai stream format."
+msgstr "La salida del modelo tras transformarla al formato de streaming de OpenAI."
+
+msgid "The model output of upstream."
+msgstr "La salida del modelo del nodo anterior."
+
+msgid "The model output."
+msgstr "La salida del modelo."
+
+msgid "The model request of upstream."
+msgstr "La solicitud al modelo del nodo anterior."
+
+msgid "The model request with chat history prompt."
+msgstr "La solicitud al modelo con el prompt del historial de chat."
+
+msgid "The model request."
+msgstr "La solicitud al modelo."
+
+msgid "The module to scan, if not set, will scan all DB-GPT modules('dbgpt,dbgpt_client,dbgpt_ext,dbgpt_serve,dbgpt_app')."
+msgstr "Módulo a escanear; si no se indica, se escanean todos los módulos de DB-GPT ('dbgpt,dbgpt_client,dbgpt_ext,dbgpt_serve,dbgpt_app')."
+
+msgid "The name of Graph, if not set, will use the default name."
+msgstr "Nombre del grafo; si no se indica, se usa el nombre por defecto."
+
+msgid "The name of model"
+msgstr "Nombre del modelo"
+
+msgid "The name of the AWEL flow"
+msgstr "Nombre del flujo AWEL"
+
+msgid "The name of the database."
+msgstr "Nombre de la base de datos."
+
+msgid "The name of the datasource, default is 'datasource'."
+msgstr "Nombre de la fuente de datos; por defecto 'datasource'."
+
+msgid "The name of the knowledge space"
+msgstr "Nombre del espacio de conocimiento"
+
+msgid "The name of the model to use for text embeddings."
+msgstr "Nombre del modelo para los embeddings de texto."
+
+msgid "The name of the model."
+msgstr "Nombre del modelo."
+
+msgid "The name of vector store, if not set, will use the default name."
+msgstr "Nombre del almacén vectorial; si no se indica, se usa el nombre por defecto."
+
+msgid "The name of your app"
+msgstr "Nombre de tu aplicación"
+
+msgid "The non-streaming output."
+msgstr "La salida sin streaming."
+
+msgid "The non-streaming request, to non-streaming Operator."
+msgstr "La solicitud sin streaming, hacia el operador sin streaming."
+
+msgid "The number of candidates."
+msgstr "Número de candidatos."
+
+msgid "The number of chunks after reranking."
+msgstr "Número de fragmentos tras el reordenamiento."
+
+msgid "The number of chunks to retrieve"
+msgstr "Número de fragmentos a recuperar"
+
+msgid "The number of chunks to retrieve from the knowledge space."
+msgstr "Número de fragmentos a recuperar del espacio de conocimiento."
+
+msgid "The number of end rounds to keep in memory"
+msgstr "Número de rondas finales que se conservan en memoria"
+
+msgid "The number of gpus you expect to use, if it is empty, use all of them as much as possible"
+msgstr "Número de GPU que esperas usar; si está vacío, se usan todas las posibles"
+
+msgid "The number of start rounds to keep in memory"
+msgstr "Número de rondas iniciales que se conservan en memoria"
+
+msgid "The number of tables to retrieve from the database."
+msgstr "Número de tablas a recuperar de la base de datos."
+
+msgid "The number of top k documents."
+msgstr "Número de documentos top k."
+
+msgid "The operator to build the prompt with static prompt."
+msgstr "Operador para construir el prompt con un prompt estático."
+
+msgid "The operator to load chat history from storage."
+msgstr "Operador para cargar el historial de chat desde el almacenamiento."
+
+msgid "The output ModelRequest."
+msgstr "El ModelRequest de salida."
+
+msgid "The output dictionary."
+msgstr "El diccionario de salida."
+
+msgid "The output key of the AWEL flow, if set, it will try to get the output by the key"
+msgstr "Clave de salida del flujo AWEL; si se indica, se intenta obtener la salida con esa clave"
+
+msgid "The output path, if not set, will print to packages/dbgpt-serve/src/dbgpt_serve/flow/compat/"
+msgstr "Ruta de salida; si no se indica, se escribe en packages/dbgpt-serve/src/dbgpt_serve/flow/compat/"
+
+msgid "The output string."
+msgstr "El texto de salida."
+
+msgid "The output value of the operator."
+msgstr "Valor de salida del operador."
+
+msgid "The password for Valkey store."
+msgstr "Contraseña del almacén Valkey."
+
+msgid "The password for the Valkey instance."
+msgstr "Contraseña de la instancia de Valkey."
+
+msgid "The password of vector store, if not set, will use the default password."
+msgstr "Contraseña del almacén vectorial; si no se indica, se usa la contraseña por defecto."
+
+msgid "The path of the AWEL flow"
+msgstr "Ruta del flujo AWEL"
+
+msgid "The path of the model, if you want to deploy a local model."
+msgstr "Ruta del modelo, si quieres desplegar un modelo local."
+
+msgid "The path of the model, if you want to deploy a local model. Defaults to 'Qwen/Qwen3-Reranker-0.6B'."
+msgstr "Ruta del modelo, si quieres desplegar un modelo local. Por defecto 'Qwen/Qwen3-Reranker-0.6B'."
+
+msgid "The persist directory, default is model_cache"
+msgstr "Directorio de persistencia; por defecto model_cache"
+
+msgid "The persist path of vector store."
+msgstr "Ruta de persistencia del almacén vectorial."
+
+msgid "The port number to bind to."
+msgstr "Número de puerto donde enlazarse."
+
+msgid "The port of Valkey store."
+msgstr "Puerto del almacén Valkey."
+
+msgid "The port of elasticsearch store, if not set, will use the default port."
+msgstr "Puerto del almacén Elasticsearch; si no se indica, se usa el puerto por defecto."
+
+msgid "The port of milvus store, if not set, will use the default port."
+msgstr "Puerto del almacén Milvus; si no se indica, se usa el puerto por defecto."
+
+msgid "The port of the Valkey instance."
+msgstr "Puerto de la instancia de Valkey."
+
+msgid "The port of the file server, default is 5670"
+msgstr "Puerto del servidor de archivos; por defecto 5670"
+
+msgid "The prefix key of the dict, link 'message' or 'extra.info'"
+msgstr "Clave de prefijo del diccionario, como 'message' o 'extra.info'"
+
+msgid "The prefix of the bucket name. If set, all logical buckets in DB-GPT will be prefixed with this value. Just work when fixed_bucket is None."
+msgstr "Prefijo de los nombres de bucket. Si se indica, todos los buckets lógicos de DB-GPT llevan este prefijo. Solo aplica cuando fixed_bucket es None."
+
+msgid "The primary field of milvus store, if not set, will use the default primary field."
+msgstr "Campo principal del almacén Milvus; si no se indica, se usa el campo por defecto."
+
+msgid "The prompt dict."
+msgstr "El diccionario del prompt."
+
+msgid "The prompt format dict."
+msgstr "El diccionario de formato del prompt."
+
+msgid "The prompt template for the conversation."
+msgstr "La plantilla de prompt para la conversación."
+
+msgid "The prompt template to build a database prompt"
+msgstr "Plantilla de prompt para construir un prompt de base de datos"
+
+msgid "The prompt template to build a database prompt."
+msgstr "Plantilla de prompt para construir un prompt de base de datos."
+
+msgid "The provider of the model. If model is deployed in local, this is the inference type. If model is deployed in third-party service, this is platform name('proxy/<platform>')"
+msgstr "Proveedor del modelo. Si el modelo se despliega localmente, es el tipo de inferencia. Si se despliega en un servicio externo, es el nombre de la plataforma ('proxy/<plataforma>')"
+
+msgid "The quantization parameters."
+msgstr "Los parámetros de cuantización."
+
+msgid "The query rewrite resource."
+msgstr "El recurso de reescritura de consultas."
+
+msgid "The query to retrieve."
+msgstr "La consulta a recuperar."
+
+msgid "The question of user"
+msgstr "La pregunta del usuario"
+
+msgid "The real model name to pass to the provider, default is None. If backend is None, use name as the real model name."
+msgstr "Nombre real del modelo que se pasa al proveedor; por defecto None. Si backend es None, se usa name como nombre real."
+
+msgid "The region of the OSS server. e.g. cn-hangzhou"
+msgstr "Región del servidor OSS, p. ej. cn-hangzhou"
+
+msgid "The region of the s3 server. e.g. us-east-1"
+msgstr "Región del servidor S3, p. ej. us-east-1"
+
+msgid "The report analyst result."
+msgstr "El resultado del analista de informes."
+
+msgid "The request body of the API endpoint"
+msgstr "Cuerpo de la solicitud del endpoint de la API"
+
+msgid "The request body of the API endpoint(Dict[str, Any])"
+msgstr "Cuerpo de la solicitud del endpoint de la API (Dict[str, Any])"
+
+msgid "The request body of the API endpoint, parse as a common LLM http body"
+msgstr "Cuerpo de la solicitud del endpoint de la API, interpretado como cuerpo HTTP común al LLM"
+
+msgid "The request body of the API endpoint, parse as a json string"
+msgstr "Cuerpo de la solicitud del endpoint de la API, interpretado como texto JSON"
+
+msgid "The request body of the API endpoint, parse as a starlette Request"
+msgstr "Cuerpo de la solicitud del endpoint de la API, interpretado como Request de starlette"
+
+msgid "The request body to send"
+msgstr "Cuerpo de la solicitud a enviar"
+
+msgid "The request string messages of the API endpoint, parsed from 'messages' field of the request body"
+msgstr "Mensajes de texto de la solicitud del endpoint, tomados del campo 'messages' del cuerpo"
+
+msgid "The rerank."
+msgstr "El reordenamiento."
+
+msgid "The reranker model are trained by BAAI, it support Chinese and English."
+msgstr "Modelo reordenador entrenado por BAAI; admite chino e inglés."
+
+msgid "The reranker model are trained by BAAI, it support multiple languages."
+msgstr "Modelo reordenador entrenado por BAAI; admite varios idiomas."
+
+msgid "The reranker model are trained by Jina AI, it support multiple languages."
+msgstr "Modelo reordenador entrenado por Jina AI; admite varios idiomas."
+
+msgid "The response body of the API endpoint"
+msgstr "Cuerpo de la respuesta del endpoint de la API"
+
+msgid "The response body of the HTTP request"
+msgstr "Cuerpo de la respuesta de la solicitud HTTP"
+
+msgid "The response format, default is a JSON format"
+msgstr "Formato de la respuesta; por defecto JSON"
+
+msgid "The response media type"
+msgstr "Tipo de medio de la respuesta"
+
+msgid "The result of the SQL execution(GPT-Vis format)"
+msgstr "Resultado de la ejecución SQL (formato GPT-Vis)"
+
+msgid "The retrieved candidates."
+msgstr "Los candidatos recuperados."
+
+msgid "The retrieved chunks from the knowledge space"
+msgstr "Fragmentos recuperados del espacio de conocimiento"
+
+msgid "The retrieved context from the datasource"
+msgstr "Contexto recuperado de la fuente de datos"
+
+msgid "The retrieved context from the knowledge space"
+msgstr "Contexto recuperado del espacio de conocimiento"
+
+msgid "The retrieved schema chunks from the datasource"
+msgstr "Fragmentos de esquema recuperados de la fuente de datos"
+
+msgid "The root operation name of the tracer"
+msgstr "Nombre de la operación raíz del trazador"
+
+msgid "The score threshold, if score of candidate is less than it, it will be filtered."
+msgstr "Umbral de puntuación; los candidatos con menor puntuación se filtran."
+
+msgid "The second string from second upstream."
+msgstr "El segundo texto, del segundo nodo anterior."
+
+msgid "The secure of milvus store, if not set, will use the default "
+msgstr "Conexión segura del almacén Milvus; si no se indica, se usa el valor por defecto "
+
+msgid "The separator between chunks."
+msgstr "Separador entre fragmentos."
+
+msgid "The separator to join the strings."
+msgstr "Separador para unir los textos."
+
+msgid "The serializer for serializing data with json format."
+msgstr "Serializador para serializar datos en formato JSON."
+
+msgid "The serializer for serializing the data. If not set, the default JSON serializer will be used."
+msgstr "Serializador de los datos. Si no se indica, se usa el serializador JSON por defecto."
+
+msgid "The signature version of the s3 server. e.g. s3v4, s3v2, None (default)"
+msgstr "Versión de firma del servidor S3, p. ej. s3v4, s3v2, None (por defecto)"
+
+msgid "The space in GiB to offload to CPU, per GPU. Default is 0, which means no offloading. Intuitively, this argument can be seen as a virtual way to increase the GPU memory size. For example, if you have one 24 GB GPU and set this to 10, virtually you can think of it as a 34 GB GPU. Then you can load a 13B model with BF16 weight, which requires at least 26GB GPU memory. Note that this requires fast CPU-GPU interconnect, as part of the model is loaded from CPU memory to GPU memory on the fly in each model forward pass."
+msgstr "Espacio en GiB que se descarga en la CPU por GPU. Por defecto 0 (sin descarga). Puede verse como una forma virtual de aumentar la memoria de la GPU. Por ejemplo, con una GPU de 24 GB y este valor en 10, es como tener una GPU de 34 GB y puedes cargar un modelo 13B con pesos BF16, que requiere al menos 26 GB. Requiere una interconexión CPU-GPU rápida, ya que parte del modelo se carga de la memoria de la CPU a la GPU en cada pasada."
+
+msgid "The specific model version to use. It can be a branch name, a tag name, or a commit id. If unspecified, will use the default version."
+msgstr "Versión concreta del modelo a usar. Puede ser una rama, una etiqueta o un id de commit. Si no se indica, se usa la versión por defecto."
+
+msgid "The specific revision to use for the model code on Hugging Face Hub. It can be a branch name, a tag name, or a commit id. If unspecified, will use the default version."
+msgstr "Revisión concreta del código del modelo en Hugging Face Hub. Puede ser una rama, una etiqueta o un id de commit. Si no se indica, se usa la versión por defecto."
+
+msgid "The split chunks by chunk manager."
+msgstr "Fragmentos divididos por el gestor de fragmentos."
+
+msgid "The start rounds to keep in the chat history."
+msgstr "Rondas iniciales que se conservan en el historial de chat."
+
+msgid "The storage backend configurations"
+msgstr "Configuraciones de los backends de almacenamiento"
+
+msgid "The storage type of model configures, if None, use the default storage(current database). When you run in light mode, it will not use any storage."
+msgstr "Tipo de almacenamiento de la configuración de modelos; si es None, usa el almacenamiento por defecto (la base de datos actual). En modo ligero no se usa almacenamiento."
+
+msgid "The storage type. Supported values: memory, disk, valkey. For valkey, configure via env vars: VALKEY_HOST, VALKEY_PORT, VALKEY_PASSWORD."
+msgstr "Tipo de almacenamiento. Valores admitidos: memory, disk, valkey. Para valkey, configúralo con las variables de entorno VALKEY_HOST, VALKEY_PORT y VALKEY_PASSWORD."
+
+msgid "The streaming LLM operator."
+msgstr "El operador LLM en streaming."
+
+msgid "The streaming model output."
+msgstr "La salida del modelo en streaming."
+
+msgid "The streaming output."
+msgstr "La salida en streaming."
+
+msgid "The streaming request, to streaming Operator."
+msgstr "La solicitud en streaming, hacia el operador en streaming."
+
+msgid "The string converted from other types."
+msgstr "El texto convertido desde otros tipos."
+
+msgid "The string to be converted to other types."
+msgstr "El texto que se convertirá a otros tipos."
+
+msgid "The summary assembler operator."
+msgstr "Operador ensamblador de resúmenes."
+
+msgid "The system message."
+msgstr "El mensaje del sistema."
+
+msgid "The temperature for LLM generation"
+msgstr "Temperatura de la generación del LLM"
+
+msgid "The temperature of the model request."
+msgstr "Temperatura de la solicitud al modelo."
+
+msgid "The temperature to run AWEL flow"
+msgstr "Temperatura para ejecutar el flujo AWEL"
+
+msgid "The text field of milvus store, if not set, will use the default text field."
+msgstr "Campo de texto del almacén Milvus; si no se indica, se usa el campo por defecto."
+
+msgid "The text split chunks by chunk manager."
+msgstr "Fragmentos de texto divididos por el gestor de fragmentos."
+
+msgid "The timeout for checking heartbeats (seconds), it will be set unhealthy if the worker is not responding in this time"
+msgstr "Tiempo de espera para comprobar latidos (segundos); el worker se marca como no saludable si no responde en ese tiempo"
+
+msgid "The timeout for the request in seconds."
+msgstr "Tiempo de espera de la solicitud en segundos."
+
+msgid "The timeout of the HTTP request in seconds"
+msgstr "Tiempo de espera de la solicitud HTTP en segundos"
+
+#, python-brace-format
+msgid "The timeout of the connection, in seconds, you can set '${env:OTEL_EXPORTER_OTLP_TRACES_TIMEOUT}' to use the environment "
+msgstr "Tiempo de espera de la conexión en segundos; puedes usar '${env:OTEL_EXPORTER_OTLP_TRACES_TIMEOUT}' para tomarlo de la variable de entorno "
+
+msgid "The timeout when transferring the file"
+msgstr "Tiempo de espera al transferir el archivo"
+
+msgid "The token to use for the HTTP request"
+msgstr "Token para la solicitud HTTP"
+
+msgid ""
+"The tokenizer mode.\n"
+"\n"
+"* \"auto\" will use the fast tokenizer if available.\n"
+"* \"slow\" will always use the slow tokenizer. \n"
+"* \"mistral\" will always use the `mistral_common` tokenizer."
+msgstr ""
+"Modo del tokenizador.\n"
+"\n"
+"* \"auto\" usa el tokenizador rápido si está disponible.\n"
+"* \"slow\" usa siempre el tokenizador lento. \n"
+"* \"mistral\" usa siempre el tokenizador `mistral_common`."
+
+msgid "The top k for LLM generation"
+msgstr "Top k de la generación del LLM"
+
+msgid "The top k for the reranker"
+msgstr "Top k del reordenador"
+
+msgid "The top p for LLM generation"
+msgstr "Top p de la generación del LLM"
+
+msgid "The type of the OpenAI API, if you use Azure, it can be: azure"
+msgstr "Tipo de la API de OpenAI; si usas Azure, puede ser: azure"
+
+msgid "The type of the model media content"
+msgstr "Tipo del contenido multimedia del modelo"
+
+msgid "The uid of the AWEL flow"
+msgstr "UID del flujo AWEL"
+
+msgid "The uri of elasticsearch store, if not set, will use the default uri."
+msgstr "URI del almacén Elasticsearch; si no se indica, se usa la URI por defecto."
+
+msgid "The uri of milvus store, if not set, will use the default uri."
+msgstr "URI del almacén Milvus; si no se indica, se usa la URI por defecto."
+
+msgid "The user input dict of the API endpoint"
+msgstr "Diccionario de entrada del usuario del endpoint de la API"
+
+msgid "The user of vector store, if not set, will use the default user."
+msgstr "Usuario del almacén vectorial; si no se indica, se usa el usuario por defecto."
+
+msgid "The user question to retrieve table schemas from the datasource"
+msgstr "Pregunta del usuario para obtener los esquemas de tablas de la fuente de datos"
+
+msgid "The user question to retrieve the knowledge"
+msgstr "Pregunta del usuario para recuperar el conocimiento"
+
+msgid "The vector index type: 'HNSW' (approximate, fast) or 'FLAT' (exact, slower)."
+msgstr "Tipo de índice vectorial: 'HNSW' (aproximado, rápido) o 'FLAT' (exacto, más lento)."
+
+msgid "The vector store connector."
+msgstr "El conector del almacén vectorial."
+
+msgid "The vector store."
+msgstr "El almacén vectorial."
+
+msgid "The version of the OpenAI API."
+msgstr "Versión de la API de OpenAI."
+
+msgid "The worker class to use for distributed execution."
+msgstr "Clase de worker para la ejecución distribuida."
+
+msgid "This configuration is for the RAG serve module."
+msgstr "Configuración del módulo de servicio RAG."
+
+msgid "This configuration is for the conversation serve module."
+msgstr "Configuración del módulo de servicio de conversaciones."
+
+msgid "This configuration is for the datasource serve module."
+msgstr "Configuración del módulo de servicio de fuentes de datos."
+
+msgid "This configuration is for the evaluate serve module."
+msgstr "Configuración del módulo de servicio de evaluación."
+
+msgid "This configuration is for the feedback serve module."
+msgstr "Configuración del módulo de servicio de comentarios."
+
+msgid "This configuration is for the file serve module. In DB-GPT, you can store yourfiles in the file server."
+msgstr "Configuración del módulo de servicio de archivos. En DB-GPT puedes guardar tus archivos en el servidor de archivos."
+
+msgid "This configuration is for the flow serve module."
+msgstr "Configuración del módulo de servicio de flujos."
+
+msgid "This configuration is for the hub dbgpts serve module."
+msgstr "Configuración del módulo de servicio Hub de dbgpts."
+
+msgid "This configuration is for the libro serve module."
+msgstr "Configuración del módulo de servicio Libro."
+
+msgid "This configuration is for the model serve module."
+msgstr "Configuración del módulo de servicio de modelos."
+
+msgid "This configuration is for the my dbgpts serve module."
+msgstr "Configuración del módulo de servicio Mis dbgpts."
+
+msgid "This configuration is for the prompt serve module."
+msgstr "Configuración del módulo de servicio de prompts."
+
+msgid "Timeout"
+msgstr "Tiempo de espera"
+
+msgid "To speedup computation, you can change the data type from float32 (the default value) to bfloat16"
+msgstr "Para acelerar el cálculo, puedes cambiar el tipo de dato de float32 (por defecto) a bfloat16"
+
+msgid "Token"
+msgstr "Token"
+
+msgid "Token block size for contiguous chunks of tokens. This is ignored on neuron devices and set to ``--max-model-len``. On CUDA devices, only block sizes up to 32 are supported. On HPU devices, block size defaults to 128."
+msgstr "Tamaño de bloque de tokens para fragmentos contiguos. Se ignora en dispositivos neuron y se fija en ``--max-model-len``. En CUDA solo se admiten tamaños de hasta 32. En HPU, por defecto es 128."
+
+msgid "Tokens reserved for model output"
+msgstr "Tokens reservados para la salida del modelo"
+
+msgid "Tongyi Proxy LLM"
+msgstr "LLM proxy de Tongyi"
+
+msgid "Tongyi proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Tongyi."
+
+msgid "Top K"
+msgstr "Top K"
+
+msgid "Top k"
+msgstr "Top k"
+
+msgid "Top size of knowledge graph chunk search"
+msgstr "Tamaño top de la búsqueda de fragmentos en el grafo de conocimiento"
+
+msgid "Topk of Knowledge Graph Extract"
+msgstr "Top k de la extracción del grafo de conocimiento"
+
+msgid "Topk of knowledge graph extract"
+msgstr "Top k de la extracción del grafo de conocimiento"
+
+msgid "Tracer config for web server, if None, use global tracer config"
+msgstr "Configuración del trazador del servidor web; si es None, usa la configuración global"
+
+msgid "Tracer configuration"
+msgstr "Configuración del trazador"
+
+msgid "Transport mode: binary or http"
+msgstr "Modo de transporte: binary o http"
+
+msgid "Trigger your workflow by http request, and parse the request body as a common LLM http body"
+msgstr "Dispara tu flujo con una solicitud HTTP e interpreta el cuerpo como cuerpo HTTP común al LLM"
+
+msgid "Trigger your workflow by http request, and parse the request body as a dict"
+msgstr "Dispara tu flujo con una solicitud HTTP e interpreta el cuerpo como diccionario"
+
+msgid "Trigger your workflow by http request, and parse the request body as a starlette Request"
+msgstr "Dispara tu flujo con una solicitud HTTP e interpreta el cuerpo como Request de starlette"
+
+msgid "Trigger your workflow by http request, and parse the request body as a string"
+msgstr "Dispara tu flujo con una solicitud HTTP e interpreta el cuerpo como texto"
+
+msgid "True Values"
+msgstr "Valores verdaderos"
+
+msgid "Trust remote code or not."
+msgstr "Confiar o no en código remoto."
+
+msgid "TuGraph Graph Config"
+msgstr "Configuración del grafo TuGraph"
+
+msgid "TuGraph config."
+msgstr "Configuración de TuGraph."
+
+msgid "TuGraph datasource"
+msgstr "Fuente de datos TuGraph"
+
+msgid "TuGraph host"
+msgstr "Host de TuGraph"
+
+msgid "TuGraph is a high-performance graph database jointly developed by Ant Group and Tsinghua University."
+msgstr "TuGraph es una base de datos de grafos de alto rendimiento desarrollada por Ant Group y la Universidad de Tsinghua."
+
+msgid "TuGraph password"
+msgstr "Contraseña de TuGraph"
+
+msgid "TuGraph port"
+msgstr "Puerto de TuGraph"
+
+msgid "TuGraph server host"
+msgstr "Host del servidor TuGraph"
+
+msgid "TuGraph server port, default 7687"
+msgstr "Puerto del servidor TuGraph; por defecto 7687"
+
+msgid "TuGraph server user"
+msgstr "Usuario del servidor TuGraph"
+
+msgid "TuGraph username"
+msgstr "Usuario de TuGraph"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Unified engine for large-scale data analytics."
+msgstr "Motor unificado para análisis de datos a gran escala."
+
+msgid "Update the template file."
+msgstr "Actualiza el archivo de plantilla."
+
+msgid "Upstream Model Output"
+msgstr "Salida del modelo anterior"
+
+msgid "Uri"
+msgstr "URI"
+
+msgid "Use HTTPS"
+msgstr "Usar HTTPS"
+
+msgid "Use SSL"
+msgstr "Usar SSL"
+
+msgid "User"
+msgstr "Usuario"
+
+msgid "User Input Dict"
+msgstr "Diccionario de entrada del usuario"
+
+msgid "User Input Parsed Operator"
+msgstr "Operador de análisis de la entrada del usuario"
+
+msgid "User Input String"
+msgstr "Texto de entrada del usuario"
+
+msgid "User Message Key"
+msgstr "Clave del mensaje del usuario"
+
+msgid "User input parsed operator, parse the user input from request body and return as a dict"
+msgstr "Operador de análisis de la entrada del usuario: la extrae del cuerpo de la solicitud y la devuelve como diccionario"
+
+msgid "User input parsed operator, parse the user input from request body and return as a string"
+msgstr "Operador de análisis de la entrada del usuario: la extrae del cuerpo de la solicitud y la devuelve como texto"
+
+msgid "User question"
+msgstr "Pregunta del usuario"
+
+msgid "Username for authentication"
+msgstr "Usuario para la autenticación"
+
+msgid "Valkey Config"
+msgstr "Configuración de Valkey"
+
+msgid "Valkey Vector Store"
+msgstr "Almacén vectorial Valkey"
+
+msgid "Valkey vector store config."
+msgstr "Configuración del almacén vectorial Valkey."
+
+msgid "Valkey vector store."
+msgstr "Almacén vectorial Valkey."
+
+msgid "Vector Storage Operator"
+msgstr "Operador de almacenamiento vectorial"
+
+msgid "Vector Storage Results"
+msgstr "Resultados del almacenamiento vectorial"
+
+msgid "Vector Store"
+msgstr "Almacén vectorial"
+
+msgid "Vector Store Connector"
+msgstr "Conector del almacén vectorial"
+
+msgid "Vector Store Type"
+msgstr "Tipo de almacén vectorial"
+
+msgid "Vercel AI Gateway Proxy LLM"
+msgstr "LLM proxy de Vercel AI Gateway"
+
+msgid "Vercel AI Gateway proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Vercel AI Gateway."
+
+msgid "Vertica datasource"
+msgstr "Fuente de datos Vertica"
+
+msgid "Vertica is a strongly consistent, ACID-compliant, SQL data warehouse, built for the scale and complexity of today`s data-driven world."
+msgstr "Vertica es un almacén de datos SQL con consistencia fuerte y compatible con ACID, diseñado para la escala y complejidad del mundo actual orientado a datos."
+
+msgid "Volcengine Proxy LLM"
+msgstr "LLM proxy de Volcengine"
+
+msgid "Volcengine proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Volcengine."
+
+msgid "Voyage 2: compact embeddings for smaller contexts."
+msgstr "Voyage 2: embeddings compactos para contextos pequeños."
+
+msgid "Voyage embedding models with 16k token context window, optimized for general and instruction tasks."
+msgstr "Modelos de embeddings Voyage con ventana de contexto de 16k tokens, optimizados para tareas generales y de instrucciones."
+
+msgid "Weaviate Config"
+msgstr "Configuración de Weaviate"
+
+msgid "Weaviate URL"
+msgstr "URL de Weaviate"
+
+msgid "Weaviate Vector Store"
+msgstr "Almacén vectorial Weaviate"
+
+msgid "Weaviate vector config."
+msgstr "Configuración vectorial de Weaviate."
+
+msgid "Weaviate vector store."
+msgstr "Almacén vectorial Weaviate."
+
+msgid "Web service configuration"
+msgstr "Configuración del servicio web"
+
+msgid "Webserver deploy host"
+msgstr "Host de despliegue del servidor web"
+
+msgid "Webserver deploy port, default is 5670"
+msgstr "Puerto de despliegue del servidor web; por defecto 5670"
+
+msgid "Whether the hook is enabled, default is True"
+msgstr "Si el hook está activado; por defecto True"
+
+msgid "Whether the model is a reasoning model. If None, it is automatically determined from model."
+msgstr "Si el modelo es de razonamiento. Si es None, se determina automáticamente a partir del modelo."
+
+msgid "Whether the response is streaming"
+msgstr "Si la respuesta es en streaming"
+
+msgid "Whether to auto convert the messages that are not supported by the LLM to a compatible format"
+msgstr "Si se convierten automáticamente a un formato compatible los mensajes que el LLM no admite"
+
+msgid "Whether to convert the history to string."
+msgstr "Si se convierte el historial a texto."
+
+msgid "Whether to create the bucket automatically if it does not exist. If set to False, the bucket must exist before using it."
+msgstr "Si se crea el bucket automáticamente cuando no existe. Si es False, el bucket debe existir antes de usarlo."
+
+msgid "Whether to disable alembic to initialize and upgrade database metadata"
+msgstr "Si se desactiva alembic para inicializar y actualizar los metadatos de la base de datos"
+
+msgid "Whether to enable DeepSeek thinking mode. If None, thinking is disabled for deepseek-v4-pro to keep ReAct output parseable."
+msgstr "Si se activa el modo de pensamiento de DeepSeek. Si es None, se desactiva en deepseek-v4-pro para que la salida ReAct se pueda analizar."
+
+msgid "Whether to enable model cache, default is True"
+msgstr "Si se activa la caché del modelo; por defecto True"
+
+msgid "Whether to enable remote embedding models. If it is True, you need to start a embedding model through `dbgpt start worker --worker_type text2vec --model_name xxx --model_path xxx`"
+msgstr "Si se activan los modelos de embeddings remotos. Si es True, debes iniciar un modelo de embeddings con `dbgpt start worker --worker_type text2vec --model_name xxx --model_path xxx`"
+
+msgid "Whether to enable remote rerank models. If it is True, you need to start a rerank model through `dbgpt start worker --worker_type text2vec --rerank --model_name xxx --model_path xxx`"
+msgstr "Si se activan los modelos reordenadores remotos. Si es True, debes iniciar un modelo reordenador con `dbgpt start worker --worker_type text2vec --rerank --model_name xxx --model_path xxx`"
+
+msgid "Whether to enable the reranker"
+msgstr "Si se activa el reordenador"
+
+msgid "Whether to force install the duckdb extensions. If True, the extensions will be installed even if they are already installed."
+msgstr "Si se fuerza la instalación de las extensiones de DuckDB. Si es True, se instalan aunque ya estén instaladas."
+
+msgid "Whether to load the model in 4 bits, default is False."
+msgstr "Si se carga el modelo en 4 bits; por defecto False."
+
+msgid "Whether to load the model in 4 bits."
+msgstr "Si se carga el modelo en 4 bits."
+
+msgid "Whether to load the model in 8 bits(LLM.int8() algorithm), default is False."
+msgstr "Si se carga el modelo en 8 bits (algoritmo LLM.int8()); por defecto False."
+
+msgid "Whether to load the model in 8 bits(LLM.int8() algorithm)."
+msgstr "Si se carga el modelo en 8 bits (algoritmo LLM.int8())."
+
+msgid "Whether to prefer gRPC for data plane operations."
+msgstr "Si se prefiere gRPC para las operaciones del plano de datos."
+
+msgid "Whether to prefer gRPC over HTTP for data plane operations."
+msgstr "Si se prefiere gRPC en lugar de HTTP para las operaciones del plano de datos."
+
+msgid "Whether to use HTTPS for the Qdrant connection."
+msgstr "Si se usa HTTPS en la conexión con Qdrant."
+
+msgid "Whether to use SSL for the Valkey connection."
+msgstr "Si se usa SSL en la conexión con Valkey."
+
+#, python-brace-format
+msgid "Whether to use insecure connection, you can set '${env:OTEL_EXPORTER_OTLP_TRACES_INSECURE}' to use the environment "
+msgstr "Si se usa una conexión insegura; puedes usar '${env:OTEL_EXPORTER_OTLP_TRACES_INSECURE}' para tomarlo de la variable de entorno "
+
+msgid "Whether to use low CPU memory usage mode. It can reduce the memory when loading the model, if you load your model with quantization, it will be True by default. You must install `accelerate` to make it work."
+msgstr "Si se usa el modo de bajo uso de memoria de CPU. Reduce la memoria al cargar el modelo; si cargas el modelo con cuantización, es True por defecto. Requiere instalar `accelerate`."
+
+msgid "Whether to use the environment variables AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY as the credentials. Default is False."
+msgstr "Si se usan las variables de entorno AWS_ACCESS_KEY_ID y AWS_SECRET_ACCESS_KEY como credenciales. Por defecto False."
+
+msgid "Whether to use the environment variables OSS_ACCESS_KEY_ID and OSS_ACCESS_KEY_SECRET as the credentials. Default is False."
+msgstr "Si se usan las variables de entorno OSS_ACCESS_KEY_ID y OSS_ACCESS_KEY_SECRET como credenciales. Por defecto False."
+
+msgid "Whether to use the new web UI, default is True"
+msgstr "Si se usa la nueva interfaz web; por defecto True"
+
+msgid "Whether to verify the SSL certificate of the database"
+msgstr "Si se verifica el certificado SSL de la base de datos"
+
+msgid "Whether use interactive mode to run AWEL flow"
+msgstr "Si se usa el modo interactivo para ejecutar el flujo AWEL"
+
+msgid "Whether use stream mode to run AWEL flow"
+msgstr "Si se usa el modo streaming para ejecutar el flujo AWEL"
+
+msgid "Worker type"
+msgstr "Tipo de worker"
+
+msgid "Xunfei Spark Proxy LLM"
+msgstr "LLM proxy de Xunfei Spark"
+
+msgid "Xunfei Spark proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Xunfei Spark."
+
+msgid "Yi Proxy LLM"
+msgstr "LLM proxy de Yi"
+
+msgid "Yi proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Yi."
+
+msgid "You are a helpful AI assistant."
+msgstr "Eres un asistente de IA útil. Responde siempre en español."
+
+msgid "Your API key for the HuggingFace Inference API."
+msgstr "Tu clave de API para la API de inferencia de HuggingFace."
+
+msgid "Your API key for the Jina AI API."
+msgstr "Tu clave de API para la API de Jina AI."
+
+msgid "Your API key for the Open API."
+msgstr "Tu clave de API para la Open API."
+
+msgid "Zhipu Proxy LLM"
+msgstr "LLM proxy de Zhipu"
+
+msgid "Zhipu proxy LLM configuration."
+msgstr "Configuración del LLM proxy de Zhipu."
+
+msgid "address"
+msgstr "dirección"
+
+msgid "bm25_b"
+msgstr "bm25_b"
+
+msgid "bm25_k1"
+msgstr "bm25_k1"
+
+msgid "chunk strategy"
+msgstr "estrategia de fragmentación"
+
+msgid "community Summary kg Config."
+msgstr "Configuración del grafo de conocimiento con resumen de comunidades."
+
+msgid "context of knowledge space."
+msgstr "contexto del espacio de conocimiento."
+
+msgid "database"
+msgstr "base de datos"
+
+msgid "database for vector tables"
+msgstr "base de datos para las tablas vectoriales"
+
+msgid "dbgpts In All Repos"
+msgstr "dbgpts en todos los repositorios"
+
+msgid "default full text type"
+msgstr "tipo de texto completo por defecto"
+
+msgid "default graph type"
+msgstr "tipo de grafo por defecto"
+
+msgid "default vector type"
+msgstr "tipo vectorial por defecto"
+
+msgid "device"
+msgstr "dispositivo"
+
+msgid "device name, e.g., 'cpu'."
+msgstr "nombre del dispositivo, p. ej. 'cpu'."
+
+msgid "gRPC Port"
+msgstr "Puerto gRPC"
+
+msgid "graph community summary enabled"
+msgstr "resumen de comunidades del grafo activado"
+
+msgid "graph store config."
+msgstr "configuración del almacén de grafos."
+
+msgid "graph store type."
+msgstr "tipo de almacén de grafos."
+
+msgid "host"
+msgstr "host"
+
+msgid "http pool maxsize"
+msgstr "tamaño máximo del pool http"
+
+msgid "http pool num_pools"
+msgstr "número de pools http"
+
+msgid "http://127.0.0.1:8000"
+msgstr "http://127.0.0.1:8000"
+
+msgid "kg community top k"
+msgstr "top k de comunidades del grafo"
+
+msgid "kg extract llm model"
+msgstr "modelo LLM para extraer el grafo"
+
+msgid "kg extract llm model name."
+msgstr "nombre del modelo LLM para extraer el grafo."
+
+msgid "kg extract score threshold"
+msgstr "umbral de puntuación de extracción del grafo"
+
+msgid "kg extract top k"
+msgstr "top k de extracción del grafo"
+
+msgid "kg_chunk_search_top_k"
+msgstr "kg_chunk_search_top_k"
+
+msgid "kg_community_score_threshold"
+msgstr "kg_community_score_threshold"
+
+msgid "kg_community_summary_batch_size"
+msgstr "kg_community_summary_batch_size"
+
+msgid "kg_document_graph_enabled"
+msgstr "kg_document_graph_enabled"
+
+msgid "kg_embedding_batch_size"
+msgstr "kg_embedding_batch_size"
+
+msgid "kg_enable_text_search"
+msgstr "kg_enable_text_search"
+
+msgid "kg_extraction_batch_size"
+msgstr "kg_extraction_batch_size"
+
+msgid "kg_similarity_score_threshold"
+msgstr "kg_similarity_score_threshold"
+
+msgid "kg_similarity_top_k"
+msgstr "kg_similarity_top_k"
+
+msgid "kg_text2gql_model_enabled"
+msgstr "kg_text2gql_model_enabled"
+
+msgid "kg_triplet_graph_enabled"
+msgstr "kg_triplet_graph_enabled"
+
+msgid "knowledge datasource"
+msgstr "fuente de datos de conocimiento"
+
+msgid "knowledge datasource, which can be a document, url, or text."
+msgstr "fuente de datos de conocimiento: puede ser un documento, una URL o texto."
+
+msgid "knowledge graph search top k"
+msgstr "top k de búsqueda en el grafo de conocimiento"
+
+msgid "knowledge graph storage results."
+msgstr "resultados del almacenamiento en grafo de conocimiento."
+
+msgid "knowledge max chunks once load"
+msgstr "máximo de fragmentos de conocimiento por carga"
+
+msgid "knowledge max load thread"
+msgstr "máximo de hilos de carga de conocimiento"
+
+msgid "knowledge rerank top k"
+msgstr "top k de reordenamiento de conocimiento"
+
+msgid "knowledge search rewrite"
+msgstr "reescritura de búsqueda de conocimiento"
+
+msgid "knowledge search top k"
+msgstr "top k de búsqueda de conocimiento"
+
+msgid "knowledge search top similarity score"
+msgstr "puntuación mínima de similitud en la búsqueda de conocimiento"
+
+msgid "knowledge space retriever operator."
+msgstr "operador recuperador del espacio de conocimiento."
+
+msgid "llm client for extract graph triplets."
+msgstr "cliente LLM para extraer tripletas del grafo."
+
+msgid "llm model name."
+msgstr "nombre del modelo LLM."
+
+msgid "oceanbase host"
+msgstr "host de OceanBase"
+
+msgid "oceanbase port"
+msgstr "puerto de OceanBase"
+
+msgid "openGauss datasource"
+msgstr "Fuente de datos openGauss"
+
+msgid "password"
+msgstr "contraseña"
+
+msgid "password to login"
+msgstr "contraseña para iniciar sesión"
+
+msgid "port"
+msgstr "puerto"
+
+msgid "prompt language"
+msgstr "idioma del prompt"
+
+msgid "query context"
+msgstr "contexto de la consulta"
+
+msgid "related chunk content"
+msgstr "contenido de fragmentos relacionados"
+
+msgid "rerank model name, e.g., 'BAAI/bge-reranker-base'."
+msgstr "nombre del modelo reordenador, p. ej. 'BAAI/bge-reranker-base'."
+
+msgid "rewrite query number."
+msgstr "número de consultas reescritas."
+
+msgid "space name."
+msgstr "nombre del espacio."
+
+msgid "space related context"
+msgstr "contexto relacionado con el espacio"
+
+msgid "text2gql_model_name"
+msgstr "text2gql_model_name"
+
+msgid "the chroma config of vector store."
+msgstr "configuración de Chroma del almacén vectorial."
+
+msgid "the elastic config of vector store."
+msgstr "configuración de Elastic del almacén vectorial."
+
+msgid "the milvus config of vector store."
+msgstr "configuración de Milvus del almacén vectorial."
+
+msgid "the ob config of vector store."
+msgstr "configuración de OceanBase del almacén vectorial."
+
+msgid "the persist path of vector store."
+msgstr "ruta de persistencia del almacén vectorial."
+
+msgid "the pg config of vector store."
+msgstr "configuración de PG del almacén vectorial."
+
+msgid "the qdrant config of vector store."
+msgstr "configuración de Qdrant del almacén vectorial."
+
+msgid "the valkey config of vector store."
+msgstr "configuración de Valkey del almacén vectorial."
+
+msgid "the weaviate config of vector store."
+msgstr "configuración de Weaviate del almacén vectorial."
+
+msgid "user input"
+msgstr "entrada del usuario"
+
+msgid "user query"
+msgstr "consulta del usuario"
+
+msgid "user to login"
+msgstr "usuario para iniciar sesión"
+
+msgid "username"
+msgstr "usuario"
+
+msgid "vector storage results."
+msgstr "resultados del almacenamiento vectorial."
+
+msgid "vector store type."
+msgstr "tipo de almacén vectorial."
+
+msgid "weaviate url address, if not set, will use the default url."
+msgstr "dirección URL de Weaviate; si no se indica, se usa la URL por defecto."
+
+msgid "xAI Grok proxy LLM configuration."
+msgstr "Configuración del LLM proxy de xAI Grok."
+
+msgid "xAI Proxy LLM"
+msgstr "LLM proxy de xAI"
+

@@ -198,7 +198,7 @@ const ChatFeedback = ({ conv_index, question, knowledge_space, select_param }: P
               </Grid>
               <Grid xs={10} sx={{ pl: 0, ml: 0 }}>
                 <Slider
-                  aria-label='Custom'
+                  aria-label='Personalizado'
                   step={1}
                   min={0}
                   max={5}

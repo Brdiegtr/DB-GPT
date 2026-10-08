@@ -14,7 +14,8 @@ CFG = Config()
 
 _PROMPT_SCENE_DEFINE_EN = "You are a data analysis expert. "
 
-_DEFAULT_TEMPLATE_EN = """
+_DEFAULT_TEMPLATE_EN = """Always reply to the user in Spanish (español), whatever language the data is in.
+
 The user has a table file data to be analyzed, which has already been imported into a \
 DuckDB table. \
 A sample of the data is as follows:
@@ -195,7 +196,7 @@ GROUP BY 1
 ORDER BY year_month ASC;
 </sql></args></api-call>
 
-注意，回答一定要符合 <api-call> 的格式! 请使用和用户问题相同的语言回答！
+注意，回答一定要符合 <api-call> 的格式! 请始终使用西班牙语(español)回答！
 用户问题：{user_input}
 """
 

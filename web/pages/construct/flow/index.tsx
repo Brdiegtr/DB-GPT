@@ -210,7 +210,10 @@ function Flow() {
                         {
                           key: 'del',
                           label: (
-                            <Popconfirm title='Are you sure to delete this flow?' onConfirm={() => deleteFlow(flow)}>
+                            <Popconfirm
+                              title='¿Seguro que quieres eliminar este flujo?'
+                              onConfirm={() => deleteFlow(flow)}
+                            >
                               <span className='text-red-400'>{t('Delete_Btn')}</span>
                             </Popconfirm>
                           ),
@@ -224,7 +227,7 @@ function Flow() {
                   <div>
                     <Tag color={flow.source === 'DBGPT-WEB' ? 'green' : 'blue'}>{flow.source}</Tag>
                     {flow.define_type && <Tag color={'purple'}>{flow.define_type}</Tag>}
-                    <Tag color={flow.editable ? 'green' : 'gray'}>{flow.editable ? 'Editable' : 'Can not Edit'}</Tag>
+                    <Tag color={flow.editable ? 'green' : 'gray'}>{flow.editable ? 'Editable' : 'No editable'}</Tag>
                     <Tag color={flow.state === 'load_failed' ? 'red' : flow.state === 'running' ? 'green' : 'blue'}>
                       {flow.state}
                     </Tag>
@@ -247,7 +250,7 @@ function Flow() {
                 }
               />
             ))}
-            {flowList.length === 0 && <MyEmpty description='No flow found' />}
+            {flowList.length === 0 && <MyEmpty description='No se encontraron flujos' />}
             <div className='w-full flex justify-end shrink-0 pb-12'>
               <Pagination
                 total={totalRef.current?.total_count || 0}
@@ -265,17 +268,17 @@ function Flow() {
       <Modal
         open={showModal}
         destroyOnClose
-        title='Copy AWEL Flow'
+        title='Copiar flujo AWEL'
         onCancel={() => {
           setShowModal(false);
         }}
         footer={false}
       >
         <Form form={form} onFinish={onFinish} className='mt-6'>
-          <Form.Item name='name' label='Name' rules={[{ required: true }]}>
+          <Form.Item name='name' label='Nombre' rules={[{ required: true }]}>
             <Input />
           </Form.Item>
-          <Form.Item name='label' label='Label' rules={[{ required: true }]}>
+          <Form.Item name='label' label='Etiqueta' rules={[{ required: true }]}>
             <Input />
           </Form.Item>
           <Form.Item label='editable'>

@@ -154,18 +154,18 @@ export default function ObservabilityOverviewPage() {
       <div className='px-6 py-4 space-y-4'>
         <div className='flex gap-4 flex-wrap'>
           <Kpi title={t('observability_agents') || 'Agents'} value={agents.length} />
-          <Kpi title={t('observability_events') || 'Events (24h)'} value={totalEvents} />
+          <Kpi title={t('observability_events') || 'Eventos (24 h)'} value={totalEvents} />
           <Kpi
-            title={t('observability_tokens') || 'Tokens (24h)'}
+            title={t('observability_tokens') || 'Tokens (24 h)'}
             value={totalTokens.toLocaleString()}
             hint={tokensLoading ? '…' : undefined}
           />
           <Kpi
-            title={t('observability_latency') || 'Latency P95'}
+            title={t('observability_latency') || 'Latencia P95'}
             value={maxLatency ? `${(maxLatency / 1000).toFixed(2)}s` : '-'}
             hint={latencyLoading ? '…' : undefined}
           />
-          <Kpi title={t('observability_error_rate') || 'Error rate'} value={`${errorRate.toFixed(1)}%`} />
+          <Kpi title={t('observability_error_rate') || 'Tasa de errores'} value={`${errorRate.toFixed(1)}%`} />
         </div>
 
         {/* AntCC-style token breakdown panel */}
@@ -192,7 +192,7 @@ export default function ObservabilityOverviewPage() {
               </div>
               <div className='flex-1 min-w-[150px] rounded-lg bg-violet-50 dark:bg-violet-900/20 p-4'>
                 <div className='text-xs text-gray-400'>
-                  {t('observability_cache_miss_tokens') || 'Cache-miss Tokens'}
+                  {t('observability_cache_miss_tokens') || 'Tokens sin caché'}
                 </div>
                 <div className='text-2xl font-semibold mt-1 text-gray-800 dark:text-gray-100'>
                   {tokenCacheMiss.toLocaleString()}
@@ -200,12 +200,12 @@ export default function ObservabilityOverviewPage() {
               </div>
             </div>
             <div className='text-xs text-gray-400 mt-3'>
-              {t('observability_token_total') || 'Token usage'}: <b>{tokenGrand.toLocaleString()}</b>
+              {t('observability_token_total') || 'Uso de tokens'}: <b>{tokenGrand.toLocaleString()}</b>
             </div>
           </Spin>
         </Card>
 
-        <Card size='small' title={t('observability_model_usage') || 'Model usage'}>
+        <Card size='small' title={t('observability_model_usage') || 'Uso de modelos'}>
           <Spin spinning={modelUsageLoading}>
             <Table
               size='small'
@@ -231,7 +231,7 @@ export default function ObservabilityOverviewPage() {
                   render: (v: number) => v.toLocaleString(),
                 },
                 {
-                  title: t('observability_avg_latency') || 'Avg latency',
+                  title: t('observability_avg_latency') || 'Latencia media',
                   dataIndex: 'avg_duration_ms',
                   render: (v?: number) => (v != null ? `${(v / 1000).toFixed(2)}s` : '-'),
                 },
@@ -288,7 +288,7 @@ export default function ObservabilityOverviewPage() {
           </Card>
         </div>
 
-        <Card size='small' title={t('observability_agent_health') || 'Agent health'}>
+        <Card size='small' title={t('observability_agent_health') || 'Salud de los agentes'}>
           <Spin spinning={healthLoading}>
             <Table
               size='small'
@@ -299,7 +299,7 @@ export default function ObservabilityOverviewPage() {
                 { title: t('observability_agent') || 'Agent', dataIndex: 'agent_name' },
                 { title: t('observability_events') || 'Events', dataIndex: 'event_count' },
                 {
-                  title: t('observability_error_rate') || 'Error rate',
+                  title: t('observability_error_rate') || 'Tasa de errores',
                   dataIndex: 'error_rate',
                   render: (r: number) => `${(r * 100).toFixed(1)}%`,
                 },
@@ -308,7 +308,7 @@ export default function ObservabilityOverviewPage() {
           </Spin>
         </Card>
 
-        <Card size='small' title={t('observability_recent_traces') || 'Recent traces'}>
+        <Card size='small' title={t('observability_recent_traces') || 'Trazas recientes'}>
           <Spin spinning={tracesLoading}>
             <Table
               size='small'

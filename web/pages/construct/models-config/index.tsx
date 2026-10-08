@@ -699,7 +699,7 @@ function ModelsConfig() {
       >
         <Form form={customForm} layout='vertical' onFinish={createCustomProviderHandler}>
           <Form.Item name='label' label={t('provider_name')} rules={[{ required: true, message: t('provider_name') }]}>
-            <Input placeholder='My Gateway' />
+            <Input placeholder='Mi pasarela' />
           </Form.Item>
           <Form.Item name='api_base' label={t('api_base')} rules={[{ required: true, message: t('api_base') }]}>
             <Input placeholder='https://api.example.com/v1' />

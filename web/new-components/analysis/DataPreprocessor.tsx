@@ -612,7 +612,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
           className='w-28'
           options={[
             { value: 'number', label: '# Number' },
-            { value: 'string', label: 'Aa String' },
+            { value: 'string', label: 'Aa Texto' },
             { value: 'date', label: '📅 Date' },
             { value: 'boolean', label: '✓ Boolean' },
             { value: 'category', label: '📋 Category' },
@@ -621,7 +621,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
       ),
     },
     {
-      title: 'Missing',
+      title: 'Vacíos',
       key: 'missing',
       render: (_: any, record: ColumnConfig) => (
         <div className='flex items-center gap-2'>
@@ -638,7 +638,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
       ),
     },
     {
-      title: 'Missing Strategy',
+      title: 'Estrategia para vacíos',
       key: 'missingStrategy',
       render: (_: any, record: ColumnConfig) => (
         <Select
@@ -648,19 +648,19 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
           className='w-32'
           disabled={record.missingCount === 0}
           options={[
-            { value: 'keep', label: 'Keep as is' },
-            { value: 'drop', label: 'Drop rows' },
-            { value: 'fill_mean', label: 'Fill mean' },
-            { value: 'fill_median', label: 'Fill median' },
-            { value: 'fill_mode', label: 'Fill mode' },
-            { value: 'fill_zero', label: 'Fill zero' },
+            { value: 'keep', label: 'Dejar igual' },
+            { value: 'drop', label: 'Eliminar filas' },
+            { value: 'fill_mean', label: 'Rellenar con media' },
+            { value: 'fill_median', label: 'Rellenar con mediana' },
+            { value: 'fill_mode', label: 'Rellenar con moda' },
+            { value: 'fill_zero', label: 'Rellenar con cero' },
             { value: 'interpolate', label: 'Interpolate' },
           ]}
         />
       ),
     },
     {
-      title: 'Outliers',
+      title: 'Atípicos',
       key: 'outliers',
       render: (_: any, record: ColumnConfig) =>
         record.selectedType === 'number' ? (
@@ -705,16 +705,16 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
         <div>
           <h3 className='text-lg font-semibold text-gray-800 dark:text-gray-200 flex items-center gap-2'>
             <SettingOutlined />
-            Data Preprocessing
+            Preprocesamiento de datos
           </h3>
           <p className='text-sm text-gray-500 dark:text-gray-400 mt-1'>
-            Configure data cleaning and transformation options
+            Configura las opciones de limpieza y transformación de datos
           </p>
         </div>
         <div className='flex items-center gap-3'>
           <div className='text-center'>
             <div className='text-2xl font-bold text-blue-600'>{dataQualityScore}</div>
-            <div className='text-xs text-gray-500'>Quality Score</div>
+            <div className='text-xs text-gray-500'>Puntuación de calidad</div>
           </div>
           <Progress
             type='circle'
@@ -734,7 +734,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
             label: (
               <span className='flex items-center gap-1.5'>
                 <EditOutlined className='text-xs' />
-                Column Settings
+                Configuración de columnas
               </span>
             ),
             children: (
@@ -748,19 +748,19 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
                       onChange={val => setConfig(prev => ({ ...prev, globalMissingStrategy: val }))}
                       className='w-32'
                       options={[
-                        { value: 'keep', label: 'Keep missing' },
-                        { value: 'fill_mean', label: 'Fill mean' },
-                        { value: 'fill_median', label: 'Fill median' },
-                        { value: 'drop', label: 'Drop rows' },
+                        { value: 'keep', label: 'Mantener vacíos' },
+                        { value: 'fill_mean', label: 'Rellenar con media' },
+                        { value: 'fill_median', label: 'Rellenar con mediana' },
+                        { value: 'drop', label: 'Eliminar filas' },
                       ]}
                     />
                     <Button size='small' onClick={() => applyGlobalStrategy('missing')}>
-                      Apply Missing
+                      Aplicar a vacíos
                     </Button>
                   </div>
                   <div className='flex items-center gap-2'>
                     <Badge count={config.columns.filter(c => c.include).length} overflowCount={99}>
-                      <Tag>Selected Columns</Tag>
+                      <Tag>Columnas seleccionadas</Tag>
                     </Badge>
                   </div>
                 </div>
@@ -781,22 +781,22 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
             label: (
               <span className='flex items-center gap-1.5'>
                 <FilterOutlined className='text-xs' />
-                Global Options
+                Opciones globales
               </span>
             ),
             children: (
               <div className='grid grid-cols-2 gap-6 p-4'>
-                <Card size='small' title='Text Processing' className='shadow-sm'>
+                <Card size='small' title='Procesamiento de texto' className='shadow-sm'>
                   <div className='space-y-3'>
                     <div className='flex items-center justify-between'>
-                      <span className='text-sm'>Trim whitespace</span>
+                      <span className='text-sm'>Quitar espacios</span>
                       <Switch
                         checked={config.trimWhitespace}
                         onChange={val => setConfig(prev => ({ ...prev, trimWhitespace: val }))}
                       />
                     </div>
                     <div className='flex items-center justify-between'>
-                      <span className='text-sm'>Lowercase strings</span>
+                      <span className='text-sm'>Pasar a minúsculas</span>
                       <Switch
                         checked={config.lowercaseStrings}
                         onChange={val => setConfig(prev => ({ ...prev, lowercaseStrings: val }))}
@@ -805,17 +805,17 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
                   </div>
                 </Card>
 
-                <Card size='small' title='Row Processing' className='shadow-sm'>
+                <Card size='small' title='Procesamiento de filas' className='shadow-sm'>
                   <div className='space-y-3'>
                     <div className='flex items-center justify-between'>
-                      <span className='text-sm'>Remove duplicates</span>
+                      <span className='text-sm'>Eliminar duplicados</span>
                       <Switch
                         checked={config.dropDuplicates}
                         onChange={val => setConfig(prev => ({ ...prev, dropDuplicates: val }))}
                       />
                     </div>
                     <div className='flex items-center justify-between'>
-                      <span className='text-sm'>Remove empty rows</span>
+                      <span className='text-sm'>Eliminar filas vacías</span>
                       <Switch
                         checked={config.removeEmptyRows}
                         onChange={val => setConfig(prev => ({ ...prev, removeEmptyRows: val }))}
@@ -824,7 +824,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
                   </div>
                 </Card>
 
-                <Card size='small' title='Outlier Handling' className='shadow-sm col-span-2'>
+                <Card size='small' title='Tratamiento de atípicos' className='shadow-sm col-span-2'>
                   <div className='space-y-3'>
                     <div className='flex items-center gap-4'>
                       <span className='text-sm text-gray-600'>Global strategy:</span>
@@ -839,7 +839,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
                         <Radio.Button value='flag'>Flag</Radio.Button>
                       </Radio.Group>
                       <Button size='small' onClick={() => applyGlobalStrategy('outlier')}>
-                        Apply to All
+                        Aplicar a todo
                       </Button>
                     </div>
                   </div>
@@ -858,14 +858,14 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
             children: (
               <div className='grid grid-cols-4 gap-4 p-4'>
                 <Card size='small' className='text-center'>
-                  <Statistic title='Total Rows' value={data.length} valueStyle={{ color: '#3B82F6' }} />
+                  <Statistic title='Total de filas' value={data.length} valueStyle={{ color: '#3B82F6' }} />
                 </Card>
                 <Card size='small' className='text-center'>
-                  <Statistic title='Total Columns' value={columns.length} valueStyle={{ color: '#10B981' }} />
+                  <Statistic title='Total de columnas' value={columns.length} valueStyle={{ color: '#10B981' }} />
                 </Card>
                 <Card size='small' className='text-center'>
                   <Statistic
-                    title='Missing Values'
+                    title='Valores vacíos'
                     value={config.columns.reduce((sum, c) => sum + c.missingCount, 0)}
                     valueStyle={{ color: '#F59E0B' }}
                     prefix={<WarningOutlined />}
@@ -873,7 +873,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
                 </Card>
                 <Card size='small' className='text-center'>
                   <Statistic
-                    title='Outliers Detected'
+                    title='Valores atípicos detectados'
                     value={config.columns
                       .filter(c => c.selectedType === 'number')
                       .reduce((sum, c) => sum + c.outlierCount, 0)}
@@ -884,7 +884,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
 
                 <div className='col-span-4'>
                   <h4 className='text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300'>
-                    Column Type Distribution
+                    Distribución de tipos de columna
                   </h4>
                   <div className='flex flex-wrap gap-2'>
                     {['number', 'string', 'date', 'boolean', 'category', 'mixed', 'unknown'].map(type => {
@@ -920,13 +920,13 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
             Preview
           </Button>
           <Button type='primary' icon={<ThunderboltOutlined />} onClick={handleApply}>
-            Apply Preprocessing
+            Aplicar preprocesamiento
           </Button>
         </div>
       </div>
 
       <Modal
-        title='Preview Preprocessing Results'
+        title='Vista previa de los resultados del preprocesamiento'
         open={showPreview}
         onCancel={() => setShowPreview(false)}
         width={800}
@@ -944,7 +944,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
               }
             }}
           >
-            Apply Changes
+            Aplicar cambios
           </Button>,
         ]}
       >
@@ -953,7 +953,7 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
             <div className='grid grid-cols-3 gap-4'>
               <Card size='small'>
                 <Statistic
-                  title='Rows'
+                  title='Filas'
                   value={previewResult.processedRowCount}
                   suffix={`/ ${previewResult.originalRowCount}`}
                   valueStyle={{
@@ -963,14 +963,14 @@ const DataPreprocessor: React.FC<DataPreprocessorProps> = ({
               </Card>
               <Card size='small'>
                 <Statistic
-                  title='Missing Filled'
+                  title='Vacíos rellenados'
                   value={previewResult.missingValuesFilled}
                   valueStyle={{ color: '#3B82F6' }}
                 />
               </Card>
               <Card size='small'>
                 <Statistic
-                  title='Outliers Handled'
+                  title='Valores atípicos tratados'
                   value={previewResult.outliersHandled}
                   valueStyle={{ color: '#8B5CF6' }}
                 />

@@ -42,7 +42,7 @@ Give the correct {dialect} analysis SQL
 The important thing is: Please make sure to only return the json string, do not add any\
  other content (for direct processing by the program), and the json can be parsed by\
   Python json.loads
-5. Please use the same language as the "user"
+5. Always reply in Spanish (español)
 """
 
 RESPONSE_FORMAT = [

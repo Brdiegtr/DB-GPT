@@ -73,16 +73,16 @@ export const UPLOAD_STATUS_LABELS: Record<UploadPhase, string> = Object.freeze({
   queued: 'Queued',
   uploading: 'Uploading',
   done: 'Ready',
-  failed: 'Upload failed',
+  failed: 'Error al subir',
   cancelled: 'Cancelled',
   blocked: 'Blocked',
 });
 
 export const PREVIEW_STATUS_LABELS: Record<PreviewPhase, string> = Object.freeze({
   idle: '',
-  loading: 'Loading preview',
-  ready: 'Preview ready',
-  preview_failed: 'Preview unavailable',
+  loading: 'Cargando vista previa',
+  ready: 'Vista previa lista',
+  preview_failed: 'Vista previa no disponible',
 });
 
 /** Hard failures (upload/validation) render destructive and demand attention. */

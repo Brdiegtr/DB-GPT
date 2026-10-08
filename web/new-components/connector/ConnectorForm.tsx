@@ -47,13 +47,13 @@ type FormShape = {
 const TRANSPORT_META: Record<string, { displayName: string; label: string; placeholder: string; hintKey: string }> = {
   sse: {
     displayName: 'SSE',
-    label: 'SSE Endpoint URL',
+    label: 'URL del endpoint SSE',
     placeholder: 'http://your-mcp-server/sse',
     hintKey: 'connector.form.sseHint',
   },
   streamable_http: {
     displayName: 'Streamable HTTP',
-    label: 'Streamable HTTP Endpoint URL',
+    label: 'URL del endpoint HTTP en streaming',
     placeholder: 'https://your-mcp-server/mcp',
     hintKey: 'connector.form.streamableHint',
   },
@@ -68,7 +68,7 @@ const AUTH_TYPE_LABEL_KEYS: Record<string, string> = {
   token: 'connector.form.authTokenCustom',
 };
 const AUTH_TYPE_LITERAL: Record<string, string> = {
-  bearer: 'Bearer Token',
+  bearer: 'Token Bearer',
 };
 
 const ConnectorForm: React.FC<ConnectorFormProps> = ({
@@ -329,7 +329,7 @@ const ConnectorForm: React.FC<ConnectorFormProps> = ({
               : t('connector.form.fieldRequired', { label: field.label });
           let control: React.ReactNode;
           if (field.type === 'select') {
-            // Auth-type select uses friendlier labels (e.g. "Bearer Token") while
+            // Auth-type select uses friendlier labels (e.g. "Token Bearer") while
             // keeping the wire value lowercase so the backend dispatch is unchanged.
             const optionList = (field.options ?? []).map(opt => {
               // Auth-type select uses friendlier labels: locale-dependent ones

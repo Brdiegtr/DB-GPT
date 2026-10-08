@@ -311,13 +311,13 @@ const ChartToolbar: React.FC<ChartToolbarProps> = ({
   <div className='chart-toolbar flex items-center gap-1 absolute top-2 right-2 z-10 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-1.5 py-1 shadow-sm border border-gray-200 dark:border-gray-700'>
     {showZoom && (
       <>
-        <Tooltip title='Zoom In'>
+        <Tooltip title='Acercar'>
           <Button type='text' size='small' icon={<ZoomInOutlined />} onClick={onZoomIn} className='!w-7 !h-7 !p-0' />
         </Tooltip>
-        <Tooltip title='Zoom Out'>
+        <Tooltip title='Alejar'>
           <Button type='text' size='small' icon={<ZoomOutOutlined />} onClick={onZoomOut} className='!w-7 !h-7 !p-0' />
         </Tooltip>
-        <Tooltip title='Reset View'>
+        <Tooltip title='Restablecer vista'>
           <Button type='text' size='small' icon={<ReloadOutlined />} onClick={onReset} className='!w-7 !h-7 !p-0' />
         </Tooltip>
       </>
@@ -325,7 +325,7 @@ const ChartToolbar: React.FC<ChartToolbarProps> = ({
     {showFullscreen && (
       <>
         <div className='w-px h-4 bg-gray-200 dark:bg-gray-700 mx-0.5' />
-        <Tooltip title={isFullscreen ? 'Exit Fullscreen' : 'Fullscreen'}>
+        <Tooltip title={isFullscreen ? 'Salir de pantalla completa' : 'Fullscreen'}>
           <Button
             type='text'
             size='small'

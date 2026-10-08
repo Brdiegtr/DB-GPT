@@ -371,16 +371,16 @@ const getArtifactFileBg = (type: string): string => {
 
 const getArtifactTypeLabel = (type: string): string => {
   const map: Record<string, string> = {
-    file: '文件',
-    html: '网页报告',
-    table: '数据表',
-    chart: '图表',
-    image: '图片',
-    code: '代码',
-    markdown: '文档',
-    summary: '分析总结',
+    file: 'Archivo',
+    html: 'Reporte web',
+    table: 'Tabla de datos',
+    chart: 'Gráfica',
+    image: 'Imagen',
+    code: 'Código',
+    markdown: 'Documento',
+    summary: 'Resumen del análisis',
   };
-  return map[type] || '产物';
+  return map[type] || 'Resultado';
 };
 
 const formatArtifactDate = (timestamp: number): string => {
@@ -389,13 +389,13 @@ const formatArtifactDate = (timestamp: number): string => {
   const diffMs = now.getTime() - date.getTime();
   const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
 
-  if (diffDays === 0) return '今天';
-  if (diffDays === 1) return '昨天';
+  if (diffDays === 0) return 'Hoy';
+  if (diffDays === 1) return 'Ayer';
   if (diffDays < 7) {
-    const dayNames = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+    const dayNames = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
     return dayNames[date.getDay()];
   }
-  return `${date.getMonth() + 1}月${date.getDate()}日`;
+  return `${date.getDate()}/${date.getMonth() + 1}`;
 };
 
 const formatPanelFileSize = (bytes?: number): string => {
@@ -430,7 +430,7 @@ const InputFileListItem: React.FC<{ file: SessionFileSnapshot }> = memo(({ file 
         {file.name}
       </div>
       <div className='mt-0.5 flex min-w-0 items-center gap-1.5 text-[11px] text-slate-400 dark:text-slate-500'>
-        <span>{file.kind || '资料'}</span>
+        <span>{file.kind || 'Archivos'}</span>
         {file.size > 0 && (
           <>
             <span className='text-slate-300 dark:text-slate-600'>·</span>
@@ -489,7 +489,7 @@ const FileListItem: React.FC<{ artifact: ArtifactItem; onClick?: () => void }> =
         </div>
       </div>
       <span className='rounded-full bg-indigo-100 px-2 py-0.5 text-[10px] font-medium text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300'>
-        推理生成
+        Razonamiento
       </span>
     </button>
   );
@@ -664,14 +664,14 @@ const KB_TOOLS = new Set([
 
 // Friendly labels and icons for each kb tool action (used in the right-panel header card)
 const KB_ACTION_LABELS: Record<string, string> = {
-  kb_ls: 'List Files',
-  kb_glob: 'Search by Name',
-  kb_grep: 'Search Content',
-  kb_cat: 'Read File',
-  semantic_search: 'Semantic Search',
-  kb_codegraph_explore: 'Code Graph Explore',
-  kb_codegraph_call_chain: 'Call Chain',
-  kb_codegraph_class_hierarchy: 'Class Hierarchy',
+  kb_ls: 'Listar archivos',
+  kb_glob: 'Buscar por nombre',
+  kb_grep: 'Buscar contenido',
+  kb_cat: 'Leer archivo',
+  semantic_search: 'Búsqueda semántica',
+  kb_codegraph_explore: 'Explorar grafo de código',
+  kb_codegraph_call_chain: 'Cadena de llamadas',
+  kb_codegraph_class_hierarchy: 'Jerarquía de clases',
 };
 const KB_ACTION_ICONS: Record<string, React.ReactNode> = {
   kb_ls: <FolderOpenOutlined className='text-teal-500' />,
@@ -887,7 +887,7 @@ function renderKbGrep(text: string, t: any): React.ReactNode {
 
 /** Render code graph tool output (kb_codegraph_explore / call_chain / class_hierarchy) */
 function renderKbCodeGraphOutput(action: string, text: string, _t: any): React.ReactNode {
-  const actionLabel = KB_ACTION_LABELS[action] || 'Code Graph';
+  const actionLabel = KB_ACTION_LABELS[action] || 'Grafo de código';
   const actionIcon = KB_ACTION_ICONS[action] || <ApartmentOutlined className='text-violet-500' />;
 
   // Try to parse structured JSON output; fall back to plain text
@@ -1077,7 +1077,7 @@ const OutputRenderer: React.FC<{ output: ExecutionOutput; index: number; action?
               src={resolveImageUrl(
                 typeof content === 'string' ? content : content?.url || content?.src || String(content),
               )}
-              alt='Generated chart'
+              alt='Gráfico generado'
               className='w-full h-auto object-contain'
               style={{ maxHeight: 600 }}
             />
@@ -1361,7 +1361,7 @@ const HtmlTabbedRenderer: React.FC<{ code?: ExecutionOutput; html: ExecutionOutp
           )}
         >
           <EyeOutlined className='mr-1.5' />
-          渲染结果
+          Resultado
           {activeTab === 'preview' && (
             <div className='absolute bottom-0 left-0 right-0 h-[2px] bg-gray-900 dark:bg-gray-100 rounded-full' />
           )}
@@ -1376,7 +1376,7 @@ const HtmlTabbedRenderer: React.FC<{ code?: ExecutionOutput; html: ExecutionOutp
           )}
         >
           <CodeOutlined className='mr-1.5' />
-          源代码
+          Código fuente
           {activeTab === 'source' && (
             <div className='absolute bottom-0 left-0 right-0 h-[2px] bg-gray-900 dark:bg-gray-100 rounded-full' />
           )}
@@ -1417,7 +1417,7 @@ const CodeExecutionRenderer: React.FC<{
     <>
       <div className='relative overflow-auto flex-1 min-h-[100px]'>
         <span className='sticky top-0 right-0 float-right z-10 text-[10px] text-gray-400 bg-gray-800/80 px-2 py-0.5 rounded mr-2 mt-2'>
-          代码
+          Código
         </span>
         <CodePreview
           code={group.codes
@@ -1434,7 +1434,7 @@ const CodeExecutionRenderer: React.FC<{
           <div className='border-t border-gray-700/50 shrink-0' />
           <div className='relative overflow-auto bg-gray-900 flex-1 min-h-[60px]'>
             <span className='sticky top-0 right-0 float-right z-10 text-[10px] text-gray-400 bg-gray-800/80 px-2 py-0.5 rounded mr-2 mt-2'>
-              执行结果
+              Resultado de ejecución
             </span>
             <div className='px-4 py-3 text-sm text-green-400 font-mono whitespace-pre leading-relaxed overflow-x-auto'>
               {group.results.map(r => String(r.content)).join('')}
@@ -1455,7 +1455,7 @@ const CodeExecutionRenderer: React.FC<{
                 ? img.content
                 : img.content?.url || img.content?.src || String(img.content),
             )}
-            alt='Generated chart'
+            alt='Gráfico generado'
             className='w-full h-auto object-contain'
             style={{ maxHeight: 600 }}
           />
@@ -1487,7 +1487,7 @@ const CodeExecutionRenderer: React.FC<{
           )}
         >
           <FileImageOutlined className='mr-1.5' />
-          图表
+          Gráfica
           {activeTab === 'chart' && (
             <div className='absolute bottom-0 left-0 right-0 h-[2px] bg-gray-900 dark:bg-gray-100 rounded-full' />
           )}
@@ -1502,7 +1502,7 @@ const CodeExecutionRenderer: React.FC<{
           )}
         >
           <CodeOutlined className='mr-1.5' />
-          代码
+          Código
           {activeTab === 'code' && (
             <div className='absolute bottom-0 left-0 right-0 h-[2px] bg-gray-900 dark:bg-gray-100 rounded-full' />
           )}
@@ -1882,7 +1882,7 @@ const TerminalRenderer: React.FC<{
         <div className='flex items-center gap-2'>
           <StatusBadge status={activeStep.status} />
           {allText && (
-            <Tooltip title='复制全部'>
+            <Tooltip title='Copiar todo'>
               <button
                 className='flex items-center gap-1 text-[11px] text-gray-500 hover:text-gray-300 transition-colors px-2 py-1 rounded hover:bg-gray-700/50'
                 onClick={() => copyToClipboard(allText)}
@@ -2078,10 +2078,10 @@ const SkillCardRenderer: React.FC<{
           setDetailData(json.data);
           setFileContent(json.data.raw_content || json.data.instructions || '');
         } else {
-          setError(json.err_msg || 'Failed to load skill detail');
+          setError(json.err_msg || 'No se pudo cargar el detalle de la habilidad');
         }
       } catch (_e) {
-        setError('Network error');
+        setError('Error de red');
       } finally {
         setLoading(false);
       }
@@ -2119,7 +2119,7 @@ const SkillCardRenderer: React.FC<{
       setDownloading(true);
       const base = process.env.API_BASE_URL || '';
       const res = await fetch(`${base}/api/v1/agent/skills/download?skill_name=${encodeURIComponent(skillName)}`);
-      if (!res.ok) throw new Error('Download failed');
+      if (!res.ok) throw new Error('Error en la descarga');
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
@@ -2129,9 +2129,9 @@ const SkillCardRenderer: React.FC<{
       a.click();
       document.body.removeChild(a);
       URL.revokeObjectURL(url);
-      message.success('下载成功');
+      message.success('Descargado');
     } catch {
-      message.error('下载失败');
+      message.error('No se pudo descargar');
     } finally {
       setDownloading(false);
     }
@@ -2188,7 +2188,7 @@ const SkillCardRenderer: React.FC<{
               </div>
             </div>
             <div className='flex items-center gap-2 flex-shrink-0 ml-3'>
-              <Tooltip title='下载为 ZIP'>
+              <Tooltip title='Descargar como ZIP'>
                 <button
                   className='flex items-center justify-center w-8 h-8 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-500 hover:text-indigo-600 hover:border-indigo-300 dark:hover:border-indigo-500 transition-colors'
                   onClick={handleDownload}
@@ -2222,7 +2222,7 @@ const SkillCardRenderer: React.FC<{
             <FolderOpenOutlined className='text-amber-500' />
             <span>{t('view_skill_files')}</span>
             {detailData?.tree?.children && (
-              <span className='text-gray-400'>({detailData.tree.children.length} 项)</span>
+              <span className='text-gray-400'>({detailData.tree.children.length} elementos)</span>
             )}
           </div>
           <RightOutlined className='text-[10px] text-gray-400' />
@@ -2256,7 +2256,7 @@ const SkillCardRenderer: React.FC<{
           </div>
         </div>
         <div className='flex items-center gap-2 flex-shrink-0'>
-          <Tooltip title='下载为 ZIP'>
+          <Tooltip title='Descargar como ZIP'>
             <button
               className='flex items-center justify-center w-8 h-8 rounded-lg border border-gray-200 dark:border-gray-600 text-gray-500 hover:text-indigo-600 hover:border-indigo-300 transition-colors'
               onClick={handleDownload}
@@ -2346,7 +2346,7 @@ const SkillCardRenderer: React.FC<{
           ) : (
             <div className='flex flex-col items-center justify-center py-12 text-gray-400'>
               <FileTextOutlined className='text-2xl mb-2' />
-              <span className='text-xs'>选择文件查看内容</span>
+              <span className='text-xs'>Elige un archivo para ver su contenido</span>
             </div>
           )}
         </div>
@@ -2388,7 +2388,8 @@ const ReferencesPanel: React.FC<{
   return (
     <div className='space-y-3' data-testid='references-panel'>
       <div className='rounded-lg border border-blue-100 bg-blue-50/60 px-3 py-2 text-xs leading-5 text-blue-700 dark:border-blue-500/20 dark:bg-blue-500/10 dark:text-blue-300'>
-        以下内容是回答过程中检索或读取的知识来源，不包含脚本执行回显、SQL 执行结果或其他工具输出。
+        Estas son las fuentes de conocimiento consultadas para la respuesta; no incluyen salidas de scripts, resultados
+        SQL ni otras herramientas.
       </div>
       {citations.map(citation => {
         const isSelected = citation.index === selectedCitationIndex;
@@ -2425,11 +2426,11 @@ const ReferencesPanel: React.FC<{
               <div className='min-w-0 flex-1'>
                 <div className='flex flex-wrap items-center justify-between gap-2'>
                   <span className='min-w-0 break-words text-sm font-semibold text-gray-900 dark:text-gray-100'>
-                    {citation.sourceName || citation.path || `来源 ${citation.index}`}
+                    {citation.sourceName || citation.path || `Fuente ${citation.index}`}
                   </span>
                   {score && (
                     <span className='flex-shrink-0 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-medium text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300'>
-                      相关度 {score}
+                      Relevancia {score}
                     </span>
                   )}
                 </div>
@@ -2452,7 +2453,7 @@ const ReferencesPanel: React.FC<{
                     className='mt-3 inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300'
                   >
                     <LinkOutlined aria-hidden />
-                    打开来源
+                    Abrir fuente
                   </a>
                 )}
               </div>
@@ -2527,7 +2528,7 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
         win.focus();
         win.print();
       } else {
-        message.error('浏览器阻止了弹出窗口，请允许后重试');
+        message.error('El navegador bloqueó la ventana emergente; permítela e inténtalo de nuevo');
       }
     }
   };
@@ -2827,7 +2828,7 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
               )}
             >
               <BookOutlined className='mr-1.5' />
-              参考来源
+              Fuentes
               <span className='ml-1.5 rounded-full bg-blue-50 px-1.5 py-0.5 text-[10px] text-blue-600 dark:bg-blue-500/10 dark:text-blue-300'>
                 {citations.length}
               </span>
@@ -2928,7 +2929,7 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
                 }
                 return resolveImageUrl(obj?.url || obj?.src || String(content));
               })()}
-              alt={previewArtifact.name || 'Image preview'}
+              alt={previewArtifact.name || 'Vista previa de imagen'}
               className='max-w-full max-h-full object-contain rounded-lg shadow-md'
               style={{ maxHeight: 'calc(100vh - 200px)' }}
             />
@@ -2948,7 +2949,7 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
           <div className='space-y-5'>
             <div
               role='tablist'
-              aria-label='任务文件分类'
+              aria-label='Categorías de archivos'
               className='flex w-fit max-w-full items-center gap-1 overflow-x-auto rounded-lg bg-gray-100/80 p-1 dark:bg-gray-800/60'
             >
               {TASK_FILE_TABS.map(tab => {
@@ -2989,10 +2990,10 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
                   {fileFilter === 'all' && (
                     <div className='px-1'>
                       <div className='text-[11px] font-semibold uppercase tracking-wider text-emerald-600/80 dark:text-emerald-400/80'>
-                        上传资料 · {visibleInputFiles.length}
+                        Archivos subidos · {visibleInputFiles.length}
                       </div>
                       <div className='mt-0.5 text-[11px] text-slate-400 dark:text-slate-500'>
-                        用户本轮带入的分析上下文
+                        Contexto que el usuario agregó en esta ronda
                       </div>
                     </div>
                   )}
@@ -3009,10 +3010,10 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
                   {fileFilter === 'all' && (
                     <div className='px-1'>
                       <div className='text-[11px] font-semibold uppercase tracking-wider text-indigo-600/80 dark:text-indigo-400/80'>
-                        推理生成 · {filteredArtifacts.length}
+                        Razonamiento · {filteredArtifacts.length}
                       </div>
                       <div className='mt-0.5 text-[11px] text-slate-400 dark:text-slate-500'>
-                        Agent 在本轮推理过程中生成的文件
+                        Archivos generados por el agente en esta ronda
                       </div>
                     </div>
                   )}
@@ -3322,12 +3323,12 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
                                     READ ONLY
                                   </span>
                                 </div>
-                                <Tooltip title='复制SQL'>
+                                <Tooltip title='Copiar SQL'>
                                   <button
                                     className='flex items-center gap-1 text-[11px] text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700'
                                     onClick={() => {
                                       navigator.clipboard.writeText(sql);
-                                      message.success('SQL已复制到剪贴板');
+                                      message.success('SQL copiado al portapapeles');
                                     }}
                                   >
                                     <CopyOutlined className='text-xs' />
@@ -3445,13 +3446,13 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
                 {isRunning ? (
                   <div className='flex flex-col items-center justify-center py-12 text-gray-400'>
                     <LoadingOutlined className='text-3xl text-blue-500 mb-4' />
-                    <span className='text-sm'>正在执行...</span>
-                    <span className='text-xs text-gray-500 mt-1'>请稍候，结果即将显示</span>
+                    <span className='text-sm'>Ejecutando...</span>
+                    <span className='text-xs text-gray-500 mt-1'>Espera, el resultado aparecerá en breve</span>
                   </div>
                 ) : (
                   <div className='flex flex-col items-center justify-center py-12 text-gray-400'>
                     <FileTextOutlined className='text-3xl mb-4' />
-                    <span className='text-sm'>暂无输出结果</span>
+                    <span className='text-sm'>Aún no hay resultados</span>
                   </div>
                 )}
               </>
@@ -3463,8 +3464,8 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
             <div className='w-20 h-20 rounded-2xl bg-gray-100 dark:bg-gray-800 flex items-center justify-center mb-4'>
               <ConsoleSqlOutlined className='text-3xl text-gray-400' />
             </div>
-            <span className='text-sm font-medium mb-1'>选择一个步骤查看详情</span>
-            <span className='text-xs text-gray-500'>点击左侧的步骤卡片以显示执行结果</span>
+            <span className='text-sm font-medium mb-1'>Elige un paso para ver detalles</span>
+            <span className='text-xs text-gray-500'>Haz clic en un paso a la izquierda para ver su resultado</span>
           </div>
         )}
       </div>
@@ -3475,12 +3476,12 @@ const ManusRightPanel: React.FC<ManusRightPanelProps> = ({
           <div className='flex items-center gap-4'>
             <span className='flex items-center gap-1'>
               <span className={`w-2 h-2 rounded-full ${isRunning ? 'bg-blue-500 animate-pulse' : 'bg-emerald-500'}`} />
-              {isRunning ? '执行中' : '就绪'}
+              {isRunning ? 'Ejecutando' : 'Listo'}
             </span>
             {subAgentContext ? (
               <span>{t('subagent_verified_steps', { count: subAgentContext.steps.length })}</span>
             ) : (
-              visibleOutputs.length > 0 && <span>{visibleOutputs.length} 个输出</span>
+              visibleOutputs.length > 0 && <span>{visibleOutputs.length} salidas</span>
             )}
           </div>
           {subAgentContext ? (

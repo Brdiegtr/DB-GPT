@@ -135,17 +135,17 @@ const _formatFileSize = (bytes: number): string => {
 const _getFileTypeLabel = (fileName: string, mimeType?: string): string => {
   const ext = fileName.toLowerCase().split('.').pop() || '';
   if (['xlsx', 'xls'].includes(ext) || mimeType?.includes('spreadsheet') || mimeType?.includes('excel')) {
-    return '电子表格';
+    return 'Hoja de cálculo';
   }
   if (ext === 'csv' || mimeType?.includes('csv')) {
-    return '电子表格';
+    return 'Hoja de cálculo';
   }
   if (ext === 'pdf' || mimeType?.includes('pdf')) return 'PDF';
-  if (['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg'].includes(ext) || mimeType?.includes('image')) return '图片';
-  if (['doc', 'docx'].includes(ext) || mimeType?.includes('word')) return 'Word 文档';
-  if (['txt', 'md'].includes(ext) || mimeType?.includes('text')) return '文本文件';
+  if (['png', 'jpg', 'jpeg', 'gif', 'webp', 'svg'].includes(ext) || mimeType?.includes('image')) return 'Imagen';
+  if (['doc', 'docx'].includes(ext) || mimeType?.includes('word')) return 'Documento de Word';
+  if (['txt', 'md'].includes(ext) || mimeType?.includes('text')) return 'Archivo de texto';
   if (['json'].includes(ext)) return 'JSON';
-  return '文件';
+  return 'Archivo';
 };
 
 const _getFileIcon = (fileName: string, mimeType?: string) => {
@@ -445,7 +445,7 @@ const convertToManusFormat = (
   const sections: ThinkingSection[] = [
     {
       id: 'section-execution',
-      title: t ? t('execution_steps') : 'Execution Steps',
+      title: t ? t('execution_steps') : 'Pasos de ejecución',
       isCompleted: steps.every(s => s.status === 'completed'),
       steps,
     },
@@ -493,10 +493,10 @@ const EXAMPLE_CARDS = [
   {
     id: 'walmart_sales',
     icon: '📊',
-    title: '沃尔玛销售数据分析',
-    description: '分析沃尔玛销售CSV数据，生成可视化网页报告',
+    title: 'Análisis de ventas de Walmart',
+    description: 'Analiza datos de ventas de Walmart en CSV y genera un reporte web visual',
     query:
-      '请全面分析这份沃尔玛销售数据，包括各门店销售趋势、假日影响、温度与油价对销售的影响等维度，生成一份精美的交互式网页分析报告。',
+      'Analiza a fondo estos datos de ventas de Walmart, incluyendo las tendencias por tienda, el impacto de los días festivos y el efecto de la temperatura y el precio del combustible, y genera un reporte web interactivo y atractivo.',
     fileName: 'Walmart_Sales.csv',
     fileType: 'text/csv',
     fileSize: 98304, // ~96 KB
@@ -508,10 +508,10 @@ const EXAMPLE_CARDS = [
   {
     id: 'db_profile_report',
     icon: '🗄️',
-    title: '数据库画像与分析报告',
-    description: '连接数据库后，生成数据库画像并生成可视化网页报告',
+    title: 'Perfil y análisis de la base de datos',
+    description: 'Conéctate a una base de datos y genera su perfil y un reporte web visual',
     query:
-      '请分析当前连接的数据库，生成数据库画像（包括表结构、字段信息、数据量统计等），并生成一份精美的交互式网页分析报告。',
+      'Analiza la base de datos conectada, genera su perfil (estructura de tablas, campos, volumen de datos, etc.) y un reporte web interactivo y atractivo.',
     dbName: 'Walmart_Sales',
     color: 'from-emerald-500/10 to-teal-500/10',
     borderColor: 'border-emerald-200/60 dark:border-emerald-800/40',
@@ -520,10 +520,10 @@ const EXAMPLE_CARDS = [
   {
     id: 'fin_report',
     icon: '📈',
-    title: '金融财报深度分析',
-    description: '分析浙江海翔药业年度报告，生成数据可视化报告',
+    title: 'Análisis a fondo de informe financiero',
+    description: 'Analiza el informe anual de Zhejiang Haixiang Pharmaceutical y genera un reporte visual',
     query:
-      '请深度分析这份浙江海翔药业2019年年度报告，包括营收利润趋势、资产负债结构、现金流分析、关键财务指标等，生成一份专业的交互式网页分析报告。',
+      'Analiza a fondo el informe anual 2019 de Zhejiang Haixiang Pharmaceutical, incluyendo tendencias de ingresos y utilidades, estructura de activos y pasivos, flujo de efectivo e indicadores financieros clave, y genera un reporte web interactivo y profesional.',
     fileName: '2020-01-23__浙江海翔药业股份有限公司__002099__海翔药业__2019年__年度报告.pdf',
     fileType: 'application/pdf',
     fileSize: 2621440, // ~2.5 MB
@@ -535,10 +535,10 @@ const EXAMPLE_CARDS = [
   {
     id: 'create_sql_skill',
     icon: '🛠️',
-    title: '创建SQL分析技能',
-    description: '使用skill-creator创建一个实用的SQL数据分析技能',
+    title: 'Crear habilidad de análisis SQL',
+    description: 'Usa skill-creator para crear una habilidad práctica de análisis SQL',
     query:
-      '请使用 skill-creator 帮我创建一个实用的SQL数据分析技能，包含连接数据库、执行SQL查询和数据可视化等核心功能。',
+      'Usa skill-creator para ayudarme a crear una habilidad práctica de análisis de datos con SQL, que incluya conectarse a una base de datos, ejecutar consultas SQL y visualizar datos.',
     color: 'from-amber-500/10 to-orange-500/10',
     borderColor: 'border-amber-200/60 dark:border-amber-800/40',
     iconBg: 'bg-amber-100 dark:bg-amber-900/40',
@@ -621,7 +621,7 @@ const Playground: NextPage = () => {
       setSessionFilePreview({
         snapshot: null,
         loading: false,
-        error: err?.message || 'Preview failed',
+        error: err?.message || 'Error en la vista previa',
         size: item.size,
       });
     }
@@ -771,7 +771,7 @@ const Playground: NextPage = () => {
         setSessionFilePreview({
           snapshot: null,
           loading: false,
-          error: err?.message || 'Preview failed',
+          error: err?.message || 'Error en la vista previa',
           size: file.size,
         });
       }
@@ -789,7 +789,7 @@ const Playground: NextPage = () => {
       );
     }
     if (sessionFilePreview.error) {
-      return <Alert type='error' showIcon message='预览失败' description={sessionFilePreview.error} />;
+      return <Alert type='error' showIcon message='Error en la vista previa' description={sessionFilePreview.error} />;
     }
     return <AttachmentPreview snapshot={sessionFilePreview.snapshot} size={sessionFilePreview.size} />;
   };
@@ -1297,16 +1297,16 @@ const Playground: NextPage = () => {
     if (outputType === 'chart') {
       const chartType = content?.chartType || 'line';
       const chartTypeNames: Record<string, string> = {
-        line: 'Line Chart',
-        column: 'Column Chart',
-        bar: 'Bar Chart',
-        pie: 'Pie Chart',
-        donut: 'Donut Chart',
-        area: 'Area Chart',
-        scatter: 'Scatter Plot',
-        'dual-axes': 'Dual Axes Chart',
+        line: 'Gráfico de líneas',
+        column: 'Gráfico de columnas',
+        bar: 'Gráfico de barras',
+        pie: 'Gráfico circular',
+        donut: 'Gráfico de anillo',
+        area: 'Gráfico de áreas',
+        scatter: 'Gráfico de dispersión',
+        'dual-axes': 'Gráfico de doble eje',
       };
-      return content?.title || chartTypeNames[chartType] || 'Chart Visualization';
+      return content?.title || chartTypeNames[chartType] || 'Visualización de gráfico';
     }
     if (outputType === 'code') {
       return `Code Snippet`;
@@ -1449,7 +1449,7 @@ const Playground: NextPage = () => {
             const blob = await resp.blob();
             triggerBlobDownload(blob, artifact.name || imgName || 'file');
           } catch {
-            message.warning('文件暂不可下载');
+            message.warning('El archivo aún no se puede descargar');
           }
         } else if (filePath) {
           // Download via backend file download endpoint (for agent-created files)
@@ -1458,16 +1458,16 @@ const Playground: NextPage = () => {
             const resp = await fetch(downloadUrl);
             if (!resp.ok) {
               const errData = await resp.json().catch(() => ({}));
-              message.warning(errData.detail || '文件暂不可下载');
+              message.warning(errData.detail || 'El archivo aún no se puede descargar');
               break;
             }
             const blob = await resp.blob();
             triggerBlobDownload(blob, artifact.name || filePath.split('/').pop() || 'file');
           } catch {
-            message.warning('文件下载失败');
+            message.warning('No se pudo descargar el archivo');
           }
         } else {
-          message.warning('文件暂不可下载');
+          message.warning('El archivo aún no se puede descargar');
         }
         break;
       }
@@ -1480,7 +1480,7 @@ const Playground: NextPage = () => {
 
   const _copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
-      message.success('Copied to clipboard');
+      message.success('Copiado al portapapeles');
     });
   };
 
@@ -1927,17 +1927,17 @@ const Playground: NextPage = () => {
     if (explicitLegacyFile) {
       const staged = sessionFiles.stageLegacyForSend(explicitLegacyFile, currentConvId);
       if (!staged.ok) {
-        message.error('加载示例失败: ' + staged.error);
+        message.error('No se pudo cargar el ejemplo: ' + staged.error);
         return;
       }
       sendSnapshot = staged.snapshot;
     } else if (hasSessionFileDrafts || hasLegacyFile) {
       if (sessionFiles.files.some(draft => draft.validation.status !== 'ok')) {
-        message.error('存在未通过校验的附件，请先移除后再发送');
+        message.error('Hay adjuntos que no pasaron la validación; quítalos antes de enviar');
         return;
       }
       if (sessionFiles.hasHardFailures) {
-        message.error('有附件上传失败，请重试或移除后再发送');
+        message.error('Algunos adjuntos no se pudieron subir; reintenta o quítalos antes de enviar');
         return;
       }
       try {
@@ -1945,7 +1945,7 @@ const Playground: NextPage = () => {
         sendSnapshot = await sessionFiles.prepare(currentConvId);
       } catch (prepareErr: any) {
         if (taskEpochRef.current !== taskEpoch) return;
-        message.error(prepareErr?.message || '附件校验失败，请重试');
+        message.error(prepareErr?.message || 'Falló la validación de adjuntos, inténtalo de nuevo');
         return;
       } finally {
         if (taskEpochRef.current === taskEpoch) setQueuedSendAfterUpload(false);
@@ -1968,7 +1968,7 @@ const Playground: NextPage = () => {
     }
     if (sendSnapshot?.legacyFile && !finalQuery.trim()) {
       // Legacy example-card default (unchanged from the preloaded flow).
-      finalQuery = 'Analyze the uploaded file.';
+      finalQuery = 'Analiza el archivo subido.';
     }
     // Construct context prefix for non-legacy queries. Legacy example sends
     // reproduce the old payload, which never carried a context prefix.
@@ -2097,7 +2097,7 @@ const Playground: NextPage = () => {
       });
 
       if (!response.body) {
-        throw new Error('No response body');
+        throw new Error('Respuesta vacía');
       }
 
       // Submission accepted by the server. The composer rail intentionally
@@ -2536,12 +2536,12 @@ const Playground: NextPage = () => {
         }
       } else {
         if (taskEpochRef.current !== taskEpoch || conversationIdRef.current !== currentConvId) return;
-        message.error(err?.message || 'Failed to get response');
+        message.error(err?.message || 'No se pudo obtener respuesta');
         setMessages(prev => {
           const newMessages = [...prev];
           const lastMsg = newMessages[newMessages.length - 1];
           if (lastMsg && lastMsg.role === 'view') {
-            lastMsg.context = err?.message || 'Error occurred';
+            lastMsg.context = err?.message || 'Ocurrió un error';
             lastMsg.thinking = false;
           }
           return newMessages;
@@ -2584,7 +2584,7 @@ const Playground: NextPage = () => {
     let exampleController: AbortController | null = null;
 
     try {
-      message.loading({ content: '正在加载示例...', key: 'example-loading', duration: 0 });
+      message.loading({ content: 'Cargando ejemplo...', key: 'example-loading', duration: 0 });
       let exampleLegacyFile: LegacyServerFile | null = null;
 
       // Example files already exist on the server: materialize the selected
@@ -2593,7 +2593,7 @@ const Playground: NextPage = () => {
       if (example.fileName) {
         if (hasSessionFileDrafts) {
           message.destroy('example-loading');
-          message.warning('示例文件与本地上传的附件不能混用，请先移除已选附件');
+          message.warning('No se pueden mezclar archivos de ejemplo con archivos subidos; primero quita los adjuntos');
           return;
         }
         exampleController = new AbortController();
@@ -2620,8 +2620,8 @@ const Playground: NextPage = () => {
           };
         } else {
           message.destroy('example-loading');
-          const errMsg = res?.err_msg || 'Unknown error';
-          message.error('加载示例失败: ' + errMsg);
+          const errMsg = res?.err_msg || 'Error desconocido';
+          message.error('No se pudo cargar el ejemplo: ' + errMsg);
           return;
         }
       }
@@ -2657,8 +2657,8 @@ const Playground: NextPage = () => {
       if (taskEpochRef.current !== taskEpoch) return;
       message.destroy('example-loading');
       console.error('Example click error:', err);
-      const errMessage = err instanceof Error ? err.message : 'Unknown error';
-      message.error('加载示例失败: ' + errMessage);
+      const errMessage = err instanceof Error ? err.message : 'Error desconocido';
+      message.error('No se pudo cargar el ejemplo: ' + errMessage);
     } finally {
       if (exampleAbortControllerRef.current === exampleController) {
         exampleAbortControllerRef.current = null;
@@ -2673,7 +2673,7 @@ const Playground: NextPage = () => {
   const handleClearChat = useCallback(() => {
     void startNewTask().catch(error => {
       console.error('Failed to clear the current task', error);
-      message.error('新建任务失败');
+      message.error('No se pudo crear la tarea');
     });
   }, [startNewTask]);
 
@@ -2903,7 +2903,7 @@ const Playground: NextPage = () => {
     } catch (e) {
       if (historyRequestRef.current !== requestVersion || taskEpochRef.current !== taskEpoch) return;
       console.error('Failed to load conversation', e);
-      message.error('加载历史对话失败');
+      message.error('No se pudo cargar el historial');
     } finally {
       if (historyAbortControllerRef.current === controller) {
         historyAbortControllerRef.current = null;
@@ -2918,19 +2918,19 @@ const Playground: NextPage = () => {
   // Share current conversation — create share link and copy to clipboard
   const handleShare = async () => {
     if (!conversationId) {
-      message.warning('请先开始一段对话再分享');
+      message.warning('Primero inicia una conversación para compartirla');
       return;
     }
     try {
       const res: any = await axios.post('/api/v1/chat/share', { conv_uid: conversationId });
       const shareUrl = res?.data?.share_url;
-      if (!shareUrl) throw new Error('No share URL returned');
+      if (!shareUrl) throw new Error('No se recibió el enlace para compartir');
       const fullUrl = `${window.location.origin}${shareUrl}`;
       await navigator.clipboard.writeText(fullUrl);
-      message.success('分享链接已复制到剪贴板！');
+      message.success('¡Enlace copiado al portapapeles!');
     } catch (e) {
       console.error('Failed to create share link', e);
-      message.error('创建分享链接失败，请稍后重试');
+      message.error('No se pudo crear el enlace, inténtalo más tarde');
     }
   };
 
@@ -2994,7 +2994,9 @@ const Playground: NextPage = () => {
       // legacy example file must never mix with local uploads (file_path vs
       // file_ids), so the pick is refused before a draft is created.
       if (hasLegacyFile) {
-        message.warning('示例文件与本地上传的附件不能混用，请先清除示例文件');
+        message.warning(
+          'No se pueden mezclar archivos de ejemplo con archivos subidos; primero quita los archivos de ejemplo',
+        );
         return false;
       }
       void sessionFiles.addFiles([file as File], ensureSessionFilesConvId());
@@ -3026,7 +3028,7 @@ const Playground: NextPage = () => {
               )}
               {messages.length > 0 && (
                 <Button type='text' size='small' onClick={handleClearChat} className='text-gray-500'>
-                  Clear Chat
+                  Borrar chat
                 </Button>
               )}
               <BellOutlined className='text-lg text-gray-500 cursor-pointer' />
@@ -3044,7 +3046,7 @@ const Playground: NextPage = () => {
           {/* When from_task mode and loading history, show loading spinner instead of Hero */}
           {router.query.from_task && historyLoading && messages.length === 0 ? (
             <div className='flex-1 flex items-center justify-center'>
-              <Spin size='large' tip='加载对话历史...' />
+              <Spin size='large' tip='Cargando historial...' />
             </div>
           ) : messages.length > 0 ? (
             <div className={`flex-1 min-h-0 flex overflow-hidden ${rightPanelCollapsed ? 'justify-center' : ''}`}>
@@ -3218,7 +3220,7 @@ const Playground: NextPage = () => {
                             const res = await fetch(
                               `${base}/api/v1/agent/skills/download?skill_name=${encodeURIComponent(skillName)}`,
                             );
-                            if (!res.ok) throw new Error('Download failed');
+                            if (!res.ok) throw new Error('Error en la descarga');
                             const blob = await res.blob();
                             const url = URL.createObjectURL(blob);
                             const a = document.createElement('a');
@@ -3340,7 +3342,7 @@ const Playground: NextPage = () => {
                             }}
                             placeholder={
                               t('ask_data_question') ||
-                              'Ask a question about your database, upload a CSV, or generate a report...'
+                              'Pregunta sobre tu base de datos, sube un CSV o genera un informe...'
                             }
                             autoSize={{ minRows: 2, maxRows: 6 }}
                             className='flex-1 resize-none !border-none !shadow-none !bg-transparent px-0 py-2'
@@ -3358,20 +3360,20 @@ const Playground: NextPage = () => {
                                       key: 'upload',
                                       label: (
                                         <Upload {...uploadProps}>
-                                          <div className='w-full'>Upload File</div>
+                                          <div className='w-full'>Subir archivo</div>
                                         </Upload>
                                       ),
                                       icon: <UploadOutlined />,
                                     },
                                     {
                                       key: 'database',
-                                      label: 'Select Data Source',
+                                      label: 'Seleccionar fuente de datos',
                                       icon: <DatabaseOutlined />,
                                       onClick: () => setIsDbModalOpen(true),
                                     },
                                     {
                                       key: 'knowledge',
-                                      label: 'Select Knowledge Base',
+                                      label: 'Seleccionar base de conocimiento',
                                       icon: <BookOutlined />,
                                       onClick: () => setIsKnowledgeModalOpen(true),
                                     },
@@ -3778,7 +3780,9 @@ const Playground: NextPage = () => {
                                       : undefined
                                   }
                                 >
-                                  {queuedSendAfterUpload && <span className='text-[13px] font-medium'>上传后发送</span>}
+                                  {queuedSendAfterUpload && (
+                                    <span className='text-[13px] font-medium'>Enviar al terminar de subir</span>
+                                  )}
                                   {(query.trim() || hasSessionFileDrafts || hasLegacyFile) && (
                                     <span
                                       className='absolute inset-0 opacity-0 group-hover/send:opacity-100 transition-opacity duration-300 pointer-events-none'
@@ -4062,7 +4066,7 @@ const Playground: NextPage = () => {
                         }}
                         placeholder={
                           t('ask_data_question') ||
-                          'Ask a question about your database, upload a CSV, or generate a report...'
+                          'Pregunta sobre tu base de datos, sube un CSV o genera un informe...'
                         }
                         autoSize={{ minRows: 3, maxRows: 8 }}
                         className='text-lg resize-none !border-none !shadow-none !bg-transparent px-2 py-2 mb-2'
@@ -4586,7 +4590,7 @@ const Playground: NextPage = () => {
                                             {space.index_methods?.includes('Wiki') && (
                                               <span
                                                 className='text-[10px] px-1.5 py-0.5 rounded-full border leading-none flex-shrink-0 border-blue-300 text-blue-500 bg-blue-50 dark:bg-blue-900/30 dark:border-blue-700 dark:text-blue-300'
-                                                title='LLM-Wiki enabled'
+                                                title='LLM-Wiki activado'
                                               >
                                                 📖 Wiki
                                               </span>
@@ -4735,7 +4739,9 @@ const Playground: NextPage = () => {
                                 : undefined
                             }
                           >
-                            {queuedSendAfterUpload && <span className='text-[13px] font-medium'>上传后发送</span>}
+                            {queuedSendAfterUpload && (
+                              <span className='text-[13px] font-medium'>Enviar al terminar de subir</span>
+                            )}
                             {(query.trim() || hasSessionFileDrafts || hasLegacyFile) && (
                               <span
                                 className='absolute inset-0 opacity-0 group-hover/send:opacity-100 transition-opacity duration-300 pointer-events-none'
@@ -4828,7 +4834,7 @@ const Playground: NextPage = () => {
           title={
             <div className='flex items-center gap-2'>
               <DatabaseOutlined />
-              Select Data Source
+              Seleccionar fuente de datos
             </div>
           }
           open={isDbModalOpen}
@@ -4855,11 +4861,11 @@ const Playground: NextPage = () => {
                 />
               </List.Item>
             )}
-            locale={{ emptyText: 'No data sources found' }}
+            locale={{ emptyText: 'No se encontraron fuentes de datos' }}
           />
           <div className='mt-4 pt-4 border-t border-gray-100 text-center'>
             <Button type='dashed' block icon={<PlusOutlined />} onClick={() => router.push('/construct/database')}>
-              Add New Data Source
+              Añadir fuente de datos
             </Button>
           </div>
         </Modal>
@@ -4869,7 +4875,7 @@ const Playground: NextPage = () => {
           title={
             <div className='flex items-center gap-2'>
               <BookOutlined />
-              Select Knowledge Base
+              Seleccionar base de conocimiento
             </div>
           }
           open={isKnowledgeModalOpen}
@@ -4900,11 +4906,11 @@ const Playground: NextPage = () => {
                 />
               </List.Item>
             )}
-            locale={{ emptyText: 'No knowledge bases found' }}
+            locale={{ emptyText: 'No se encontraron bases de conocimiento' }}
           />
           <div className='mt-4 pt-4 border-t border-gray-100 text-center'>
             <Button type='dashed' block icon={<PlusOutlined />} onClick={() => router.push('/construct/knowledge')}>
-              Add New Knowledge Base
+              Añadir base de conocimiento
             </Button>
           </div>
         </Modal>

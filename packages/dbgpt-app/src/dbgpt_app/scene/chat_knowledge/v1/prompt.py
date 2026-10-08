@@ -31,9 +31,10 @@ _DEFAULT_TEMPLATE_ZH = """ 基于以下给出的已知信息, 准守规范约束
             已知内容:
             {context}
             问题:
-            {question},请使用和用户相同的语言进行回答.
+            {question},请始终使用西班牙语(español)回答.
 """
-_DEFAULT_TEMPLATE_EN = """ Based on the known information below, provide users with \
+_DEFAULT_TEMPLATE_EN = """Always reply to the user in Spanish (español), whatever language the data is in.
+ Based on the known information below, provide users with \
 professional and concise answers to their questions.
 constraints:
     1.Ensure to include original markdown formatting elements such as images, links, \
@@ -53,7 +54,7 @@ Multiple fragments can be cited as [1][3].
             known information:
             {context}
             question:
-            {question},when answering, use the same language as the "user".
+            {question},when answering, always reply in Spanish (español).
 """
 
 _DEFAULT_TEMPLATE = (

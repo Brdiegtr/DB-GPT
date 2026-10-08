@@ -160,7 +160,9 @@ const SaveAsScheduledTaskDrawer: React.FC<SaveAsScheduledTaskDrawerProps> = ({
         })()}
         {freezingFiles.length > 0 && (
           <div className='mt-2'>
-            <div className='mb-1 text-xs text-gray-400'>将冻结以下附件（创建后与当前会话解耦）:</div>
+            <div className='mb-1 text-xs text-gray-400'>
+              Se guardarán estos adjuntos (independientes de la conversación actual):
+            </div>
             <AttachmentMessageGroup files={freezingFiles} />
           </div>
         )}

@@ -216,7 +216,7 @@ export function useReActAgentChat(options: UseReActAgentChatOptions = {}): UseRe
         }
 
         if (!response.body) {
-          throw new Error('Response body is null');
+          throw new Error('La respuesta está vacía');
         }
 
         const reader = response.body.getReader();
@@ -307,7 +307,7 @@ export function useReActAgentChat(options: UseReActAgentChatOptions = {}): UseRe
           return tempHistory;
         }
 
-        const errorMessage = error.message || 'Unknown error occurred';
+        const errorMessage = error.message || 'Ocurrió un error desconocido';
 
         setStreamingTurn(prev => {
           if (prev) {

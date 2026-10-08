@@ -168,7 +168,7 @@ export function useConnectorTools(connectorId?: string) {
       setData(unwrap<ConnectorToolsResponse>(res) ?? null);
     } catch (err) {
       console.error('Failed to fetch connector tools:', err);
-      const message = err instanceof Error ? err.message : 'Failed to load tools';
+      const message = err instanceof Error ? err.message : 'No se pudieron cargar las herramientas';
       setError(message);
     } finally {
       setLoading(false);

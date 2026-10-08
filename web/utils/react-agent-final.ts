@@ -31,7 +31,7 @@ const GENERIC_LEGACY_SOURCE_NAMES = new Set([
   'knowledgebase',
   'knowledge',
   'kb',
-  '知识库',
+  'Base de conocimiento',
   'reference',
   'references',
   'source',
@@ -150,7 +150,7 @@ function normalizeLegacyReferences(value: unknown): AgentCitation[] {
       const specificSourceName = chunkSourceName ?? groupSourceName;
 
       // The old ReAct producer labelled every tool observation as
-      // "Knowledge Base", including source code and SQL output. Such data is
+      // "Base de conocimiento", including source code and SQL output. Such data is
       // useful only for stripping the legacy envelope; it is not trustworthy
       // citation metadata. Surface a legacy citation only when the payload
       // identifies a concrete document, path, or URL.

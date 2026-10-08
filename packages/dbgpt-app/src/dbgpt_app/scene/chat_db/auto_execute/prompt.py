@@ -16,7 +16,8 @@ CFG = Config()
 _PROMPT_SCENE_DEFINE_EN = "You are a database expert. "
 _PROMPT_SCENE_DEFINE_ZH = "你是一个数据库专家. "
 
-_DEFAULT_TEMPLATE_EN = """
+_DEFAULT_TEMPLATE_EN = """Always reply to the user in Spanish (español), whatever language the data is in.
+
 Please answer the user's question based on the database selected by the user and some \
 of the available table structure definitions of the database.
 Database name:
@@ -27,7 +28,9 @@ Table structure definition:
 Constraint:
     1.Please understand the user's intention based on the user's question, and use the \
     given table structure definition to create a grammatically correct {dialect} sql. \
-    If sql is not required, answer the user's question directly.. 
+    You do NOT know the data: any question about counts, totals, lists or values \
+    MUST be answered with sql, never with numbers from your own guess. Only answer \
+    directly when the question does not need any data.
     2.Always limit the query to a maximum of {top_k} results unless the user specifies \
     in the question the specific number of rows of data he wishes to obtain.
     3.You can only use the tables provided in the table structure information to \
@@ -89,9 +92,9 @@ PROMPT_SCENE_DEFINE = (
 
 RESPONSE_FORMAT_SIMPLE = {
     "thoughts": "thoughts summary to say to user",
-    "direct_response": "If the context is sufficient to answer user, reply directly "
-    "without sql",
-    "sql": "SQL Query to run",
+    "direct_response": "Leave empty whenever the question is about data in the "
+    "database. Only fill it for greetings or questions unrelated to the data",
+    "sql": "SQL Query to run (required for any question about data)",
     "display_type": "Data display method",
 }
 

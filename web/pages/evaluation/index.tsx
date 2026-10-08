@@ -230,37 +230,37 @@ const Evaluation = () => {
 
   const columns: TableProps<DataSetItemType>['columns'] = [
     {
-      title: '名称',
+      title: 'Nombre',
       dataIndex: 'name',
       key: 'name',
       width: '10%',
       fixed: 'left',
     },
     {
-      title: '编码',
+      title: 'Código',
       dataIndex: 'code',
       key: 'code',
       width: '20%',
       // render: (text) => <a>{text}</a>,
     },
     {
-      title: '储存方式',
+      title: 'Tipo de almacenamiento',
       dataIndex: 'storage_type',
       key: 'storage_type',
     },
     {
-      title: '数据集数量',
+      title: 'Cantidad de conjuntos de datos',
       dataIndex: 'datasets_count',
       key: 'datasets_count',
     },
 
     {
-      title: '创建时间',
+      title: 'Fecha de creación',
       dataIndex: 'gmt_create',
       key: 'gmt_create',
     },
     {
-      title: '成员',
+      title: 'Miembros',
       dataIndex: 'members',
       key: 'members',
       width: '10%',
@@ -271,7 +271,7 @@ const Evaluation = () => {
       },
     },
     {
-      title: '更新时间',
+      title: 'Fecha de actualización',
       dataIndex: 'gmt_modified',
       key: 'gmt_modified',
     },
@@ -281,7 +281,7 @@ const Evaluation = () => {
       render: (_, record) => (
         <Space size='middle'>
           <Popconfirm
-            title='确认删除吗'
+            title='¿Seguro que quieres eliminarlo?'
             onConfirm={async () => {
               const [, , res] = await apiInterceptors(
                 delDataSet({
@@ -289,12 +289,12 @@ const Evaluation = () => {
                 }),
               );
               if (res?.success == true) {
-                message.success('删除成功');
+                message.success('Eliminado correctamente');
                 getDataSetsRefresh();
               }
             }}
           >
-            <Button type='link'>删除</Button>
+            <Button type='link'>Eliminar</Button>
           </Popconfirm>
           <Button
             type='link'
@@ -308,7 +308,7 @@ const Evaluation = () => {
               });
             }}
           >
-            编辑
+            Editar
           </Button>
           <Button
             type='link'
@@ -360,7 +360,7 @@ const Evaluation = () => {
               setCommonLoading(false);
             }}
           >
-            下载
+            Descargar
           </Button>
         </Space>
       ),
@@ -370,7 +370,7 @@ const Evaluation = () => {
    */
   const evaluationsColumns: TableProps<EvaluationItemType>['columns'] = [
     {
-      title: '数据集名称',
+      title: 'Nombre del conjunto de datos',
       dataIndex: 'datasets_name',
       key: 'datasets_name',
       fixed: 'left',
@@ -387,7 +387,7 @@ const Evaluation = () => {
       ),
     },
     {
-      title: '测评状态',
+      title: 'Estado de evaluación',
       dataIndex: 'state',
       key: 'state',
       render: text => {
@@ -395,28 +395,28 @@ const Evaluation = () => {
       },
     },
     {
-      title: '测评编码',
+      title: 'Código de evaluación',
       dataIndex: 'evaluate_code',
       key: 'evaluate_code',
     },
     {
-      title: '场景',
+      title: 'Escenario',
       dataIndex: 'scene_key',
       key: 'scene_key',
     },
 
     {
-      title: '测评指标',
+      title: 'Métricas de evaluación',
       dataIndex: 'evaluate_metrics',
       key: 'evaluate_metrics',
     },
     {
-      title: '创建时间',
+      title: 'Fecha de creación',
       dataIndex: 'gmt_create',
       key: 'gmt_create',
     },
     {
-      title: '更新时间',
+      title: 'Fecha de actualización',
       dataIndex: 'gmt_modified',
       key: 'gmt_modified',
     },
@@ -424,8 +424,8 @@ const Evaluation = () => {
     {
       title: (
         <span className='w-[50px]'>
-          <span className='text-nowrap'>详情</span>
-          <Tooltip placement='topLeft' title='查看日志与评分'>
+          <span className='text-nowrap'>Detalles</span>
+          <Tooltip placement='topLeft' title='Ver registros y calificación'>
             <InfoCircleOutlined />
           </Tooltip>
         </span>
@@ -439,7 +439,7 @@ const Evaluation = () => {
       ),
     },
     {
-      title: '测评结果',
+      title: 'Resultado de evaluación',
       key: 'result',
       render: (_, record) => (
         <>
@@ -452,7 +452,7 @@ const Evaluation = () => {
               });
             }}
           >
-            评分明细
+            Detalle de calificación
           </Button>
           <Button
             type='link'
@@ -505,19 +505,19 @@ const Evaluation = () => {
               setCommonLoading(false);
             }}
           >
-            下载
+            Descargar
           </Button>
         </>
       ),
     },
     {
-      title: '操作',
+      title: 'Acciones',
       key: 'action',
       width: '25%',
       render: (_, record) => (
         <>
           <Popconfirm
-            title='确认删除吗'
+            title='¿Seguro que quieres eliminarlo?'
             onConfirm={async () => {
               const [, , res] = await apiInterceptors(
                 delEvaluation({
@@ -525,12 +525,12 @@ const Evaluation = () => {
                 }),
               );
               if (res?.success == true) {
-                message.success('删除成功');
+                message.success('Eliminado correctamente');
                 getEvaluationsRefresh();
               }
             }}
           >
-            <Button type='link'>删除</Button>
+            <Button type='link'>Eliminar</Button>
           </Popconfirm>
         </>
       ),
@@ -556,11 +556,11 @@ const Evaluation = () => {
             className='backdrop-filter backdrop-blur-lg bg-white bg-opacity-30 border-2 border-white rounded-lg shadow p-1 dark:border-[#6f7f95] dark:bg-[#6f7f95] dark:bg-opacity-60'
             options={[
               {
-                label: '评测数据',
+                label: 'Datos de evaluación',
                 value: 'evaluations',
               },
               {
-                label: '数据集',
+                label: 'Conjunto de datos',
                 value: 'dataSet',
               },
             ]}
@@ -579,7 +579,7 @@ const Evaluation = () => {
                     setIsAddDataSet(true);
                   }}
                 >
-                  添加数据集
+                  Agregar conjunto de datos
                 </Button>
               </div>
               <Table
@@ -605,7 +605,7 @@ const Evaluation = () => {
                     setIsModalOpen(true);
                   }}
                 >
-                  发起评测
+                  Iniciar evaluación
                 </Button>
               </div>
               <Table
@@ -654,7 +654,7 @@ const Evaluation = () => {
             </>
           )}
           <Modal
-            title='发起测评'
+            title='Iniciar evaluación'
             open={isModalOpen}
             onOk={async () => {
               const values = await form.validateFields();
@@ -666,7 +666,7 @@ const Evaluation = () => {
                   }),
                 );
                 if (res?.success) {
-                  message.success('发起成功');
+                  message.success('Iniciado correctamente');
                   getEvaluationsRefresh();
                   form.resetFields();
                 }
@@ -687,7 +687,7 @@ const Evaluation = () => {
               labelCol={{ span: 4 }}
               wrapperCol={{ span: 20 }}
             >
-              <Form.Item name='scene_key' label='场景类型' rules={[{ required: true }]}>
+              <Form.Item name='scene_key' label='Tipo de escenario' rules={[{ required: true }]}>
                 <Select
                   options={[
                     {
@@ -728,7 +728,7 @@ const Evaluation = () => {
                   }}
                 ></Select>
               </Form.Item>
-              <Form.Item name='scene_value' label='场景参数' rules={[{ required: true }]}>
+              <Form.Item name='scene_value' label='Parámetros del escenario' rules={[{ required: true }]}>
                 <Select
                   loading={sceneValueOptionLoading}
                   disabled={sceneValueOptionLoading}
@@ -743,15 +743,20 @@ const Evaluation = () => {
                   }}
                 ></Select>
               </Form.Item>
-              <Form.Item name='parallel_num' label='并行参数' rules={[{ required: true }]} initialValue={1}>
+              <Form.Item
+                name='parallel_num'
+                label='Parámetros de paralelismo'
+                rules={[{ required: true }]}
+                initialValue={1}
+              >
                 <Input></Input>
               </Form.Item>
-              <Form.Item name='datasets' label='数据集' rules={[{ required: true }]}>
+              <Form.Item name='datasets' label='Conjunto de datos' rules={[{ required: true }]}>
                 <Select options={dataSetsOptions}></Select>
               </Form.Item>
               <Form.Item
                 name='evaluate_metrics'
-                label='评测指标'
+                label='Métricas de evaluación'
                 rules={[{ required: useWatch('scene_key', form) === 'app' }]}
               >
                 <Select loading={getMetricsLoading} disabled={getMetricsLoading} options={metricOptions}></Select>
@@ -759,7 +764,7 @@ const Evaluation = () => {
             </Form>
           </Modal>
           <Modal
-            title={isAddDataSet ? '添加数据集' : '编辑数据集'}
+            title={isAddDataSet ? 'Agregar conjunto de datos' : 'Editar conjunto de datos'}
             open={isDataSetModalOpen}
             confirmLoading={dataSetModalLoading}
             onOk={() => {
@@ -773,21 +778,21 @@ const Evaluation = () => {
                     formData.append('dataset_name', values.dataset_name);
                     values.members && formData.append('members', values.members.join(','));
 
-                    const file = values.doc_file.file; // 获取文件对象
+                    const file = values.doc_file.file; // 获取Archivo对象
                     formData.append('doc_file', file, file.name);
 
                     uploadDataSetsFile(formData)
                       .then(response => {
                         if (response.data.success) {
-                          message.success('上传成功');
+                          message.success('Subido correctamente');
                           runGetDataSets();
                         } else {
                           message.error(response.data.err_msg);
                         }
                       })
                       .catch(error => {
-                        console.error('上传失败', error);
-                        message.error(error?.response?.data?.err_msg || '上传失败');
+                        console.error('Error al subir', error);
+                        message.error(error?.response?.data?.err_msg || 'Error al subir');
                       })
                       .finally(() => {
                         setIsDataSetModalOpen(false);
@@ -801,7 +806,7 @@ const Evaluation = () => {
                     })
                       .then(res => {
                         if (res.data.success) {
-                          message.success('上传成功');
+                          message.success('Subido correctamente');
                           runGetDataSets();
                         } else {
                           message.error(res.data.err_msg);
@@ -809,7 +814,7 @@ const Evaluation = () => {
                       })
                       .catch(err => {
                         console.log(err);
-                        message.error(err?.response?.data?.err_msg || '上传失败');
+                        message.error(err?.response?.data?.err_msg || 'Error al subir');
                       })
                       .finally(() => {
                         setIsDataSetModalOpen(false);
@@ -824,7 +829,7 @@ const Evaluation = () => {
                   })
                     .then(res => {
                       if (res.data.success) {
-                        message.success('更新成功');
+                        message.success('Actualizado correctamente');
                         runGetDataSets();
                       } else {
                         message.error(res.data.err_msg);
@@ -832,7 +837,7 @@ const Evaluation = () => {
                     })
                     .catch(err => {
                       console.log(err);
-                      message.error('更新失败');
+                      message.error('No se pudo actualizar');
                     })
                     .finally(() => {
                       setIsDataSetModalOpen(false);
@@ -853,14 +858,14 @@ const Evaluation = () => {
               labelCol={{ span: 4 }}
               wrapperCol={{ span: 20 }}
             >
-              <Form.Item name='dataset_name' label='名称' rules={[{ required: true }]}>
+              <Form.Item name='dataset_name' label='Nombre' rules={[{ required: true }]}>
                 <Input disabled={!isAddDataSet} />
               </Form.Item>
-              <Form.Item name='members' label='成员'>
+              <Form.Item name='members' label='Miembros'>
                 <Select mode='tags' />
               </Form.Item>
               {isAddDataSet && (
-                <Form.Item name='storage_type' label='储存类型' rules={[{ required: true }]}>
+                <Form.Item name='storage_type' label='Tipo de almacenamiento' rules={[{ required: true }]}>
                   <Select options={storageTypeOptions} />
                 </Form.Item>
               )}
@@ -881,7 +886,7 @@ const Evaluation = () => {
                       });
                     }}
                   >
-                    <Button icon={<UploadOutlined />}>Click to Upload</Button>
+                    <Button icon={<UploadOutlined />}>Haz clic para subir</Button>
                   </Upload>
                 </Form.Item>
               )}
@@ -893,7 +898,7 @@ const Evaluation = () => {
             </Form>
           </Modal>
           <Modal
-            title='评分明细'
+            title='Detalle de calificación'
             open={isModalVisible}
             onOk={handleModalClose}
             onCancel={handleModalClose}
@@ -909,7 +914,7 @@ const Evaluation = () => {
             }}
             footer={[
               <Button key='back' onClick={handleModalClose}>
-                返回
+                Volver
               </Button>,
             ]}
           >

@@ -19,6 +19,8 @@ _DOMAIN = "dbgpt"
 _DEFAULT_LANGUAGE = os.getenv("LANGUAGE", "en")
 
 _LANGUAGE_MAPPING = {
+    # Interfaz solo en español: el idioma "en" muestra la traducción al español
+    "en": "es",
     "zh": "zh_CN",
     "zh_CN": "zh_CN",
 }

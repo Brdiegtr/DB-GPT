@@ -422,7 +422,7 @@ export default function DocPanel(props: IProps) {
               icon={<PlusOutlined />}
               onClick={handleAddDocument}
             >
-              Create Now
+              Crear ahora
             </Button>
           </Empty>
         )}
@@ -530,7 +530,7 @@ export default function DocPanel(props: IProps) {
                   {fields.map(({ key, name }) => (
                     <div key={key} className={cls('flex flex-1 items-center gap-8 mb-6')}>
                       <Form.Item label='' name={[name, 'question']} className='grow'>
-                        <Input placeholder='请输入' />
+                        <Input placeholder='Escribe un valor' />
                       </Form.Item>
                       <Form.Item>
                         <MinusCircleOutlined

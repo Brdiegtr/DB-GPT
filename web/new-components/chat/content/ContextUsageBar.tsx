@@ -33,14 +33,14 @@ const STATE_COLORS: Record<string, { bar: string; bg: string; text: string; ring
     bg: 'bg-yellow-50 dark:bg-yellow-950/30',
     text: 'text-yellow-700 dark:text-yellow-300',
     ring: '#f59e0b',
-    label: 'Context (compressing)',
+    label: 'Contexto (comprimiendo)',
   },
   ERROR: {
     bar: 'bg-red-500',
     bg: 'bg-red-50 dark:bg-red-950/30',
     text: 'text-red-700 dark:text-red-300',
     ring: '#ef4444',
-    label: 'Context (critical)',
+    label: 'Contexto (crítico)',
   },
 };
 

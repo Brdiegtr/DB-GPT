@@ -400,7 +400,7 @@
                                 "default": "You are a helpful AI Assistant.",
                                 "placeholder": null,
                                 "description": "系统消息。",
-                                "value": "{context}\n\nwhen answering, use the same language as the \"user\".",
+                                "value": "{context}\n\nwhen answering, always reply in Spanish (español).",
                                 "options": null,
                                 "ui": {
                                     "refresh": false,

@@ -197,7 +197,7 @@ export function useReActAgent(options: UseReActAgentOptions = {}): UseReActAgent
         }
 
         if (!response.body) {
-          throw new Error('Response body is null');
+          throw new Error('La respuesta está vacía');
         }
 
         const reader = response.body.getReader();
@@ -248,7 +248,7 @@ export function useReActAgent(options: UseReActAgentOptions = {}): UseReActAgent
           return;
         }
 
-        const errorMessage = error.message || 'Unknown error occurred';
+        const errorMessage = error.message || 'Ocurrió un error desconocido';
 
         setState(prev => ({
           ...prev,

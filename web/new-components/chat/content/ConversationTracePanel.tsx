@@ -367,7 +367,7 @@ const ConversationTracePanel: React.FC<ConversationTracePanelProps> = ({ convers
 
       {messages.length === 0 ? (
         <div className='flex h-full items-center justify-center p-5'>
-          <Empty description={t('observability_no_trace') || 'No trace yet'} />
+          <Empty description={t('observability_no_trace') || 'Aún no hay traza'} />
         </div>
       ) : (
         <div className='space-y-2'>

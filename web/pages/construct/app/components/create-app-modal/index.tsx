@@ -224,7 +224,7 @@ const CreateAppModal: React.FC<{
               <Upload listType="picture-card">
                 <button style={{ border: 0, background: 'none' }} type="button">
                   <PlusOutlined />
-                  <div style={{ marginTop: 8 }}>上传图标</div>
+                  <div style={{ marginTop: 8 }}>Subir ícono</div>
                 </button>
               </Upload>
             </Form.Item> */}

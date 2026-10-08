@@ -83,8 +83,8 @@ const NestedFormFields: React.FC<NestedFormFieldsProps> = ({ parentName, fields,
 
   return (
     <div className='space-y-4 border rounded-md p-4'>
-      <Form.Item label='Type' name={[parentName, 'type']}>
-        <Select onChange={handleTypeChange} placeholder='Select a type'>
+      <Form.Item label='Tipo' name={[parentName, 'type']}>
+        <Select onChange={handleTypeChange} placeholder='Selecciona un tipo'>
           {Object.keys(fields).map(type => (
             <Select.Option key={type} value={type}>
               {type}

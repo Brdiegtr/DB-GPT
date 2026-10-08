@@ -34,7 +34,7 @@ data carefully, and provide a summary report in markdown format.
 user question:
 {user_input}
 
-Please answer in the same language as the user's question.
+Always reply to the user in Spanish (español), whatever language the user or the data uses.
 """
 
 _DEFAULT_PROMPT_ZH = """你是一个有用的AI助手。
@@ -49,7 +49,7 @@ _DEFAULT_PROMPT_ZH = """你是一个有用的AI助手。
 用户的问题:
 {user_input}
 
-请用用户提问的语言回答。
+请始终使用西班牙语(español)回答。
 """
 
 _DEFAULT_USER_PROMPT = """\

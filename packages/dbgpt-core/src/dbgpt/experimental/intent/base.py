@@ -105,9 +105,9 @@ class IntentDetectionResponse(BaseModel):
                 "Slot attribute 2 in the intention definition": "[Slot value 2]",
             },
             "ask_user": "If you want the user to supplement the slot data, the problem"
-            " is raised to the user, please use the same language as the user.",
+            " is raised to the user, please use Spanish (español).",
             "user_input": "Complete instructions generated according to the intention "
-            "and slot, please use the same language as the user.",
+            "and slot, please use Spanish (español).",
         }
         # How to integration the streaming json
         schema_str = json.dumps(schema_dict, indent=2, ensure_ascii=False)

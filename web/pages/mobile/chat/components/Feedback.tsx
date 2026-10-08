@@ -32,12 +32,12 @@ const Feedback: React.FC<{
     const result = copy(chatDialogRef.current?.textContent || pureStr);
     if (result) {
       if (pureStr) {
-        message.success('复制成功');
+        message.success('Copiado');
       } else {
-        message.warning('内容复制为空');
+        message.warning('El contenido copiado está vacío');
       }
     } else {
-      message.error('复制失败');
+      message.error('No se pudo copiar');
     }
   };
 
@@ -58,7 +58,7 @@ const Feedback: React.FC<{
       onSuccess: data => {
         const [, res] = data;
         setStatus(res?.feedback_type);
-        message.success('反馈成功');
+        message.success('Comentario enviado');
         setFeedbackOpen(false);
       },
     },
@@ -73,7 +73,7 @@ const Feedback: React.FC<{
         const [, res] = data;
         if (res) {
           setStatus('none');
-          message.success('操作成功');
+          message.success('Operación exitosa');
         }
       },
     },
@@ -97,7 +97,7 @@ const Feedback: React.FC<{
     {
       manual: true,
       onSuccess: () => {
-        message.success('操作成功');
+        message.success('Operación exitosa');
       },
     },
   );
@@ -149,7 +149,7 @@ const Feedback: React.FC<{
             }}
             className='text-xs'
           >
-            终止话题
+            Terminar conversación
           </Button>
         )}
       </div>

@@ -21,16 +21,15 @@ execution. This allows you to:
 
 Usage notes:
 - IMPORTANT: Always write the question text, header, option \
-labels, and descriptions in the SAME language the user is using. \
-If the user writes in English, all content must be in English; \
-if in Chinese, use Chinese, etc.
+labels, and descriptions in Spanish (español), whatever \
+language the user or the data uses.
 - When `custom` is enabled (default), a "Type your own answer" \
 option is added automatically; don't include "Other" or \
 catch-all options
 - Answers are returned as arrays of labels; set `multiple: true` \
 to allow selecting more than one
 - If you recommend a specific option, make that the first option \
-in the list and add "(Recommended)" at the end of the label
+in the list and add "(Recomendado)" at the end of the label
 Parameter: {"questions": [{"question": "...", "header": "...", \
 "options": [{"label": "...", "description": "..."}], \
 "multiple": false}]}
